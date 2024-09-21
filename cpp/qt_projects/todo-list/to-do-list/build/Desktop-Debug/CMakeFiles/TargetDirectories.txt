@@ -1,0 +1,9 @@
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/to-do-list.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/install.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/to-do-list_autogen_timestamp_deps.dir
+/home/mikep/Documents/repo_git/cpp/qt_projects/todo-list/to-do-list/build/Desktop-Debug/CMakeFiles/to-do-list_autogen.dir
