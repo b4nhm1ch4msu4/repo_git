@@ -1,6 +1,6 @@
-tienp tienp
 mike mike
 abc abc
 admin admin
 user pass
-root root
+peiu 1
+tienp tienp
