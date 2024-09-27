@@ -1,0 +1,3 @@
+/home/tienp/Documents/repo_git/cpp/lab/cppHeaderSplit/build/CMakeFiles/main.dir
+/home/tienp/Documents/repo_git/cpp/lab/cppHeaderSplit/build/CMakeFiles/edit_cache.dir
+/home/tienp/Documents/repo_git/cpp/lab/cppHeaderSplit/build/CMakeFiles/rebuild_cache.dir
