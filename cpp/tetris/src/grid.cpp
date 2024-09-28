@@ -1,5 +1,6 @@
 #include "grid.h"
-#include <iostream>
+#include "colors.h"
+#include <cmath>
 #include <raylib.h>
 #include <vector>
 
@@ -18,28 +19,6 @@ void Grid::Initialize() {
     }
 }
 
-void Grid::print() {
-  for (int row = 0; row < numRows; row++) {
-    for (int col = 0; col < numCols; col++) {
-      std::cout << grid[row][col];
-    }
-    std::cout << std::endl;
-  }
-}
-
-std::vector<Color> Grid::GetCellColors() {
-  Color darkGrey = {26, 31, 40, 255};
-  Color green = {47, 230, 23, 255};
-  Color red = {232, 18, 18, 255};
-  Color orange = {226, 116, 17, 255};
-  Color yellow = {237, 234, 4, 255};
-  Color purple = {166, 0, 247, 255};
-  Color cyan = {21, 204, 209, 255};
-  Color blue = {13, 64, 216, 255};
-
-  return {darkGrey, green, red, orange, yellow, purple, cyan, blue};
-}
-
 void Grid::Draw() {
   for (int row = 0; row < numRows; row++) {
     for (int col = 0; col < numCols; col++) {
@@ -48,4 +27,18 @@ void Grid::Draw() {
                     cellSize - 1, colors[cellVal]);
     }
   }
+}
+
+bool Grid::IsCellOut(int col, int row) {
+  if (row >= 0 && row < numRows && col >= 0 && col < numCols) {
+    return false;
+  }
+  return true;
+}
+
+bool Grid::IsCellEmpty(int col, int row) {
+  if (grid[row][col] == 0) {
+    return true;
+  }
+  return false;
 }

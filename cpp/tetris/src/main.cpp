@@ -1,21 +1,29 @@
-#include "grid.h"
+#include "game.h"
 #include <raylib.h>
 
+double lastUpdateTime = 0;
+bool EventTriggered(double interval) {
+  double currentTime = GetTime();
+  if (currentTime - lastUpdateTime >= interval) {
+    lastUpdateTime = currentTime;
+    return true;
+  }
+  return false;
+}
 int main() {
   Color darkBlue = {44, 44, 127, 255};
   InitWindow(300, 800, "raylib Tetris");
   SetTargetFPS(60);
+  Game game = Game();
 
-  Grid grid = Grid();
-  grid.grid[0][0] = 1;
-  grid.grid[1][3] = 2;
-  grid.grid[3][5] = 5;
-  grid.grid[6][9] = 7;
-  grid.print();
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(darkBlue);
-    grid.Draw();
+    game.Draw();
+    game.HandlerInput();
+    if (EventTriggered(0.2)) {
+      game.MoveDown();
+    }
     EndDrawing();
   }
 
