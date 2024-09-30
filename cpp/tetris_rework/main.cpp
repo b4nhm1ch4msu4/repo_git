@@ -1,7 +1,17 @@
-#include <iostream>
+#include "include/grid.h"
+#include "raylib.h"
 
-int main(int argc, char *argv[]) {
+int main(void) {
+  InitWindow(320, 620, "Tetris made by raylib");
+  Grid grid = Grid();
+  while (!WindowShouldClose()) {
+    BeginDrawing();
+    grid.Draw();
+    ClearBackground(RAYWHITE);
+    EndDrawing();
+  }
 
-  std::cout << "Tetris game" << std::endl;
+  CloseWindow();
+
   return 0;
 }
