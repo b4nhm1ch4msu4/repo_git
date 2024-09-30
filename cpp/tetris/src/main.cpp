@@ -12,12 +12,13 @@ bool EventTriggered(double interval) {
   }
   return false;
 }
+
+// Entry point
 int main() {
   InitWindow(500, 620, "raylib Tetris");
   SetTargetFPS(60);
   Font font = LoadFontEx("font/JetBrainsMonoNerdFont-Medium.ttf", 64, 0, 0);
   Game game = Game();
-
   while (!WindowShouldClose()) {
     UpdateMusicStream(game.music);
     BeginDrawing();
@@ -28,13 +29,11 @@ int main() {
       DrawTextEx(font, "Game Over", {320, 450}, 40, 2, WHITE);
     }
     DrawRectangleRounded({330, 55, 170, 60}, 0.3, 6, lightBlue);
-
     char scoreText[10];
     sprintf(scoreText, "%d", game.score);
     Vector2 textSize = MeasureTextEx(font, scoreText, 38, 2);
     DrawTextEx(font, scoreText, {330 + (170 - textSize.x) / 2, 65}, 38, 2,
                WHITE);
-
     DrawRectangleRounded({330, 215, 170, 180}, 0.3, 6, lightBlue);
     game.Draw();
     game.HandlerInput();
@@ -43,7 +42,6 @@ int main() {
     }
     EndDrawing();
   }
-
   CloseWindow();
   return 0;
 }
