@@ -8,6 +8,9 @@ using namespace std;
 Color darkGreen = Color{20, 160, 133, 255};
 int cellSize = 20;
 int cellCount = 25;
+int offset = 60;
+
+double inputTimeout = 0;
 float lastTimeUpdate = 0;
 bool EventTrigged(double interval) {
   double currentTime = GetTime();
@@ -22,14 +25,14 @@ bool EventTrigged(double interval) {
 //---Food class---
 //----------------
 class Food {
+public:
   Vector2 position = GetRandomPos();
   Vector2 GetRandomPos() {
-    float x = GetRandomValue(0, 24);
-    float y = GetRandomValue(0, 24);
+    float x = GetRandomValue(2, 25);
+    float y = GetRandomValue(2, 25);
     return {x, y};
   }
 
-public:
   void Draw() {
     DrawRectangle(position.x * cellSize, position.y * cellSize, cellSize,
                   cellSize, RED);
@@ -40,58 +43,17 @@ public:
 //---Snake class---
 //-----------------
 class Snake {
-  deque<Vector2> body = {Vector2{6, 5}, Vector2{5, 5}, Vector2{4, 5}};
-  bool isSnakeInside() {
-    Vector2 currentPos = body[0];
-    if (0 <= currentPos.x && currentPos.x <= 25 && 0 <= currentPos.y &&
-        currentPos.y <= 25) {
-      return true;
-    }
-    return false;
-  }
-
 public:
-  Vector2 Direction = {1, 0};
-  // Vector2 GetDirection() { return Vector2Subtract(body[0], body[1]); }
-  // void TurnLeft() {
-  //   if (Vector2Equals(GetDirection(), {0, -1})) {
-  //     body[0] = Vector2Add(body[0], {-1, 1});
-  //   }
-  //   if (Vector2Equals(GetDirection(), {0, 1})) {
-  //     body[0] = Vector2Add(body[0], {-1, -1});
-  //   }
-  // }
-  // void TurnRight() {
-  //   if (Vector2Equals(GetDirection(), {0, -1})) {
-  //     body[0] = Vector2Add(body[0], {1, 1});
-  //   }
-  //   if (Vector2Equals(GetDirection(), {0, 1})) {
-  //     body[0] = Vector2Add(body[0], {1, -1});
-  //   }
-  // }
-  // void TurnUp() {
-  //
-  //   if (Vector2Equals(GetDirection(), {1, 0})) {
-  //     body[0] = Vector2Add(body[0], {-1, -1});
-  //   }
-  //   if (Vector2Equals(GetDirection(), {-1, 0})) {
-  //     body[0] = Vector2Add(body[0], {1, -1});
-  //   }
-  // }
-  // void TurnDown() {
-  //   if (Vector2Equals(GetDirection(), {1, 0})) {
-  //     body[0] = Vector2Add(body[0], {-1, 1});
-  //   }
-  //   if (Vector2Equals(GetDirection(), {-1, 0})) {
-  //     body[0] = Vector2Add(body[0], {1, 1});
-  //   }
-  // }
-
+  Snake() { InitSnake(); }
+  deque<Vector2> body;
+  Vector2 Direction;
+  void InitSnake() {
+    body = {Vector2{6, 5}, Vector2{5, 5}, Vector2{4, 5}};
+    Direction = {1, 0};
+  }
   void Update() {
-    if (isSnakeInside()) {
-      body.pop_back();
-      body.push_front(Vector2Add(body.front(), Direction));
-    }
+    body.pop_back();
+    body.push_front(Vector2Add(body.front(), Direction));
   }
 
   void Draw() {
@@ -111,20 +73,73 @@ public:
 //-----------------
 class Game {
 public:
+  Sound eatSound, wallSound;
+  int score = 0;
+  bool isGameOver = false;
   Snake snake = Snake();
   Food food = Food();
+  Game() {
+    InitAudioDevice();
+    eatSound = LoadSound("sounds/eat.mp3");
+    wallSound = LoadSound("sounds/wall.mp3");
+  }
+  ~Game() {
+    UnloadSound(eatSound);
+    UnloadSound(wallSound);
+    CloseAudioDevice();
+  }
   void Draw() {
+    DrawRectangleLinesEx(Rectangle{(float)offset - 10, (float)offset - 10,
+                                   (float)cellSize * cellCount,
+                                   (float)cellSize * cellCount},
+                         10, BLACK);
     snake.Draw();
     food.Draw();
   }
-  void Update() { snake.Update(); }
+  void Update() {
+    if (isSnakeInside() && !IsCollisionWithBody()) {
+      snake.Update();
+      CheckColisionWithFood();
+    } else {
+      isGameOver = true;
+      return;
+    }
+  }
+  void CheckColisionWithFood() {
+    if (Vector2Equals(snake.body[0], food.position)) {
+      food.position = food.GetRandomPos();
+      snake.body.push_front(Vector2Add(snake.body[0], snake.Direction));
+      score++;
+      PlaySound(eatSound);
+    }
+  }
+  bool IsCollisionWithBody() {
+    int size = snake.body.size();
+    for (int i = 1; i < size; i++) {
+      if (Vector2Equals(snake.body[0], snake.body[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  bool isSnakeInside() {
+    Vector2 currentPos = snake.body[0];
+    if (2 <= currentPos.x && currentPos.x <= 25 && 2 <= currentPos.y &&
+        currentPos.y <= 25) {
+      return true;
+    }
+    PlaySound(wallSound);
+    return false;
+  }
 };
 
 //----------------
 //--Entry Point---
 //----------------
 int main() {
-  InitWindow(cellSize * cellCount, cellSize * cellCount, "Snake Game");
+  InitWindow(offset * 2 + cellSize * cellCount,
+             offset * 2 + cellSize * cellCount, "Snake Game");
   SetTargetFPS(60);
   Game game = Game();
 
@@ -132,38 +147,51 @@ int main() {
     BeginDrawing();
     ClearBackground(darkGreen);
     game.Draw();
-    if (EventTrigged(0.5)) {
+    DrawText("Snake Retro", offset - 5, offset - 50, 40, BLACK);
+    DrawText(TextFormat("%i", game.score), offset + 5,
+             offset + cellCount * cellSize + 5, 30, BLACK);
+    if (game.isGameOver && IsKeyPressed(KEY_SPACE)) {
+      game.isGameOver = false;
+      game.snake.InitSnake();
+      game.score = 0;
+    }
+    if (EventTrigged(0.2)) {
       game.Update();
     }
 
     // Handle input
-    int keyPressed = GetKeyPressed();
-    switch (keyPressed) {
-    case KEY_RIGHT:
-      if (game.snake.Direction.x != -1) {
-        game.snake.Direction = {1, 0};
+    if (GetTime() - inputTimeout > 0.2) {
+      int keyPressed = GetKeyPressed();
+      switch (keyPressed) {
+      case KEY_RIGHT:
+        if (game.snake.Direction.x != -1) {
+          game.snake.Direction = {1, 0};
+          inputTimeout = GetTime();
+        }
+        break;
+      case KEY_UP:
+        if (game.snake.Direction.y != 1) {
+          game.snake.Direction = {0, -1};
+          inputTimeout = GetTime();
+        }
+        break;
+      case KEY_LEFT:
+        if (game.snake.Direction.x != 1) {
+          game.snake.Direction = {-1, 0};
+          inputTimeout = GetTime();
+        }
+        break;
+      case KEY_DOWN:
+        if (game.snake.Direction.y != -1) {
+          game.snake.Direction = {0, 1};
+          inputTimeout = GetTime();
+        }
+        break;
       }
-      break;
-    case KEY_UP:
-      if (game.snake.Direction.y != 1) {
-        game.snake.Direction = {0, -1};
-      }
-      break;
-    case KEY_LEFT:
-      if (game.snake.Direction.x != 1) {
-        game.snake.Direction = {-1, 0};
-      }
-      break;
-    case KEY_DOWN:
-      if (game.snake.Direction.y != -1) {
-        game.snake.Direction = {0, 1};
-      }
-      break;
     }
 
     EndDrawing();
   }
-
   CloseWindow();
   return 0;
 }
