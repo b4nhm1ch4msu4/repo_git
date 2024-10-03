@@ -1,17 +1,16 @@
-#include "include/grid.h"
-#include "raylib.h"
+#include <raylib.h>
 
-int main(void) {
-  InitWindow(320, 620, "Tetris made by raylib");
-  Grid grid = Grid();
+int main(int argc, char *argv[]) {
+  InitWindow(300, 600, "Tetris Classic");
+  SetTargetFPS(60);
+
   while (!WindowShouldClose()) {
     BeginDrawing();
-    grid.Draw();
-    ClearBackground(RAYWHITE);
+    ClearBackground(BLACK);
+
     EndDrawing();
   }
 
   CloseWindow();
-
   return 0;
 }
