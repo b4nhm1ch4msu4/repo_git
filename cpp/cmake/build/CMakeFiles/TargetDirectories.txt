@@ -1,0 +1,3 @@
+/home/mike/e/repo_git/cpp/cmake/build/CMakeFiles/hello.dir
+/home/mike/e/repo_git/cpp/cmake/build/CMakeFiles/edit_cache.dir
+/home/mike/e/repo_git/cpp/cmake/build/CMakeFiles/rebuild_cache.dir

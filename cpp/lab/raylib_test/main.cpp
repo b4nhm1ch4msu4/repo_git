@@ -10,7 +10,6 @@ int main(int argc, char *argv[]) {
              LIGHTGRAY);
     EndDrawing();
   }
-
   CloseWindow();
 
   return 0;
