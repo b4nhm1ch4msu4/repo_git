@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tetris.dir/main.cpp.o"
-  "CMakeFiles/tetris.dir/main.cpp.o.d"
-  "bin/tetris"
+  "CMakeFiles/tetris.dir/main.cpp.obj"
+  "CMakeFiles/tetris.dir/main.cpp.obj.d"
+  "bin/tetris.exe"
+  "bin/tetris.exe.manifest"
   "bin/tetris.pdb"
+  "libtetris.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
