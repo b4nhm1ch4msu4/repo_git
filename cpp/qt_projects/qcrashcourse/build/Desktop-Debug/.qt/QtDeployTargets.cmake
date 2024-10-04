@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_qcrashcourse_FILE /home/mikep/Documents/repo_git/cpp/qt_projects/qtcrashcrouse/qcrashcourse/build/Desktop-Debug/qcrashcourse)
-set(__QT_DEPLOY_TARGET_qcrashcourse_TYPE EXECUTABLE)

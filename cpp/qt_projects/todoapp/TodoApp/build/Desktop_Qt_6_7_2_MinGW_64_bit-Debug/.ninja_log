@@ -1,0 +1,10 @@
+# ninja log v6
+14	1986	7497175310297302	TodoApp_autogen/timestamp	2a4973fc91bb89ff
+14	1986	7497175310297302	TodoApp_autogen/mocs_compilation.cpp	2a4973fc91bb89ff
+14	1986	7497175310297302	E:/repo_git/cpp/qt_projects/todoapp/TodoApp/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TodoApp_autogen/timestamp	2a4973fc91bb89ff
+14	1986	7497175310297302	E:/repo_git/cpp/qt_projects/todoapp/TodoApp/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/TodoApp_autogen/mocs_compilation.cpp	2a4973fc91bb89ff
+1992	4855	7497175311425192	CMakeFiles/TodoApp.dir/TodoApp_autogen/mocs_compilation.cpp.obj	4c08364c29fd4555
+2004	4872	7497175311553723	CMakeFiles/TodoApp.dir/main.cpp.obj	aa484b6b789d8b
+2018	5271	7497175311695741	CMakeFiles/TodoApp.dir/mainwindow.cpp.obj	5bdbe618e98372d2
+12	1924	7497175710400596	CMakeFiles/TodoApp.dir/TodoApp_autogen/mocs_compilation.cpp.obj	4c08364c29fd4555
+1925	2354	7497175729523539	TodoApp.exe	fe21ef794e5ba2cc
