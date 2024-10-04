@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tetris.dir\build.make CMakeFiles/tetris.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/grid.obj: src/grid.cpp.obj
+.PHONY : src/grid.obj
+
+# target to build an object file
+src/grid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tetris.dir\build.make CMakeFiles/tetris.dir/src/grid.cpp.obj
+.PHONY : src/grid.cpp.obj
+
+src/grid.i: src/grid.cpp.i
+.PHONY : src/grid.i
+
+# target to preprocess a source file
+src/grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tetris.dir\build.make CMakeFiles/tetris.dir/src/grid.cpp.i
+.PHONY : src/grid.cpp.i
+
+src/grid.s: src/grid.cpp.s
+.PHONY : src/grid.s
+
+# target to generate assembly for a file
+src/grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tetris.dir\build.make CMakeFiles/tetris.dir/src/grid.cpp.s
+.PHONY : src/grid.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/grid.obj
+	@echo ... src/grid.i
+	@echo ... src/grid.s
 .PHONY : help
 
 

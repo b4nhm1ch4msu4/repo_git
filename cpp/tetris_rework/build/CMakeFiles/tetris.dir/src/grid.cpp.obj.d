@@ -1,6 +1,6 @@
-CMakeFiles/tetris.dir/main.cpp.obj: \
- E:\repo_git\cpp\tetris_rework\main.cpp \
- E:\repo_git\cpp\tetris_rework\includes/grid.h \
+CMakeFiles/tetris.dir/src/grid.cpp.obj: \
+ E:\repo_git\cpp\tetris_rework\src\grid.cpp \
+ E:/repo_git/cpp/tetris_rework/includes/grid.h \
  E:/Programs/raylib/src/raylib.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdarg.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stdarg.h \

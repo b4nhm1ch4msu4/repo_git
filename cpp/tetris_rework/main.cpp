@@ -1,12 +1,16 @@
+#include "includes/colors.h"
+#include "includes/grid.h"
 #include <raylib.h>
 
 int main(int argc, char *argv[]) {
-  InitWindow(300, 600, "Tetris Classic");
+  InitWindow(350, 650, "Tetris Classic");
   SetTargetFPS(60);
+  Grid grid = Grid();
 
   while (!WindowShouldClose()) {
     BeginDrawing();
-    ClearBackground(BLACK);
+    ClearBackground(DardGray);
+    grid.Draw();
 
     EndDrawing();
   }

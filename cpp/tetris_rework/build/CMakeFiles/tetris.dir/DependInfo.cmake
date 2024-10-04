@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/repo_git/cpp/tetris_rework/main.cpp" "CMakeFiles/tetris.dir/main.cpp.obj" "gcc" "CMakeFiles/tetris.dir/main.cpp.obj.d"
+  "E:/repo_git/cpp/tetris_rework/src/grid.cpp" "CMakeFiles/tetris.dir/src/grid.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/grid.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
