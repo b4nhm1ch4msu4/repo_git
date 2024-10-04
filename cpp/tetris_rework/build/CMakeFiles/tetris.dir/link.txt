@@ -1,3 +1,1 @@
-E:\Programs\CMake\bin\cmake.exe -E rm -f CMakeFiles\tetris.dir/objects.a
-C:\ProgramData\chocolatey\bin\ar.exe qc CMakeFiles\tetris.dir/objects.a @CMakeFiles\tetris.dir\objects1.rsp
-C:\ProgramData\chocolatey\bin\c++.exe -Wl,--whole-archive CMakeFiles\tetris.dir/objects.a -Wl,--no-whole-archive -o bin\tetris.exe -Wl,--out-implib,libtetris.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tetris.dir\linkLibs.rsp
+/usr/bin/c++ CMakeFiles/tetris.dir/main.cpp.o CMakeFiles/tetris.dir/src/block.cpp.o CMakeFiles/tetris.dir/src/colors.cpp.o CMakeFiles/tetris.dir/src/grid.cpp.o CMakeFiles/tetris.dir/src/position.cpp.o -o bin/tetris  -lraylib

@@ -11,5 +11,5 @@ const Color DarkGray = {50, 50, 50, 255};     // Background
 const Color LightGray = {200, 200, 200, 255}; // Grid
 
 std::vector<Color> GetAllColors() {
-  return {DardGray, Cyan, Yellow, Purple, Green, Red, Blue, Orange};
+  return {DarkGray, Cyan, Yellow, Purple, Green, Red, Blue, Orange};
 }

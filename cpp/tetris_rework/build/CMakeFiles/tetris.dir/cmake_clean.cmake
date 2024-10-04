@@ -1,12 +1,16 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tetris.dir/main.cpp.obj"
-  "CMakeFiles/tetris.dir/main.cpp.obj.d"
-  "CMakeFiles/tetris.dir/src/grid.cpp.obj"
-  "CMakeFiles/tetris.dir/src/grid.cpp.obj.d"
-  "bin/tetris.exe"
-  "bin/tetris.exe.manifest"
+  "CMakeFiles/tetris.dir/main.cpp.o"
+  "CMakeFiles/tetris.dir/main.cpp.o.d"
+  "CMakeFiles/tetris.dir/src/block.cpp.o"
+  "CMakeFiles/tetris.dir/src/block.cpp.o.d"
+  "CMakeFiles/tetris.dir/src/colors.cpp.o"
+  "CMakeFiles/tetris.dir/src/colors.cpp.o.d"
+  "CMakeFiles/tetris.dir/src/grid.cpp.o"
+  "CMakeFiles/tetris.dir/src/grid.cpp.o.d"
+  "CMakeFiles/tetris.dir/src/position.cpp.o"
+  "CMakeFiles/tetris.dir/src/position.cpp.o.d"
+  "bin/tetris"
   "bin/tetris.pdb"
-  "libtetris.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -3,13 +3,13 @@
 #include <raylib.h>
 
 int main(int argc, char *argv[]) {
-  InitWindow(350, 650, "Tetris Classic");
+  InitWindow(300, 600, "Tetris Classic");
   SetTargetFPS(60);
   Grid grid = Grid();
 
   while (!WindowShouldClose()) {
     BeginDrawing();
-    ClearBackground(DardGray);
+    ClearBackground(LightGray);
     grid.Draw();
 
     EndDrawing();

@@ -1,3 +1,4 @@
-#include "../includes/blocks.h"
+#include "../includes/block.h"
 
-Block::Block() {}
+Block::Block() { rotateState = 0; }
+void Block::Draw() {}
