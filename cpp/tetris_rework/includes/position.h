@@ -1,8 +1,8 @@
 #pragma once
 
 class Position {
-  int row, col;
-
+private:
 public:
   Position(int, int);
+  int row, col;
 };
