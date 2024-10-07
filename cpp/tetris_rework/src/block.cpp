@@ -29,7 +29,3 @@ std::vector<Position> Block::GetCellPos() {
   }
   return movedTiles;
 }
-void Block::Rotate() { rotateState = (rotateState + 1) % 4; }
-void Block::MoveDown() { Move(0, 1); };
-void Block::MoveLeft() { Move(-1, 0); };
-void Block::MoveRight() { Move(1, 0); };

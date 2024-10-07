@@ -1,6 +1,9 @@
-CMakeFiles/tetris.dir/main.cpp.obj: \
- E:\repo_git\cpp\tetris_rework\main.cpp \
- E:\repo_git\cpp\tetris_rework\includes/colors.h \
+CMakeFiles/tetris.dir/src/game.cpp.obj: \
+ E:\repo_git\cpp\tetris_rework\src\game.cpp \
+ E:/repo_git/cpp/tetris_rework/includes/game.h \
+ E:/repo_git/cpp/tetris_rework/src/blocks.cpp \
+ E:/repo_git/cpp/tetris_rework/includes/block.h \
+ E:/repo_git/cpp/tetris_rework/includes/colors.h \
  E:/Programs/raylib/src/raylib.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdarg.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stdarg.h \
@@ -54,9 +57,6 @@ CMakeFiles/tetris.dir/main.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/binders.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/range_access.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
- E:\repo_git\cpp\tetris_rework\includes/game.h \
- E:/repo_git/cpp/tetris_rework/src/blocks.cpp \
- E:/repo_git/cpp/tetris_rework/includes/block.h \
  E:/repo_git/cpp/tetris_rework/includes/position.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_tree.h \
@@ -67,11 +67,23 @@ CMakeFiles/tetris.dir/main.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uses_allocator.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_multimap.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/erase_if.h \
- E:\repo_git\cpp\tetris_rework\includes/grid.h \
+ E:/repo_git/cpp/tetris_rework/includes/grid.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdlib \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/limits.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed/syslimits.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/stdlib.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/errno.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_abs.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ctime \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/time.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/corecrt.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/_timeval.h \

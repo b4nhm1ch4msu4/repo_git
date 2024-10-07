@@ -7,20 +7,15 @@
 class Block {
 public:
   Block();
+  int id;
   void Draw();
-  void Rotate();
-  void MoveDown();
-  void MoveUp();
-  void MoveRight();
-  void MoveLeft();
+  void Move(int, int);
+  int rotateState;
+  std::vector<Position> GetCellPos();
 
 protected:
-  int id;
-  int rotateState;
   int cellSize;
   int rowOffset, colOffset;
   std::map<int, std::vector<Position>> cells;
   std::vector<Color> colors;
-  void Move(int, int);
-  std::vector<Position> GetCellPos();
 };

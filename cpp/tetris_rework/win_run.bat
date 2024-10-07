@@ -1,4 +1,4 @@
-Remove-Item ./build/* -Recurse -Force -Confirm:$false
+del /s /q build\*
 cd build
 cmake -G "MinGW Makefiles" ..
 make

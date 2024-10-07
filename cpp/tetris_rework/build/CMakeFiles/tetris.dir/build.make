@@ -128,11 +128,26 @@ CMakeFiles/tetris.dir/src/colors.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tetris.dir/src/colors.cpp.s"
 	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\repo_git\cpp\tetris_rework\src\colors.cpp -o CMakeFiles\tetris.dir\src\colors.cpp.s
 
+CMakeFiles/tetris.dir/src/game.cpp.obj: CMakeFiles/tetris.dir/flags.make
+CMakeFiles/tetris.dir/src/game.cpp.obj: CMakeFiles/tetris.dir/includes_CXX.rsp
+CMakeFiles/tetris.dir/src/game.cpp.obj: E:/repo_git/cpp/tetris_rework/src/game.cpp
+CMakeFiles/tetris.dir/src/game.cpp.obj: CMakeFiles/tetris.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tetris.dir/src/game.cpp.obj"
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris.dir/src/game.cpp.obj -MF CMakeFiles\tetris.dir\src\game.cpp.obj.d -o CMakeFiles\tetris.dir\src\game.cpp.obj -c E:\repo_git\cpp\tetris_rework\src\game.cpp
+
+CMakeFiles/tetris.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tetris.dir/src/game.cpp.i"
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\repo_git\cpp\tetris_rework\src\game.cpp > CMakeFiles\tetris.dir\src\game.cpp.i
+
+CMakeFiles/tetris.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tetris.dir/src/game.cpp.s"
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\repo_git\cpp\tetris_rework\src\game.cpp -o CMakeFiles\tetris.dir\src\game.cpp.s
+
 CMakeFiles/tetris.dir/src/grid.cpp.obj: CMakeFiles/tetris.dir/flags.make
 CMakeFiles/tetris.dir/src/grid.cpp.obj: CMakeFiles/tetris.dir/includes_CXX.rsp
 CMakeFiles/tetris.dir/src/grid.cpp.obj: E:/repo_git/cpp/tetris_rework/src/grid.cpp
 CMakeFiles/tetris.dir/src/grid.cpp.obj: CMakeFiles/tetris.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tetris.dir/src/grid.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tetris.dir/src/grid.cpp.obj"
 	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris.dir/src/grid.cpp.obj -MF CMakeFiles\tetris.dir\src\grid.cpp.obj.d -o CMakeFiles\tetris.dir\src\grid.cpp.obj -c E:\repo_git\cpp\tetris_rework\src\grid.cpp
 
 CMakeFiles/tetris.dir/src/grid.cpp.i: cmake_force
@@ -147,7 +162,7 @@ CMakeFiles/tetris.dir/src/position.cpp.obj: CMakeFiles/tetris.dir/flags.make
 CMakeFiles/tetris.dir/src/position.cpp.obj: CMakeFiles/tetris.dir/includes_CXX.rsp
 CMakeFiles/tetris.dir/src/position.cpp.obj: E:/repo_git/cpp/tetris_rework/src/position.cpp
 CMakeFiles/tetris.dir/src/position.cpp.obj: CMakeFiles/tetris.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tetris.dir/src/position.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tetris.dir/src/position.cpp.obj"
 	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris.dir/src/position.cpp.obj -MF CMakeFiles\tetris.dir\src\position.cpp.obj.d -o CMakeFiles\tetris.dir\src\position.cpp.obj -c E:\repo_git\cpp\tetris_rework\src\position.cpp
 
 CMakeFiles/tetris.dir/src/position.cpp.i: cmake_force
@@ -164,6 +179,7 @@ tetris_OBJECTS = \
 "CMakeFiles/tetris.dir/src/block.cpp.obj" \
 "CMakeFiles/tetris.dir/src/blocks.cpp.obj" \
 "CMakeFiles/tetris.dir/src/colors.cpp.obj" \
+"CMakeFiles/tetris.dir/src/game.cpp.obj" \
 "CMakeFiles/tetris.dir/src/grid.cpp.obj" \
 "CMakeFiles/tetris.dir/src/position.cpp.obj"
 
@@ -174,6 +190,7 @@ bin/tetris.exe: CMakeFiles/tetris.dir/main.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/src/block.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/src/blocks.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/src/colors.cpp.obj
+bin/tetris.exe: CMakeFiles/tetris.dir/src/game.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/src/grid.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/src/position.cpp.obj
 bin/tetris.exe: CMakeFiles/tetris.dir/build.make
@@ -181,7 +198,7 @@ bin/tetris.exe: E:/Programs/raylib/src/libraylib.a
 bin/tetris.exe: CMakeFiles/tetris.dir/linkLibs.rsp
 bin/tetris.exe: CMakeFiles/tetris.dir/objects1.rsp
 bin/tetris.exe: CMakeFiles/tetris.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin\tetris.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\repo_git\cpp\tetris_rework\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin\tetris.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tetris.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

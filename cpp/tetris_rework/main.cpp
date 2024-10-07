@@ -1,39 +1,37 @@
 #include "includes/colors.h"
-#include "includes/grid.h"
-#include "src/blocks.cpp"
+#include "includes/game.h"
+#include <ctime>
 #include <raylib.h>
 
+double lastUpdatedTime = 0;
+
+bool EvenTrigger(double interval) {
+  double currentTime = GetTime();
+  if (currentTime - lastUpdatedTime >= interval) {
+    lastUpdatedTime = currentTime;
+    return true;
+  }
+  return false;
+}
+
 int main(int argc, char *argv[]) {
-  InitWindow(320, 620, "Tetris Classic");
+  InitWindow(500, 620, "Tetris Classic");
   SetTargetFPS(60);
-  Grid grid = Grid();
-  IBlock block = IBlock();
+  Game game = Game();
+  Font font = LoadFontEx("assets/fonts/font.ttf", 64, 0, 0);
 
   while (!WindowShouldClose()) {
+    game.HandleInput();
+    if (EvenTrigger(0.2)) {
+      game.MoveBlockDown();
+    }
     BeginDrawing();
     ClearBackground(LightGray);
-    grid.Draw();
-    block.Draw();
-
-    // int keyPressed = GetKeyPressed();
-    // switch (keyPressed) {
-    // case KEY_DOWN:
-    //   block.MoveDown();
-    //   break;
-    //
-    // case KEY_UP:
-    //   block.Rotate();
-    //   break;
-    //
-    // case KEY_LEFT:
-    //   block.MoveLeft();
-    //   break;
-    //
-    // case KEY_RIGHT:
-    //   block.MoveRight();
-    //   break;
-    // }
-
+    DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
+    DrawTextEx(font, "Next", {370, 165}, 38, 2, WHITE);
+    DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, DarkGray);
+    DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, DarkGray);
+    game.Draw();
     EndDrawing();
   }
 

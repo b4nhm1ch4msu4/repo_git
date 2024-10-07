@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/repo_git/cpp/tetris_rework/src/block.cpp" "CMakeFiles/tetris.dir/src/block.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/block.cpp.obj.d"
   "E:/repo_git/cpp/tetris_rework/src/blocks.cpp" "CMakeFiles/tetris.dir/src/blocks.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/blocks.cpp.obj.d"
   "E:/repo_git/cpp/tetris_rework/src/colors.cpp" "CMakeFiles/tetris.dir/src/colors.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/colors.cpp.obj.d"
+  "E:/repo_git/cpp/tetris_rework/src/game.cpp" "CMakeFiles/tetris.dir/src/game.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/game.cpp.obj.d"
   "E:/repo_git/cpp/tetris_rework/src/grid.cpp" "CMakeFiles/tetris.dir/src/grid.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/grid.cpp.obj.d"
   "E:/repo_git/cpp/tetris_rework/src/position.cpp" "CMakeFiles/tetris.dir/src/position.cpp.obj" "gcc" "CMakeFiles/tetris.dir/src/position.cpp.obj.d"
   )
