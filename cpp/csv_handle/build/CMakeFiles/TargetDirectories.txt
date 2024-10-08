@@ -1,0 +1,3 @@
+/home/mike/e/repo_git/cpp/csv_handle/build/CMakeFiles/CSV_Handler.dir
+/home/mike/e/repo_git/cpp/csv_handle/build/CMakeFiles/edit_cache.dir
+/home/mike/e/repo_git/cpp/csv_handle/build/CMakeFiles/rebuild_cache.dir
