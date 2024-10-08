@@ -1,11 +1,15 @@
 #pragma once
 #include "../src/blocks.cpp"
 #include "grid.h"
+#include <raylib.h>
 #include <vector>
 
 class Game {
 public:
   Game();
+  ~Game();
+  int score;
+  bool isGameOver;
   Grid grid;
   void Draw();
   void MoveBlockLeft();
@@ -13,9 +17,9 @@ public:
   void MoveBlockDown();
   void RotateBlock();
   void HandleInput();
+  Music music;
 
 private:
-  bool isGameOver;
   Block currentBlock, nextBlock;
   Block GetRandomBlock();
   std::vector<Block> blocks;
@@ -24,4 +28,7 @@ private:
   void LockBlock();
   bool BlockFit();
   void Reset();
+  Sound rotateSound;
+  Sound clearSound;
+  void UpdateScore(int, int);
 };

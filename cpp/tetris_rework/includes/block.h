@@ -8,7 +8,7 @@ class Block {
 public:
   Block();
   int id;
-  void Draw();
+  void Draw(int, int);
   void Move(int, int);
   int rotateState;
   std::vector<Position> GetCellPos();

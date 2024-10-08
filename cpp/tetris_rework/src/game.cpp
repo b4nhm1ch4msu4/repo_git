@@ -9,11 +9,23 @@ Game::Game() {
   std::srand(std::time(0));
 
   isGameOver = false;
+  int score = 0;
   grid = Grid();
   blocks = GetAllBlocks();
   currentBlock = GetRandomBlock();
   nextBlock = GetRandomBlock();
+  InitAudioDevice();
+  music = LoadMusicStream("../assets/sounds/music.mp3");
+  PlayMusicStream(music);
+  rotateSound = LoadSound("../assets/sounds/rotate.mp3");
+  clearSound = LoadSound("../assets/sounds/clear.mp3");
 };
+Game::~Game() {
+  UnloadSound(rotateSound);
+  UnloadSound(clearSound);
+  UnloadMusicStream(music);
+  CloseAudioDevice();
+}
 
 Block Game::GetRandomBlock() {
   if (blocks.empty()) {
@@ -27,7 +39,19 @@ Block Game::GetRandomBlock() {
 
 void Game::Draw() {
   grid.Draw();
-  currentBlock.Draw();
+  currentBlock.Draw(11, 11);
+  switch (nextBlock.id) {
+
+  case 2:
+    nextBlock.Draw(260, 260);
+    break;
+  case 1:
+    nextBlock.Draw(275, 245);
+    break;
+  default:
+    nextBlock.Draw(290, 260);
+    break;
+  }
 }
 
 std::vector<Block> Game::GetAllBlocks() {
@@ -45,6 +69,7 @@ void Game::HandleInput() {
     break;
   case KEY_DOWN:
     MoveBlockDown();
+    UpdateScore(0, 1);
     break;
   case KEY_LEFT:
     MoveBlockLeft();
@@ -102,7 +127,12 @@ void Game::LockBlock() {
   for (Position item : tiles) {
     grid.grid[item.row][item.col] = currentBlock.id;
   }
-  grid.ClearFullRow();
+  int rowCleared = grid.ClearFullRow();
+  if (rowCleared) {
+
+    PlaySound(clearSound);
+    UpdateScore(rowCleared, 0);
+  }
   currentBlock = nextBlock;
   if (BlockFit() == false) {
     isGameOver = true;
@@ -120,8 +150,25 @@ bool Game::BlockFit() {
 }
 void Game::Reset() {
   isGameOver = false;
+  score = 0;
   grid.Init();
   blocks = GetAllBlocks();
   currentBlock = GetRandomBlock();
   nextBlock = GetRandomBlock();
+  PlayMusicStream(music);
+}
+void Game::UpdateScore(int linesCleared, int moveDownPoints) {
+  switch (linesCleared) {
+  case 1:
+    score += 10;
+    break;
+  case 2:
+    score += 25;
+    break;
+  case 3:
+    score += 40;
+    break;
+  }
+
+  score += moveDownPoints;
 }
