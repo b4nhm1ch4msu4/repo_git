@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   InitWindow(500, 620, "Tetris Classic");
   SetTargetFPS(60);
   Game game = Game();
-  Font font = LoadFontEx("../assets/fonts/font.ttf", 64, 0, 0);
+  Font font = LoadFontEx("assets/fonts/font.ttf", 64, 0, 0);
 
   while (!WindowShouldClose()) {
     UpdateMusicStream(game.music);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
     DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, DarkGray);
 
     char scoreText[10];
-    std::sprintf(scoreText, "%d", game.score);
+    sprintf(scoreText, "%d", game.score);
     Vector2 textSize = MeasureTextEx(font, scoreText, 38, 2);
 
     DrawTextEx(font, scoreText, {320 + (170 - textSize.x) / 2, 65}, 38, 2,

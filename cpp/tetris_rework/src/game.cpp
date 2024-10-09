@@ -9,16 +9,16 @@ Game::Game() {
   std::srand(std::time(0));
 
   isGameOver = false;
-  int score = 0;
+  score = 0;
   grid = Grid();
   blocks = GetAllBlocks();
   currentBlock = GetRandomBlock();
   nextBlock = GetRandomBlock();
   InitAudioDevice();
-  music = LoadMusicStream("../assets/sounds/music.mp3");
+  music = LoadMusicStream("assets/sounds/music.mp3");
   PlayMusicStream(music);
-  rotateSound = LoadSound("../assets/sounds/rotate.mp3");
-  clearSound = LoadSound("../assets/sounds/clear.mp3");
+  rotateSound = LoadSound("assets/sounds/rotate.mp3");
+  clearSound = LoadSound("assets/sounds/clear.mp3");
 };
 Game::~Game() {
   UnloadSound(rotateSound);
