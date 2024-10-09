@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/tetris.dir/main.cpp.o CMakeFiles/tetris.dir/src/block.cpp.o CMakeFiles/tetris.dir/src/blocks.cpp.o CMakeFiles/tetris.dir/src/colors.cpp.o CMakeFiles/tetris.dir/src/game.cpp.o CMakeFiles/tetris.dir/src/grid.cpp.o CMakeFiles/tetris.dir/src/position.cpp.o -o bin/tetris  -lraylib
