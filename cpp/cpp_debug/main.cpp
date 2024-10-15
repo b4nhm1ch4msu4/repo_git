@@ -37,8 +37,7 @@ public:
       cin >> rollnum;
       vector<string> row;
       string line, word, temp;
-      while (file >> temp) {
-        getline(file, line);
+      while (getline(file, line)) {
         stringstream s(line);
         while (getline(s, word, ',')) {
           row.push_back(word);
