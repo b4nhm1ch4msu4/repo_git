@@ -1,0 +1,3 @@
+\test file
+SYST:ERR?
+*IDN?

@@ -1,0 +1,84 @@
+2023-12-04 10:32:13 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-04 10:32:13 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-04 10:32:47 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 10:32:47 Model.py             Write_commands_from_file       INFO     Line:53   Send command SYST:ERR?
+ successfull
+2023-12-04 10:32:48 Model.py             Write_commands_from_file       INFO     Line:53   Send command *IDN? successfull
+2023-12-04 10:32:49 Main.py              Send_list_btn_clicked          INFO     Line:123  Send commands from file F:/Mike/Common/Control_Equiment/test.txt success
+2023-12-04 10:35:17 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-04 10:35:17 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-04 10:35:30 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 10:35:30 Model.py             Write_commands_from_file       INFO     Line:57   Send command SYST:ERR?
+
+2023-12-04 10:35:31 Model.py             Write_commands_from_file       INFO     Line:57   Send command *IDN?
+2023-12-04 10:35:31 Model.py             Write_commands_from_file       INFO     Line:59   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:35:32 Model.py             Write_commands_from_file       INFO     Line:64   Check error: -410,"Query INTERRUPTED"
+
+2023-12-04 10:35:32 Main.py              Send_list_btn_clicked          ERROR    Line:125  Send commands from file F:/Mike/Common/Control_Equiment/test.txt fail!!!
+2023-12-04 10:38:48 Main.py              Query_btn_clicked              INFO     Line:88   Send command SYST:ERR? to Instrument
+2023-12-04 10:38:48 Main.py              Query_btn_clicked              INFO     Line:93   Get respond: -410,"Query INTERRUPTED"
+
+2023-12-04 10:38:51 Main.py              Clear_btn_clicked              INFO     Line:110  Clear output screen.
+2023-12-04 10:38:52 Main.py              Check_error_btn_clicked        INFO     Line:105  Check error: +0,"No error"
+
+2023-12-04 10:39:12 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 10:39:12 Model.py             Write_commands_from_file       INFO     Line:57   Send command SYST:ERR?
+
+2023-12-04 10:39:13 Model.py             Write_commands_from_file       INFO     Line:57   Send command *IDN?
+2023-12-04 10:39:13 Model.py             Write_commands_from_file       INFO     Line:59   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:39:14 Model.py             Write_commands_from_file       INFO     Line:64   Check error: -410,"Query INTERRUPTED"
+
+2023-12-04 10:39:14 Main.py              Send_list_btn_clicked          ERROR    Line:125  Send commands from file F:/Mike/Common/Control_Equiment/test.txt fail!!!
+2023-12-04 10:45:19 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-04 10:45:19 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-04 10:45:29 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 10:45:29 Model.py             Write_commands_from_file       INFO     Line:53   check response:  True
+2023-12-04 10:45:29 Model.py             Write_commands_from_file       INFO     Line:59   Send command SYST:ERR?
+
+2023-12-04 10:45:30 Model.py             Write_commands_from_file       INFO     Line:53   check response:  Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:45:30 Model.py             Write_commands_from_file       INFO     Line:59   Send command *IDN?
+2023-12-04 10:45:30 Model.py             Write_commands_from_file       INFO     Line:61   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:45:31 Model.py             Write_commands_from_file       INFO     Line:66   Check error: -410,"Query INTERRUPTED"
+
+2023-12-04 10:45:31 Main.py              Send_list_btn_clicked          ERROR    Line:125  Send commands from file F:/Mike/Common/Control_Equiment/test.txt fail!!!
+2023-12-04 10:49:09 Main.py              Clear_btn_clicked              INFO     Line:110  Clear output screen.
+2023-12-04 10:49:11 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-04 10:49:11 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-04 10:49:23 Main.py              Query_btn_clicked              INFO     Line:88   Send command *IDN? to Instrument
+2023-12-04 10:49:23 Main.py              Query_btn_clicked              INFO     Line:93   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:49:27 Main.py              Check_error_btn_clicked        INFO     Line:105  Check error: +0,"No error"
+
+2023-12-04 10:49:28 Main.py              Clear_btn_clicked              INFO     Line:110  Clear output screen.
+2023-12-04 10:49:49 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 10:49:49 Model.py             Write_commands_from_file       INFO     Line:53   check response:  True
+2023-12-04 10:49:49 Model.py             Write_commands_from_file       INFO     Line:59   Send command SYST:ERR?
+
+2023-12-04 10:49:50 Model.py             Write_commands_from_file       INFO     Line:53   check response:  Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:49:50 Model.py             Write_commands_from_file       INFO     Line:59   Send command *IDN?
+2023-12-04 10:49:50 Model.py             Write_commands_from_file       INFO     Line:61   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 10:49:51 Model.py             Write_commands_from_file       INFO     Line:66   Check error: -410,"Query INTERRUPTED"
+
+2023-12-04 10:49:51 Main.py              Send_list_btn_clicked          ERROR    Line:125  Send commands from file F:/Mike/Common/Control_Equiment/test.txt fail!!!
+2023-12-04 11:01:51 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-04 11:01:52 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-04 11:02:04 Model.py             Write_commands_from_file       INFO     Line:42   Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/test.txt' mode='r' encoding='cp1252'> successful.
+2023-12-04 11:02:04 Model.py             Write_commands_from_file       INFO     Line:53   check response:  +0,"No error"
+
+2023-12-04 11:02:04 Model.py             Write_commands_from_file       INFO     Line:59   Send command SYST:ERR?
+2023-12-04 11:02:04 Model.py             Write_commands_from_file       INFO     Line:61   Get respond: +0,"No error"
+
+2023-12-04 11:02:05 Model.py             Write_commands_from_file       INFO     Line:53   check response:  Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 11:02:05 Model.py             Write_commands_from_file       INFO     Line:59   Send command *IDN?
+2023-12-04 11:02:05 Model.py             Write_commands_from_file       INFO     Line:61   Get respond: Keysight Technologies,34461A,MY57213238,A.02.17-02.40-02.17-00.52-04-02
+
+2023-12-04 11:02:06 Model.py             Write_commands_from_file       INFO     Line:66   Check error: +0,"No error"
+
+2023-12-04 11:02:06 Main.py              Send_list_btn_clicked          INFO     Line:123  Send commands from file F:/Mike/Common/Control_Equiment/test.txt success

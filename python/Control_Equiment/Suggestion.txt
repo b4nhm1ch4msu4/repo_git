@@ -1,0 +1,13 @@
+1. Global variable g_ prefix.
+2. Including statements need to re-alignment.
+3. Try not to use abbreviations
+4. use under line to split the variable/function name.
+5. PEP 8 coding convention
+6. Use new line to split different logic block.
+7. Log format 
+format='%(asctime)s - %(message)s'
+'%(asctime)s %(filename)-20s %(levelname)-8s [%(threadName)-9s] Line:%(lineno)-4s %(message)s'
+8. Constant variable naming formant : all capital letters
+9. func_btn_frame.py <---- file naming 
+10. Remove unnecessary comments in func_btn_frame.py
+

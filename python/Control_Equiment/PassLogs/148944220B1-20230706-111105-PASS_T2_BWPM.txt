@@ -1,0 +1,1408 @@
+2023-07-06 11:09:41,686 [INFO ] Main - FATP_BWPM: first bt item is BT_TX_BDR_Ch0_1DH5_POWER_AVG
+2023-07-06 11:09:41,686 [INFO ] Main - FATP_BWPM: last bt item is BT_TX_BDR_Ch78_1DH5_POWER_AVG
+2023-07-06 11:09:41,687 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Run
+2023-07-06 11:09:41,687 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:41,687 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Run
+2023-07-06 11:09:41,687 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:41,687 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Run
+2023-07-06 11:09:41,688 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:41,688 [DEBUG] TestManager - SeqNo:0 PreTestAction:BtResultAction Run
+2023-07-06 11:09:41,688 [DEBUG] TestManager - SeqNo:0 PreTestAction:BtResultAction Result:True
+2023-07-06 11:09:41,688 [DEBUG] TestManager - SeqNo:0 PreTestAction:UserReportAction Run
+2023-07-06 11:09:41,689 [DEBUG] TestManager - SeqNo:0 PreTestAction:UserReportAction Result:True
+2023-07-06 11:09:41,689 [DEBUG] FATP_BWPM - TestCase:Get_Image_ver Run Start
+2023-07-06 11:09:41,690 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:09:41,690 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:getprop ro.build.version.software
+2023-07-06 11:09:41,756 [DEBUG] AdbCommandAction - SeqNo:0 , Output:DDW1.0287.1304554.E1N.23160.F
+2023-07-06 11:09:41,757 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:DDW1.0287.1304554.E1N.23160.F
+2023-07-06 11:09:41,757 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:09:41,757 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Run
+2023-07-06 11:09:41,758 [DEBUG] AdbGetSNAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /persist/factory_sn
+2023-07-06 11:09:41,805 [DEBUG] AdbGetSNAction - SeqNo:0 , Output:148944220B1
+2023-07-06 11:09:41,806 [DEBUG] AdbGetSNAction - SeqNo:0 , MatchOutput:148944220B1
+2023-07-06 11:09:41,806 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Result:True
+2023-07-06 11:09:41,807 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:41,807 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:41,807 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:09:41,807 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:service call bluetooth_manager 8
+2023-07-06 11:09:41,869 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Result: Parcel(00000000 00000001   '........')
+2023-07-06 11:09:41,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:09:41,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:09:41,870 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:svc wifi disable
+2023-07-06 11:09:41,950 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:09:41,951 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:09:41,951 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-07-06 11:09:41,951 [DEBUG] ThreadSleepAction - Sleep Time:2000
+2023-07-06 11:09:43,953 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-07-06 11:09:43,953 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:09:43,953 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:dumpsys bluetooth_manager
+2023-07-06 11:09:44,068 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Bluetooth Status
+  enabled: false
+  state: OFF
+  address: 44:6F:F8:3C:FA:59
+  name: blowfish
+
+Enable log:
+  04-18 03:19:59  Enabled  due to SYSTEM_BOOT by android
+  04-18 03:20:07  Enabled  due to APPLICATION_REQUEST by null
+  04-18 04:45:14 Disabled  due to APPLICATION_REQUEST by null
+
+Bluetooth crashed 0 times
+
+0 BLE apps registered
+
+BluetoothManagerService:
+  mEnable:false
+  mQuietEnable:false
+  mEnableExternal:false
+  mQuietEnableExternal:false
+
+Bluetooth Service not connected
+2023-07-06 11:09:44,069 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:09:44,069 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:09:44,070 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:dumpsys wifi | grep Wi-Fi
+2023-07-06 11:09:44,510 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Wi-Fi is disabled
+mWifiInfo SSID: <unknown ssid>, BSSID: <none>, MAC: 44:6f:f8:3c:fc:b1, Supplicant state: DISCONNECTED, Wi-Fi standard: 0, RSSI: -127, Link speed: -1Mbps, Tx Link speed: -1Mbps, Max Supported Tx Link speed: -1Mbps, Rx Link speed: -1Mbps, Max Supported Rx Link speed: -1Mbps, Frequency: -1MHz, Net ID: -1, Metered hint: false, score: 0
+2023-07-06 11:09:44,510 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:09:44,511 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,511 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,512 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,512 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,512 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,513 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,513 [DEBUG] FATP_BWPM - TestCase:Get_Image_ver Run Result:True
+2023-07-06 11:09:44,513 [DEBUG] FATP_BWPM - TestCase:Get_Image_ver Run End
+2023-07-06 11:09:44,527 [DEBUG] FATP_BWPM - TestCase:TMO_Line_IN Run Start
+2023-07-06 11:09:44,527 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:09:44,528 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,528 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:09:44,528 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,528 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,529 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,529 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,529 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,529 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Run
+2023-07-06 11:09:44,530 [DEBUG] TmoClientAction - Tmo Step1Socket = TMO_WATCH_MASTERDATA_IN;148944220B1;148944220B1$GET_OLD_IMEI$GET_OLD_PICA$GET_OLD_MSN$GET_OLD_BMAC$GET_OLD_WMAC$GET_OLD_MEID$GET_OLD_SIM;101WR-A3;T2_BWPM_1;IMEI;0;MEID;0;BT;1;WIFI;1;691$482$763;;;Y;
+2023-07-06 11:09:44,623 [DEBUG] TmoClientAction - Cyclic info : [OEMConfig_Folder] = SDDCN_W2360006, address = 4
+2023-07-06 11:09:44,623 [DEBUG] TmoClientAction - Cyclic info : [OEMConfig_FileName] = oem-22, address = 5
+2023-07-06 11:09:44,623 [DEBUG] TmoClientAction - Cyclic info : [SFIS_TPIDs_Info] = G09ALFC01301B TPK, address = 2
+2023-07-06 11:09:44,624 [DEBUG] TmoClientAction - Step2Socket = 148944220;PASS;;;DDW1.RWDY.230509.001.R;;60717231;77J13203010;DDW1;Dyson;SYS E80;DDW1 TITANIUM EVT RTL T1;E1;482DDW10070;CERT INFO;OEM-22;;SDDCN_W2360006;oem-22;691J8300010;F/WMB E80;DDW1 GA-671;;;;7630000P0C0;LCM-ASSY;G09ALFC01301B TPK;;;;;;\\10.114.129.188\cvc_test\Attestation\E80\DDW1\20230316\AttestKey.xml;;;;;;$;$$$$$$$$$$$$$$$$$$$$$$$$$$$$446FF83CFA59$$446FF83CFCB1$$$$$$$$$$$60717231$148944220$$$$704-E1-AAA0021A;A;ASS_MO;
+2023-07-06 11:09:44,627 [DEBUG] TmoClientAction - Tmo Step2 PASS, retry time = 
+2023-07-06 11:09:44,629 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Result:True
+2023-07-06 11:09:44,629 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ParsingSpecificColumnAction Run
+2023-07-06 11:09:44,629 [DEBUG] ParsingSpecificColumnAction - SFIS_BTMac : 446FF83CFA59
+2023-07-06 11:09:44,630 [DEBUG] ParsingSpecificColumnAction - SFIS_WIFIMac : 446FF83CFCB1
+2023-07-06 11:09:44,630 [DEBUG] ParsingSpecificColumnAction - NoNeed : 60717231
+2023-07-06 11:09:44,630 [DEBUG] ParsingSpecificColumnAction - MSN : 148944220
+2023-07-06 11:09:44,630 [DEBUG] ParsingSpecificColumnAction - SFIS_CustomerSN : 704-E1-AAA0021A
+2023-07-06 11:09:44,631 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ParsingSpecificColumnAction Result:True
+2023-07-06 11:09:44,631 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Run
+2023-07-06 11:09:44,631 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Result:True
+2023-07-06 11:09:44,632 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,632 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,632 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,632 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,632 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,633 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,633 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,633 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,633 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,633 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,634 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,634 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,634 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,634 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,637 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,637 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,637 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,637 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,637 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,638 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,638 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,638 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,639 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,639 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,639 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,640 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,640 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,640 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,640 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,641 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,641 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:09:44,641 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,641 [DEBUG] FATP_BWPM - TestCase:TMO_Line_IN Run Result:True
+2023-07-06 11:09:44,641 [DEBUG] Main - CapModelName = DDW1, dut_model = DDW1
+2023-07-06 11:09:44,644 [DEBUG] FATP_BWPM - TestCase:TMO_Line_IN Run End
+2023-07-06 11:09:44,644 [WARN ] AdbGetSNAction - VerifyOutput=true but ExpectOutput is empty!! 
+2023-07-06 11:09:44,645 [DEBUG] FATP_BWPM - TestCase:Check_Factory_SN Run Start
+2023-07-06 11:09:44,645 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:09:44,646 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:09:44,646 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Run
+2023-07-06 11:09:44,646 [DEBUG] AdbGetSNAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /persist/factory_sn
+2023-07-06 11:09:44,706 [DEBUG] AdbGetSNAction - SeqNo:0 , Output:148944220B1
+2023-07-06 11:09:44,706 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Result:True
+2023-07-06 11:09:44,707 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Run
+2023-07-06 11:09:44,707 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-07-06 11:09:44,707 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-07-06 11:09:44,708 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Run
+2023-07-06 11:09:44,708 [DEBUG] StringStoreValueRegexMatchAction - Input is 148944220B1
+2023-07-06 11:09:44,708 [WARN ] StringStoreValueRegexMatchAction - Pattern not match : ^[0-9A-Z]{12}(?![0-9])
+2023-07-06 11:09:44,709 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Result:False
+2023-07-06 11:09:44,709 [DEBUG] IfElseAction - =======ConditionActions End
+2023-07-06 11:09:44,709 [DEBUG] IfElseAction - =======FalseActions Start
+2023-07-06 11:09:44,709 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Run
+2023-07-06 11:09:44,709 [DEBUG] StringStoreValueRegexMatchAction - Input is 148944220B1
+2023-07-06 11:09:44,710 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Result:True
+2023-07-06 11:09:44,710 [DEBUG] IfElseAction - =======FalseActions End
+2023-07-06 11:09:44,710 [DEBUG] IfElseAction - CheckResult:False Condition_result:False result:True
+2023-07-06 11:09:44,710 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Result:True
+2023-07-06 11:09:44,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-07-06 11:09:44,711 [DEBUG] Main - value1 : 148944220 , value2 : 148944220
+2023-07-06 11:09:44,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-07-06 11:09:44,712 [DEBUG] FATP_BWPM - TestCase:Check_Factory_SN Run Result:True
+2023-07-06 11:09:44,713 [DEBUG] FATP_BWPM - TestCase:Check_Factory_SN Run End
+2023-07-06 11:09:44,714 [DEBUG] FATP_BWPM - TestCase:Enter_DUT_Mode Run Start
+2023-07-06 11:09:44,715 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,715 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,715 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-07-06 11:09:44,715 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:wait-for-device
+2023-07-06 11:09:44,758 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-07-06 11:09:44,758 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,759 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,760 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-07-06 11:09:44,760 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:root
+2023-07-06 11:09:44,803 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-07-06 11:09:44,803 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:09:44,803 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:09:44,804 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-07-06 11:09:44,804 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:remount
+2023-07-06 11:09:45,752 [DEBUG] ProcessUtil - Output: remount succeeded
+2023-07-06 11:09:45,753 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-07-06 11:09:45,753 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-07-06 11:09:45,753 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:wait-for-device
+2023-07-06 11:09:45,794 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-07-06 11:09:45,795 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbShellInputAction Run
+2023-07-06 11:10:06,144 [DEBUG] AdbShellInputAction - SeqNo:0 , Output:Result: Parcel(00000000 00000001   '........')
+====================Bluetooth turn OFF
+====================Set Bluetooth SOC_TYPE
+====================Run wdsdaemon
+====================Run btconfig script
+====================btconfig Start
+SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x3
+ Params: 
+SEND -> dump :  01 03 0c 00
+Other event received, Breaking
+RECV <- dump :  0e 04 01 03 0c 00
+====================btconfig cmd.001 done
+SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x6 ocf 0x3
+ Params: 
+SEND -> dump :  01 03 18 00
+Other event received, Breaking
+RECV <- dump :  0e 04 01 03 18 00
+====================btconfig cmd.002 done
+SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x5
+ Params: 0x2 0x0 0x2 
+SEND -> dump :  01 05 0c 03 02 00 02
+Other event received, Breaking
+RECV <- dump :  0e 04 01 05 0c 00
+====================btconfig cmd.003 done
+SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x1a
+ Params: 0x3 
+SEND -> dump :  01 1a 0c 01 03
+Other event received, Breaking
+RECV <- dump :  0e 04 01 1a 0c 00
+====================btconfig cmd.004 done
+SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x20
+ Params: 0x0 
+SEND -> dump :  01 20 0c 01 00
+Other event received, Breaking
+RECV <- dump :  0e 04 01 20 0c 00
+====================btconfig cmd.005 done
+bt-hci: get_bt_soc_type
+BT soc set to cherokee
+Opening WDS server socket
+Opening UART BT Channel
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fd:8
+Waiting for data:
+cmd:	0x1	0x17	0xfc	0x2	0x14	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x5	0x1	0x17	0xfc	0x0	0x14	
+cmd:	0x1	0x0	0xfc	0x1	0x19	
+Waiting for data:
+evt:	0x4	0xe	0x12	0x1	0x0	0xfc	0x0	0x19	0xc	0x17	0x0	0x0	0x0	0x41	0x58	0x0	0x2	0x0	0x2	0x19	0x40	
+cmd:	0x1	0x3	0xc	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x4	0x1	0x3	0xc	0x0	
+process_pc_data_to_soc: error while reading from fd = 9 err = Success
+process_pc_data_to_soc: This indicates the close of other end
+main: Error while processing Data to SoC err = 1
+main:closing the server socket and reopening
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fd:8
+Waiting for data:
+cmd:	0x1	0x17	0xfc	0x2	0x14	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x5	0x1	0x17	0xfc	0x0	0x14	
+cmd:	0x1	0x0	0xfc	0x1	0x19	
+Waiting for data:
+evt:	0x4	0xe	0x12	0x1	0x0	0xfc	0x0	0x19	0xc	0x17	0x0	0x0	0x0	0x41	0x58	0x0	0x2	0x0	0x2	0x19	0x40	
+cmd:	0x1	0x3	0x18	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x4	0x1	0x3	0x18	0x0	
+process_pc_data_to_soc: error while reading from fd = 9 err = Success
+process_pc_data_to_soc: This indicates the close of other end
+main: Error while processing Data to SoC err = 1
+main:closing the server socket and reopening
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fd:8
+Waiting for data:
+cmd:	0x1	0x17	0xfc	0x2	0x14	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x5	0x1	0x17	0xfc	0x0	0x14	
+cmd:	0x1	0x0	0xfc	0x1	0x19	
+Waiting for data:
+evt:	0x4	0xe	0x12	0x1	0x0	0xfc	0x0	0x19	0xc	0x17	0x0	0x0	0x0	0x41	0x58	0x0	0x2	0x0	0x2	0x19	0x40	
+cmd:	0x1	0x5	0xc	0x3	0x2	0x0	0x2	
+Waiting for data:
+evt:	0x4	0xe	0x4	0x1	0x5	0xc	0x0	
+process_pc_data_to_soc: error while reading from fd = 9 err = Success
+process_pc_data_to_soc: This indicates the close of other end
+main: Error while processing Data to SoC err = 1
+main:closing the server socket and reopening
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fd:8
+Waiting for data:
+cmd:	0x1	0x17	0xfc	0x2	0x14	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x5	0x1	0x17	0xfc	0x0	0x14	
+cmd:	0x1	0x0	0xfc	0x1	0x19	
+Waiting for data:
+evt:	0x4	0xe	0x12	0x1	0x0	0xfc	0x0	0x19	0xc	0x17	0x0	0x0	0x0	0x41	0x58	0x0	0x2	0x0	0x2	0x19	0x40	
+cmd:	0x1	0x1a	0xc	0x1	0x3	
+Waiting for data:
+evt:	0x4	0xe	0x4	0x1	0x1a	0xc	0x0	
+process_pc_data_to_soc: error while reading from fd = 9 err = Success
+process_pc_data_to_soc: This indicates the close of other end
+main: Error while processing Data to SoC err = 1
+main:closing the server socket and reopening
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fd:8
+Waiting for data:
+cmd:	0x1	0x17	0xfc	0x2	0x14	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x5	0x1	0x17	0xfc	0x0	0x14	
+cmd:	0x1	0x0	0xfc	0x1	0x19	
+Waiting for data:
+evt:	0x4	0xe	0x12	0x1	0x0	0xfc	0x0	0x19	0xc	0x17	0x0	0x0	0x0	0x41	0x58	0x0	0x2	0x0	0x2	0x19	0x40	
+cmd:	0x1	0x20	0xc	0x1	0x0	
+Waiting for data:
+evt:	0x4	0xe	0x4	0x1	0x20	0xc	0x0	
+process_pc_data_to_soc: error while reading from fd = 9 err = Success
+process_pc_data_to_soc: This indicates the close of other end
+main: Error while processing Data to SoC err = 1
+main:closing the server socket and reopening
+establish_server_socket(wdssock) Entry  
+convert name to android abstract name:wdssock 8
+listen to local socket:wdssock, fd:8
+wdssock: before accept_server_socket
+wdssock accepted fd:9 for server fdSOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x22
+ Params: 0x0 
+SEND -> dump :  01 22 0c 01 00
+Other event received, Breaking
+RECV <- dump :  0e 04 01 22 0c 00
+====================btconfig cmd.006 done
+====================Test
+2023-07-06 11:10:06,144 [DEBUG] AdbShellInputAction - SeqNo:0 , MatchOutput:====================btconfig cmd.006 done
+2023-07-06 11:10:06,145 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbShellInputAction Result:True
+2023-07-06 11:10:06,145 [DEBUG] FATP_BWPM - TestCase:Enter_DUT_Mode Run Result:True
+2023-07-06 11:10:06,148 [DEBUG] FATP_BWPM - TestCase:Enter_DUT_Mode Run End
+2023-07-06 11:10:06,150 [INFO ] Main - FATP_BWPM: set N4010 to bt mode start
+2023-07-06 11:10:06,875 [INFO ] Main - FATP_BWPM: set N4010 to bt mode end
+2023-07-06 11:10:06,876 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch0_1DH5_POWER_AVG Run Start
+2023-07-06 11:10:06,876 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Run
+2023-07-06 11:10:06,954 [DEBUG] Main - [1] res = 0 , cmd = SYST:PRES
+2023-07-06 11:10:06,956 [DEBUG] Main - [1] res = 0 , cmd = LINK:TYPE TEST
+2023-07-06 11:10:06,959 [DEBUG] Main - [1] res = 0 , cmd = LINK:STE:BDAD #hBDBDBDBDBD
+2023-07-06 11:10:06,961 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONN:AUTO 1
+2023-07-06 11:10:06,963 [DEBUG] Main - [1] res = 0 , cmd = LINK:EUT:PCL PC2
+2023-07-06 11:10:06,965 [DEBUG] Main - [1] res = 0 , cmd = LINK:INQ:DUR 6.4
+2023-07-06 11:10:06,967 [DEBUG] Main - [1] res = 0 , cmd = SENS:CORR:LOSS:STAT OFF
+2023-07-06 11:10:06,969 [DEBUG] Main - [1] res = 0 , cmd = LINK:TEST:EXIT 0
+2023-07-06 11:10:06,971 [DEBUG] Main - [1] res = 0 , cmd = SEQ:ACT 0
+2023-07-06 11:10:06,973 [DEBUG] Main - [1] res = 0 , cmd = SEQ:CLE
+2023-07-06 11:10:06,974 [DEBUG] N4010_BT - Model Name = DDW1
+2023-07-06 11:10:06,976 [DEBUG] Main - [1] res = 0 , cmd = SENS:CORR:LOSS:STAT OFF
+2023-07-06 11:10:06,978 [DEBUG] Main - [1] res = 0 , cmd = SENS:CORR:LOSS:FIX 0
+2023-07-06 11:10:06,980 [DEBUG] Main - [1] res = 0 , cmd = SEQ:CLE
+2023-07-06 11:10:06,981 [DEBUG] Main - [1] res = 0 , cmd = SEQ:ADD OPOW
+2023-07-06 11:10:06,983 [DEBUG] Main - [1] res = 0 , cmd = SEQ:SEL OPOW
+2023-07-06 11:10:06,985 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:APOW:STAR 20
+2023-07-06 11:10:06,986 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:APOW:STOP 80
+2023-07-06 11:10:06,989 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:PACK:TYPE DH5
+2023-07-06 11:10:06,991 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:PACK:PAYL PRBS9
+2023-07-06 11:10:06,993 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:PACK:NUMB 1
+2023-07-06 11:10:06,995 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:TX:POW:LEV -40
+2023-07-06 11:10:06,997 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:RX:POW:RANG 10
+2023-07-06 11:10:06,999 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:BAND 3000000
+2023-07-06 11:10:07,001 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:HOPP OFF
+2023-07-06 11:10:07,002 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:LOW:STAT 1
+2023-07-06 11:10:07,004 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:LOW 2402MHz,2480MHz
+2023-07-06 11:10:07,006 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:MED:STAT 1
+2023-07-06 11:10:07,008 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:MED 2441MHz,2402MHz
+2023-07-06 11:10:07,010 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:HIGH:STAT 1
+2023-07-06 11:10:07,012 [DEBUG] Main - [1] res = 0 , cmd = LINK:CONF:CHAN:HIGH 2480MHz,2402MHz
+2023-07-06 11:10:07,014 [DEBUG] Main - [1] res = 0 , cmd = SEQ:TEST:ACT 0
+2023-07-06 11:10:07,016 [DEBUG] Main - [1] res = 0 , cmd = INIT
+2023-07-06 11:10:07,018 [DEBUG] Main - [1] before viQueryf - cmd = *OPC?
+
+2023-07-06 11:10:13,997 [DEBUG] Main - [1] res = 0 , result = +1
+
+2023-07-06 11:10:14,098 [DEBUG] Main - [1] before viQueryf - cmd = FETC:OPOW:AVER? LOW,MAX
+
+2023-07-06 11:10:14,101 [DEBUG] Main - [1] res = 0 , result = -1.55910100E+001
+
+2023-07-06 11:10:14,101 [DEBUG] Main - [1] before viQueryf - cmd = FETC:OPOW:AVER? MED,MAX
+
+2023-07-06 11:10:14,105 [DEBUG] Main - [1] res = 0 , result = -1.56594700E+001
+
+2023-07-06 11:10:14,105 [DEBUG] Main - [1] before viQueryf - cmd = FETC:OPOW:AVER? HIGH,MAX
+
+2023-07-06 11:10:14,109 [DEBUG] Main - [1] res = 0 , result = -1.64571900E+001
+
+2023-07-06 11:10:14,109 [DEBUG] N4010_BT - Model Name = DDW1
+2023-07-06 11:10:14,110 [DEBUG] N4010_BT - Model Name = DDW1
+2023-07-06 11:10:14,111 [DEBUG] N4010_BT - Model Name = DDW1
+2023-07-06 11:10:14,111 [DEBUG] BtCommonTestAction - value != ABNORMAL_VALUE, no need check again!
+2023-07-06 11:10:14,112 [DEBUG] BtCommonTestAction - Result Value: 11.90899
+2023-07-06 11:10:14,112 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Result:True
+2023-07-06 11:10:14,113 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:14,113 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:14,113 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Run
+2023-07-06 11:10:14,113 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Result:True
+2023-07-06 11:10:14,113 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:14,114 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:14,114 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:14,114 [DEBUG] DecimalRangeVerifyAction - Input: 11.90899
+2023-07-06 11:10:14,115 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:11.90899, Minimum:8, Maximum:18
+2023-07-06 11:10:14,115 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:14,115 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch0_1DH5_POWER_AVG Run Result:True
+2023-07-06 11:10:14,117 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch0_1DH5_POWER_AVG Run End
+2023-07-06 11:10:14,118 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch39_1DH5_POWER_AVG Run Start
+2023-07-06 11:10:14,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Run
+2023-07-06 11:10:14,119 [DEBUG] BtCommonTestAction - Result Value: 12.84053
+2023-07-06 11:10:14,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Result:True
+2023-07-06 11:10:14,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:14,120 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:14,120 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Run
+2023-07-06 11:10:14,120 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Result:True
+2023-07-06 11:10:14,120 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:14,120 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:14,121 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:14,121 [DEBUG] DecimalRangeVerifyAction - Input: 12.84053
+2023-07-06 11:10:14,121 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:12.84053, Minimum:8, Maximum:18
+2023-07-06 11:10:14,121 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:14,122 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch39_1DH5_POWER_AVG Run Result:True
+2023-07-06 11:10:14,123 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch39_1DH5_POWER_AVG Run End
+2023-07-06 11:10:14,124 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch78_1DH5_POWER_AVG Run Start
+2023-07-06 11:10:14,125 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Run
+2023-07-06 11:10:14,125 [DEBUG] BtCommonTestAction - Result Value: 12.54281
+2023-07-06 11:10:14,125 [DEBUG] CommonTestCase - SeqNo:0 TestAction:BtCommonTestAction Result:True
+2023-07-06 11:10:14,125 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:14,126 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:14,126 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Run
+2023-07-06 11:10:14,126 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckBTValueIsNull Result:True
+2023-07-06 11:10:14,127 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:14,127 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:14,127 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:14,128 [DEBUG] DecimalRangeVerifyAction - Input: 12.54281
+2023-07-06 11:10:14,128 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:12.54281, Minimum:8, Maximum:18
+2023-07-06 11:10:14,128 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:14,128 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch78_1DH5_POWER_AVG Run Result:True
+2023-07-06 11:10:14,130 [DEBUG] FATP_BWPM - TestCase:BT_TX_BDR_Ch78_1DH5_POWER_AVG Run End
+2023-07-06 11:10:14,131 [DEBUG] FATP_BWPM - TestCase:CHECK_SUMMARY_NOTALLNULL Run Start
+2023-07-06 11:10:14,132 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:14,132 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:14,132 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:14,133 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:14,133 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbShellInputAction Run
+2023-07-06 11:10:34,172 [DEBUG] AdbShellInputAction - SeqNo:0 , Output:SOC is CHEROKEE
+connect_to_wds_server, Connected to WDS server, socket fd: 3
+SEND -> dump :  01 17 fc 02 14 00
+sending command to disable logging
+Other event received, Breaking
+RECV <- dump :  0e 05 01 17 fc 00 14
+SEND -> dump :  01 00 fc 01 19
+sending command to read soc version
+Other event received, Breaking
+RECV <- dump :  0e 12 01 00 fc 00 19 0c 17 00 00 00 41 58 00 02 00 02 19 40
+isUnifiedHci: unified hci
+
+Execute command: rawcmd
+RAW HCI command: ogf 0x3 ocf 0x3
+ Params: 
+SEND -> dump :  01 03 0c 00
+Other event received, Breaking
+RECV <- dump :  0e 04 01 03 0c 00
+====================HCI reset
+====================Get wdsdaemon Pid and Kill wdsdaemon
+====================Remove temp txt
+Result: Parcel(00000000 00000001   '........')
+====================Bluetooth turn OFF
+2023-07-06 11:10:34,172 [DEBUG] AdbShellInputAction - SeqNo:0 , MatchOutput:====================Bluetooth turn OFF
+2023-07-06 11:10:34,173 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbShellInputAction Result:True
+2023-07-06 11:10:34,173 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Run
+2023-07-06 11:10:34,174 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-07-06 11:10:34,174 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-07-06 11:10:34,174 [DEBUG] IfElseAction - SeqNo:0 SubActions:BtResultAction Run
+2023-07-06 11:10:34,175 [DEBUG] IfElseAction - SeqNo:0 SubActions:BtResultAction Result:True
+2023-07-06 11:10:34,175 [DEBUG] IfElseAction - =======ConditionActions End
+2023-07-06 11:10:34,175 [DEBUG] IfElseAction - =======TrueActions Start
+2023-07-06 11:10:34,175 [DEBUG] IfElseAction - SeqNo:0 SubActions:StoreValueFormatAction Run
+2023-07-06 11:10:34,175 [DEBUG] IfElseAction - SeqNo:0 SubActions:StoreValueFormatAction Result:True
+2023-07-06 11:10:34,176 [DEBUG] IfElseAction - SeqNo:0 SubActions:ExportToGlobalStoreValueAction Run
+2023-07-06 11:10:34,176 [DEBUG] IfElseAction - SeqNo:0 SubActions:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:10:34,176 [DEBUG] IfElseAction - =======TrueActions End
+2023-07-06 11:10:34,176 [DEBUG] IfElseAction - CheckResult:True Condition_result:True result:True
+2023-07-06 11:10:34,177 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Result:True
+2023-07-06 11:10:34,177 [DEBUG] FATP_BWPM - TestCase:CHECK_SUMMARY_NOTALLNULL Run Result:True
+2023-07-06 11:10:34,179 [DEBUG] FATP_BWPM - TestCase:CHECK_SUMMARY_NOTALLNULL Run End
+2023-07-06 11:10:34,180 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch01 Run Start
+2023-07-06 11:10:34,181 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Run
+2023-07-06 11:10:34,181 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0, Type:TX, Mode:N_24, Channel:1
+2023-07-06 11:10:34,182 [DEBUG] HybirdConnectCommandAction - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch01 , CommandAction:QLibCommandAction
+2023-07-06 11:10:34,283 [DEBUG] QLibCommandAction - SeqNo:0 , Action:WIFI_11n_CH1_TX1_START
+2023-07-06 11:10:34,283 [WARN ] QLibCommandAction - iRF_Channel_Index : 1 , iTX_POWER : 10 , iRate : 23 , iTxMode : 3
+2023-07-06 11:10:38,739 [INFO ] N4010SettingHelper - ==[Start]Auto Range==
+2023-07-06 11:10:41,827 [INFO ] N4010SettingHelper - IEEE802.11n
+2023-07-06 11:10:41,827 [INFO ] N4010SettingHelper - Frequency = 2412000000
+2023-07-06 11:10:41,828 [INFO ] N4010SettingHelper - CableLoss = 29.5
+2023-07-06 11:10:41,828 [INFO ] N4010SettingHelper - PowerRange = 17
+2023-07-06 11:10:41,828 [INFO ] N4010SettingHelper - TriggerLevel = 0.125892541179417
+2023-07-06 11:10:41,829 [INFO ] N4010SettingHelper - MaxPacketLength = 0.0004078
+2023-07-06 11:10:41,829 [INFO ] N4010SettingHelper - MaxSymbolsUsed = 93
+2023-07-06 11:10:41,829 [INFO ] N4010SettingHelper - MimimumIdlePeriod = 7E-06
+2023-07-06 11:10:41,834 [INFO ] N4010SettingHelper - ==[End]Auto Range==
+2023-07-06 11:10:41,834 [INFO ] N4010SettingHelper - Wlan:IEEE802_11n ,Freq:2412000000 ,Loss:29.5 ,Range:17 ,Tigger:0.12589 ,Packet:0.0004078 ,Symbols:93
+2023-07-06 11:10:42,412 [DEBUG] N4010Adapter - CH1: test 0: power = 9.18137129212819 , EVM = -33.3020991259717, Freq_err = -2.53280109612054, Mask = 0, Lower_1 = -29.4254093170166, Lower_2 = -49.5833187103271, Upper_1 = -28.4735050201416, Upper_2 = -51.833890914917
+
+2023-07-06 11:10:42,413 [DEBUG] N4010Adapter - CH1: avg result: power = 9.18137129212819 , EVM = -33.3020991259717, Freq_err = -2.53280109612054, Mask = 0, Lower_1 = -29.4254093170166, Lower_2 = -49.5833187103271, Upper_1 = -28.4735050201416, Upper_2 = -51.833890914917
+
+2023-07-06 11:10:42,413 [DEBUG] N4010Adapter - N4010 client api get txn power
+2023-07-06 11:10:42,413 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0 , Power:9.18137129212819
+2023-07-06 11:10:42,413 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Result:True
+2023-07-06 11:10:42,414 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:42,414 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:42,414 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:42,415 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:42,415 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:42,415 [DEBUG] DecimalRangeVerifyAction - Input: 9.18137129212819
+2023-07-06 11:10:42,416 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:9.18137129212819, Minimum:5, Maximum:15
+2023-07-06 11:10:42,416 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:42,416 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch01 Run Result:True
+2023-07-06 11:10:42,418 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch01 Run End
+2023-07-06 11:10:42,420 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch07 Run Start
+2023-07-06 11:10:42,420 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Run
+2023-07-06 11:10:42,420 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0, Type:TX, Mode:N_24, Channel:7
+2023-07-06 11:10:42,421 [DEBUG] HybirdConnectCommandAction - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch07 , CommandAction:QLibCommandAction
+2023-07-06 11:10:42,526 [DEBUG] QLibCommandAction - SeqNo:0 , Action:WIFI_11n_CH7_TX1_START
+2023-07-06 11:10:42,526 [WARN ] QLibCommandAction - iRF_Channel_Index : 7 , iTX_POWER : 10 , iRate : 23 , iTxMode : 3
+2023-07-06 11:10:43,119 [INFO ] N4010SettingHelper - ==[Start]Auto Range==
+2023-07-06 11:10:46,066 [INFO ] N4010SettingHelper - IEEE802.11n
+2023-07-06 11:10:46,067 [INFO ] N4010SettingHelper - Frequency = 2442000000
+2023-07-06 11:10:46,067 [INFO ] N4010SettingHelper - CableLoss = 30
+2023-07-06 11:10:46,068 [INFO ] N4010SettingHelper - PowerRange = 18
+2023-07-06 11:10:46,068 [INFO ] N4010SettingHelper - TriggerLevel = 0.141253754462275
+2023-07-06 11:10:46,068 [INFO ] N4010SettingHelper - MaxPacketLength = 0.0002239
+2023-07-06 11:10:46,069 [INFO ] N4010SettingHelper - MaxSymbolsUsed = 47
+2023-07-06 11:10:46,069 [INFO ] N4010SettingHelper - MimimumIdlePeriod = 7E-06
+2023-07-06 11:10:46,073 [INFO ] N4010SettingHelper - ==[End]Auto Range==
+2023-07-06 11:10:46,074 [INFO ] N4010SettingHelper - Wlan:IEEE802_11n ,Freq:2442000000 ,Loss:30 ,Range:18 ,Tigger:0.14125 ,Packet:0.0002239 ,Symbols:47
+2023-07-06 11:10:46,416 [DEBUG] N4010Adapter - CH7: test 0: power = 9.89892014880695 , EVM = -33.4199318572998, Freq_err = -2.75211718802497, Mask = 0, Lower_1 = -30.5948038101196, Lower_2 = -51.0062799453735, Upper_1 = -30.6494340896607, Upper_2 = -53.3074045181274
+
+2023-07-06 11:10:46,416 [DEBUG] N4010Adapter - CH7: avg result: power = 9.89892014880695 , EVM = -33.4199318572998, Freq_err = -2.75211718802497, Mask = 0, Lower_1 = -30.5948038101196, Lower_2 = -51.0062799453735, Upper_1 = -30.6494340896607, Upper_2 = -53.3074045181274
+
+2023-07-06 11:10:46,417 [DEBUG] N4010Adapter - N4010 client api get txn power
+2023-07-06 11:10:46,417 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0 , Power:9.89892014880695
+2023-07-06 11:10:46,418 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Result:True
+2023-07-06 11:10:46,418 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:46,418 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:46,418 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:46,419 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:46,419 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:46,419 [DEBUG] DecimalRangeVerifyAction - Input: 9.89892014880695
+2023-07-06 11:10:46,419 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:9.89892014880695, Minimum:5, Maximum:15
+2023-07-06 11:10:46,420 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:46,420 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch07 Run Result:True
+2023-07-06 11:10:46,422 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch07 Run End
+2023-07-06 11:10:46,423 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch11 Run Start
+2023-07-06 11:10:46,424 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Run
+2023-07-06 11:10:46,424 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0, Type:TX, Mode:N_24, Channel:11
+2023-07-06 11:10:46,424 [DEBUG] HybirdConnectCommandAction - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch11 , CommandAction:QLibCommandAction
+2023-07-06 11:10:46,529 [DEBUG] QLibCommandAction - SeqNo:0 , Action:WIFI_11n_CH11_TX1_START
+2023-07-06 11:10:46,529 [WARN ] QLibCommandAction - iRF_Channel_Index : 11 , iTX_POWER : 10 , iRate : 23 , iTxMode : 3
+2023-07-06 11:10:47,126 [INFO ] N4010SettingHelper - ==[Start]Auto Range==
+2023-07-06 11:10:50,075 [INFO ] N4010SettingHelper - IEEE802.11n
+2023-07-06 11:10:50,075 [INFO ] N4010SettingHelper - Frequency = 2462000000
+2023-07-06 11:10:50,076 [INFO ] N4010SettingHelper - CableLoss = 30
+2023-07-06 11:10:50,076 [INFO ] N4010SettingHelper - PowerRange = 18
+2023-07-06 11:10:50,077 [INFO ] N4010SettingHelper - TriggerLevel = 0.141253754462275
+2023-07-06 11:10:50,077 [INFO ] N4010SettingHelper - MaxPacketLength = 0.0002239
+2023-07-06 11:10:50,077 [INFO ] N4010SettingHelper - MaxSymbolsUsed = 47
+2023-07-06 11:10:50,078 [INFO ] N4010SettingHelper - MimimumIdlePeriod = 7E-06
+2023-07-06 11:10:50,082 [INFO ] N4010SettingHelper - ==[End]Auto Range==
+2023-07-06 11:10:50,083 [INFO ] N4010SettingHelper - Wlan:IEEE802_11n ,Freq:2462000000 ,Loss:30 ,Range:18 ,Tigger:0.14125 ,Packet:0.0002239 ,Symbols:47
+2023-07-06 11:10:50,424 [DEBUG] N4010Adapter - CH11: test 0: power = 10.3437217263199 , EVM = -33.1551738121268, Freq_err = -2.9076587849349, Mask = 0, Lower_1 = -31.0178146362305, Lower_2 = -49.7328186035156, Upper_1 = -32.0359954833984, Upper_2 = -51.3742294311523
+
+2023-07-06 11:10:50,425 [DEBUG] N4010Adapter - CH11: avg result: power = 10.3437217263199 , EVM = -33.1551738121268, Freq_err = -2.9076587849349, Mask = 0, Lower_1 = -31.0178146362305, Lower_2 = -49.7328186035156, Upper_1 = -32.0359954833984, Upper_2 = -51.3742294311523
+
+2023-07-06 11:10:50,425 [DEBUG] N4010Adapter - N4010 client api get txn power
+2023-07-06 11:10:50,425 [DEBUG] SmartWiFiTxPowerAction - SeqNo:0 , Power:10.3437217263199
+2023-07-06 11:10:50,426 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SmartWiFiTxPowerAction Result:True
+2023-07-06 11:10:50,426 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:50,426 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:50,427 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Run
+2023-07-06 11:10:50,427 [DEBUG] CommonTestCase - SeqNo:0 TestAction:UserReportAction Result:True
+2023-07-06 11:10:50,427 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-07-06 11:10:50,427 [DEBUG] DecimalRangeVerifyAction - Input: 10.3437217263199
+2023-07-06 11:10:50,428 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:10.3437217263199, Minimum:5, Maximum:15
+2023-07-06 11:10:50,428 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-07-06 11:10:50,428 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch11 Run Result:True
+2023-07-06 11:10:50,430 [DEBUG] FATP_BWPM - TestCase:RF_Tx_Power_2G_nMode_MCS7_Ch11 Run End
+2023-07-06 11:10:50,431 [DEBUG] FATP_BWPM - TestCase:WIFI_QLib_STOP Run Start
+2023-07-06 11:10:50,432 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-07-06 11:10:50,536 [DEBUG] QLibCommandAction - SeqNo:0 , Action:Disconnect
+2023-07-06 11:10:50,546 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-07-06 11:10:50,546 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-07-06 11:10:50,546 [DEBUG] ProcessUtil - WorkingDirectory:, Command:WiFiFTM.bat, Arguments:
+2023-07-06 11:10:55,265 [DEBUG] ProcessUtil - Output: C:\DDW1_Test\CEI_BWPM>set PID= 
+
+C:\DDW1_Test\CEI_BWPM>adb root 
+
+C:\DDW1_Test\CEI_BWPM>timeout /t 1 
+
+Waiting for 1 seconds, press a key to continue ...0
+
+C:\DDW1_Test\CEI_BWPM>adb remount 
+remount succeeded
+
+C:\DDW1_Test\CEI_BWPM>if errorlevel 1 GOTO _REMOUNT 
+
+C:\DDW1_Test\CEI_BWPM>adb shell ps -A   | findstr ftmdaemon  1>ps.txt 
+
+C:\DDW1_Test\CEI_BWPM>for /F "tokens=1,2" %A in (ps.txt) do (set PID=%B ) 
+
+C:\DDW1_Test\CEI_BWPM>(set PID=882 ) 
+
+C:\DDW1_Test\CEI_BWPM>echo adb shell kill 882 
+adb shell kill 882
+
+C:\DDW1_Test\CEI_BWPM>adb shell rmmod wlan 
+
+C:\DDW1_Test\CEI_BWPM>adb shell insmod vendor/lib/modules/qca_cld3_wlan.ko 
+
+C:\DDW1_Test\CEI_BWPM>adb shell kill 882 
+
+C:\DDW1_Test\CEI_BWPM>adb shell 'ftmdaemon' -d 
+
+C:\DDW1_Test\CEI_BWPM>adb shell svc wifi enable 
+
+C:\DDW1_Test\CEI_BWPM>timeout /t 2 
+
+Waiting for 2 seconds, press a key to continue ...10
+
+C:\DDW1_Test\CEI_BWPM>adb shell svc wifi disable
+2023-07-06 11:10:55,265 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-07-06 11:10:55,266 [DEBUG] FATP_BWPM - TestCase:WIFI_QLib_STOP Run Result:True
+2023-07-06 11:10:55,267 [DEBUG] FATP_BWPM - TestCase:WIFI_QLib_STOP Run End
+2023-07-06 11:10:55,268 [DEBUG] FATP_BWPM - TestCase:Read_Battery_Capacity Run Start
+2023-07-06 11:10:55,269 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,269 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sys/class/power_supply/battery/capacity
+2023-07-06 11:10:55,343 [DEBUG] AdbCommandAction - SeqNo:0 , Output:53
+2023-07-06 11:10:55,344 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:53
+2023-07-06 11:10:55,344 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,345 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:55,345 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:55,345 [DEBUG] FATP_BWPM - TestCase:Read_Battery_Capacity Run Result:True
+2023-07-06 11:10:55,347 [DEBUG] FATP_BWPM - TestCase:Read_Battery_Capacity Run End
+2023-07-06 11:10:55,348 [DEBUG] FATP_BWPM - TestCase:Battery_Parameters Run Start
+2023-07-06 11:10:55,349 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,349 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sys/class/power_supply/battery/current_now
+2023-07-06 11:10:55,397 [DEBUG] AdbCommandAction - SeqNo:0 , Output:248819
+2023-07-06 11:10:55,398 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:248819
+2023-07-06 11:10:55,398 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,398 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,398 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sys/class/power_supply/battery/capacity
+2023-07-06 11:10:55,442 [DEBUG] AdbCommandAction - SeqNo:0 , Output:53
+2023-07-06 11:10:55,443 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:53
+2023-07-06 11:10:55,443 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,444 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,444 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sys/class/power_supply/battery/voltage_now
+2023-07-06 11:10:55,504 [DEBUG] AdbCommandAction - SeqNo:0 , Output:4048248
+2023-07-06 11:10:55,505 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:4048248
+2023-07-06 11:10:55,505 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,506 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,506 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sys/class/power_supply/battery/temp
+2023-07-06 11:10:55,565 [DEBUG] AdbCommandAction - SeqNo:0 , Output:287
+2023-07-06 11:10:55,566 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:287
+2023-07-06 11:10:55,566 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,566 [DEBUG] FATP_BWPM - TestCase:Battery_Parameters Run Result:True
+2023-07-06 11:10:55,569 [DEBUG] FATP_BWPM - TestCase:Battery_Parameters Run End
+2023-07-06 11:10:55,570 [DEBUG] FATP_BWPM - TestCase:Simple_test_result_checking Run Start
+2023-07-06 11:10:55,570 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,571 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /data/log/SimpleTest_OP_Value.log
+2023-07-06 11:10:55,624 [DEBUG] AdbCommandAction - SeqNo:0 , Output:[Battery] 
+Battery_capacity:55
+Battery_current:null
+Battery_temperature:31
+Battery_voltage:3902
+Battery_id:100391
+[Pressure] 
+Pressure_VALUE:1004.2517
+[ECompass] 
+ECompass_VALUE:-1064.4 841.95 -29.1;-1064.4 841.95 -29.400002;-1063.65 842.4 -30.300001;-1063.65 842.4 -30.300001;-1062.75 841.95 -29.400002;-1064.7001 841.35004 -28.95;-1062.0 842.25006 -29.85;-1064.8501 841.95 -30.150002;-1063.9501 843.45 -30.750002;-1065.3 843.15 -28.95;-1063.2001 844.2 -30.750002;-1064.25 843.15 -30.000002;-1064.1001 842.55005 -29.400002;-1065.0 844.2 -30.000002;-1062.75 840.45 -30.150002;-1064.25 843.45 -28.95;-1064.8501 841.50006 -29.400002;-1064.1001 843.00006 -29.85;-1063.8 841.95 -31.2;-1062.75 842.55005 -30.150002;
+[GPS] 
+GPS_CN: 1 = 41.6  2 = 41.1  5 = 41.0   13 = 43.3  17 = 43.4  20 = 41.5  
+GPS_CN_NUM:6
+GPS_time:3
+[PPG] 
+(PPG_LEAK) 
+PPG_LEAK_VALUE:22, 4, 8, 24
+(PPG_LED) 
+PPG_LED_VALUE:2763, 2384, 2354, 2476
+[ACC] 
+(ACC_CAL_1) 
+ACC_CAL_VALUE_1_1:x:0.13878371 y:-0.11964113 z:9.662218
+ACC_CAL_VALUE_1_2:x:0.0933201 y:-0.0879362 z:-0.158524
+(ACC_TEST_1) 
+ACC_TEST_VALUE_1_1:null
+[Light] 
+(Light_CAL_1) 
+Light_CAL_VALUE_1_1:null
+(Light_TEST_1) 
+Light_TEST_VALUE_1_1:344
+2023-07-06 11:10:55,625 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,625 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Run
+2023-07-06 11:10:55,627 [DEBUG] WriteStoreValueToFileAction - FilePath: D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Value.log
+2023-07-06 11:10:55,629 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Result:True
+2023-07-06 11:10:55,630 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,630 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /data/log/SimpleTest_OP_Result.log
+2023-07-06 11:10:55,680 [DEBUG] AdbCommandAction - SeqNo:0 , Output:[BootRun]:Pass
+[Battery]:Pass
+[Pressure]:Pass
+[ECompass]:Pass
+[ACC_Gyro]:Pass
+[TouchSelfTest]:Pass
+[RHT]:Pass
+[VOC]:Pass
+[CO2]:Pass
+[OPTest]:Pass
+[GPS]:Pass
+[Combine_LCM_Vibrator_Button]:Pass
+[LCM]:Pass
+[Vibrator]:Pass
+[Button]:Pass
+[Touch]:Pass
+[PPG]:Pass
+(PPG_LEAK):Pass
+(PPG_LED):Pass
+[ACC]:Pass
+(ACC_CAL_1):Pass
+(ACC_TEST_1):Pass
+[Light]:Pass
+(Light_TEST_1):Pass
+2023-07-06 11:10:55,681 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,681 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Run
+2023-07-06 11:10:55,681 [DEBUG] WriteStoreValueToFileAction - FilePath: D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Result.log
+2023-07-06 11:10:55,683 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Result:True
+2023-07-06 11:10:55,684 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SimpleTestLogParsing Run
+2023-07-06 11:10:55,684 [INFO ] Main - [BootRun]:Pass
+2023-07-06 11:10:55,684 [INFO ] Main - [Battery]:Pass
+2023-07-06 11:10:55,685 [INFO ] Main - [Pressure]:Pass
+2023-07-06 11:10:55,685 [INFO ] Main - [ECompass]:Pass
+2023-07-06 11:10:55,685 [INFO ] Main - [ACC_Gyro]:Pass
+2023-07-06 11:10:55,685 [INFO ] Main - [TouchSelfTest]:Pass
+2023-07-06 11:10:55,686 [INFO ] Main - [RHT]:Pass
+2023-07-06 11:10:55,686 [INFO ] Main - [VOC]:Pass
+2023-07-06 11:10:55,686 [INFO ] Main - [CO2]:Pass
+2023-07-06 11:10:55,686 [INFO ] Main - [OPTest]:Pass
+2023-07-06 11:10:55,687 [INFO ] Main - [GPS]:Pass
+2023-07-06 11:10:55,687 [INFO ] Main - [Combine_LCM_Vibrator_Button]:Pass
+2023-07-06 11:10:55,687 [INFO ] Main - [LCM]:Pass
+2023-07-06 11:10:55,687 [INFO ] Main - [Vibrator]:Pass
+2023-07-06 11:10:55,687 [INFO ] Main - [Button]:Pass
+2023-07-06 11:10:55,688 [INFO ] Main - [Touch]:Pass
+2023-07-06 11:10:55,688 [INFO ] Main - [PPG]:Pass
+2023-07-06 11:10:55,688 [INFO ] Main - (PPG_LEAK):Pass
+2023-07-06 11:10:55,688 [INFO ] Main - (PPG_LED):Pass
+2023-07-06 11:10:55,688 [INFO ] Main - [ACC]:Pass
+2023-07-06 11:10:55,689 [INFO ] Main - (ACC_CAL_1):Pass
+2023-07-06 11:10:55,689 [INFO ] Main - (ACC_TEST_1):Pass
+2023-07-06 11:10:55,689 [INFO ] Main - [Light]:Pass
+2023-07-06 11:10:55,689 [INFO ] Main - (Light_TEST_1):Pass
+2023-07-06 11:10:55,689 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SimpleTestLogParsing Result:True
+2023-07-06 11:10:55,690 [DEBUG] FATP_BWPM - TestCase:Simple_test_result_checking Run Result:True
+2023-07-06 11:10:55,691 [DEBUG] FATP_BWPM - TestCase:Simple_test_result_checking Run End
+2023-07-06 11:10:55,692 [DEBUG] FATP_BWPM - TestCase:Backup_LSensor_RawData Run Start
+2023-07-06 11:10:55,693 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:10:55,693 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /persist/sensors/registry/registry/ltr308_0_platform.ambient.fac_cal.bias D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.bias
+2023-07-06 11:10:55,781 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:10:55,782 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:10:55,782 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:10:55,782 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /persist/sensors/registry/registry/ltr308_0_platform.ambient.fac_cal.scale D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.scale
+2023-07-06 11:10:55,867 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:10:55,867 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:10:55,868 [DEBUG] FATP_BWPM - TestCase:Backup_LSensor_RawData Run Result:True
+2023-07-06 11:10:55,868 [DEBUG] FATP_BWPM - TestCase:Backup_LSensor_RawData Run End
+2023-07-06 11:10:55,874 [DEBUG] FATP_BWPM - TestCase:Backup_TP_Rawdata Run Start
+2023-07-06 11:10:55,876 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,876 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /sdcard/selftest.csv
+2023-07-06 11:10:55,955 [DEBUG] AdbCommandAction - SeqNo:0 , Output:FW Version=0x02030482
+Selftest Version=1.1.40.1.0
+
+Test Result = 0x00000000
+
+All pass
+
+
+0xFD, 0xE7
+0x06, 0xF7
+0x00, 0x00
+0x00, 0x00
+0xFE, 0x79
+0x00, 0x00
+0x00, 0x00
+0x00, 0xC9
+0xFF, 0x37
+0x3F5,0x388,0x 0,0x 0,0x342,0x3BD,0x 0,0x 0,0x3B7,0x344,0x 0,0x 0,0x344,0x3BA,0x 0,0x 0,0x3BC,0x343,0x 0,0x 0,0x387,0x402,0x 0,0x 0,0x3F5,0x387,0x 0,0x 0,0x340,0x3BC,0x 0,0x 0,0x3B8,0x342,0x 0,0x 0,0x344,0x3C0,0x 0,0x 0,0x3B9,0x341,0x 0,0x 0,0x389,0x402,0x 0,0x 0,0x55AA,0xABA2,
+0x413,0x3C4,0x 0,0x 0,0x381,0x3FC,0x 0,0x 0,0x3F0,0x37A,0x 0,0x 0,0x379,0x3F3,0x 0,0x 0,0x3FB,0x385,0x 0,0x 0,0x3C5,0x422,0x 0,0x 0,0x412,0x3C2,0x 0,0x 0,0x37F,0x3FA,0x 0,0x 0,0x3F1,0x378,0x 0,0x 0,0x37A,0x3F8,0x 0,0x 0,0x3F8,0x383,0x 0,0x 0,0x3C7,0x421,0x 0,0x 0,0x55AA,0xB0C6,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Raw Data 1
+00000,00000,01974,00000,01981,00000,
+00000,01995,01990,01995,01996,00000,
+01981,01995,01984,01987,02001,01987,
+00000,01995,01990,01997,02002,00000,
+01992,02004,01996,02002,02010,01998,
+00000,00000,01990,00000,01996,00000,
+
+
+
+Raw Data 2
+00000,00000,00278,00000,00256,00000,
+00000,00141,00177,00164,00134,00000,
+00236,00141,00238,00218,00127,00233,
+00000,00150,00236,00219,00135,00000,
+00263,00149,00175,00155,00112,00246,
+00000,00000,00280,00000,00256,00000,
+
+
+
+Raw Data 3
+00000,00000,01145,00000,01155,00000,
+00000,00977,01053,01063,00979,00000,
+01097,00961,01119,01119,00973,01117,
+00000,00977,01119,01125,00975,00000,
+01119,00981,01053,01055,00995,01121,
+00000,00000,01155,00000,01161,00000,
+
+
+
+Raw Data_UC
+00000,00000,01117,00000,01127,00000,
+00000,00917,00997,01005,00919,00000,
+01041,00913,01055,01055,00923,01061,
+00000,00927,01055,01061,00923,00000,
+01063,00919,00995,00995,00927,01065,
+00000,00000,01127,00000,01131,00000,
+
+
+
+FW Version=0x02030482
+Selftest Version=1.1.40.1.0
+
+Test Result = 0x00000000
+
+All pass
+
+
+0xFD, 0xE7
+0x06, 0xF7
+0x00, 0x00
+0x00, 0x00
+0xFE, 0x79
+0x00, 0x00
+0x00, 0x00
+0x00, 0xC9
+0xFF, 0x37
+0x3F5,0x388,0x 0,0x 0,0x342,0x3BD,0x 0,0x 0,0x3B7,0x344,0x 0,0x 0,0x344,0x3BA,0x 0,0x 0,0x3BC,0x343,0x 0,0x 0,0x387,0x402,0x 0,0x 0,0x3F5,0x387,0x 0,0x 0,0x340,0x3BC,0x 0,0x 0,0x3B8,0x342,0x 0,0x 0,0x344,0x3C0,0x 0,0x 0,0x3B9,0x341,0x 0,0x 0,0x389,0x402,0x 0,0x 0,0x55AA,0xABA2,
+0x413,0x3C4,0x 0,0x 0,0x381,0x3FC,0x 0,0x 0,0x3F0,0x37A,0x 0,0x 0,0x379,0x3F3,0x 0,0x 0,0x3FB,0x385,0x 0,0x 0,0x3C5,0x422,0x 0,0x 0,0x412,0x3C2,0x 0,0x 0,0x37F,0x3FA,0x 0,0x 0,0x3F1,0x378,0x 0,0x 0,0x37A,0x3F8,0x 0,0x 0,0x3F8,0x383,0x 0,0x 0,0x3C7,0x421,0x 0,0x 0,0x55AA,0xB0C6,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Raw Data 1
+00000,00000,01980,00000,01981,00000,
+00000,02006,01997,01994,01992,00000,
+01995,02009,01996,01985,02002,01988,
+00000,02000,01993,01987,01993,00000,
+01996,02006,02000,01994,02001,01990,
+00000,00000,01995,00000,01988,00000,
+
+
+
+Raw Data 2
+00000,00000,00257,00000,00284,00000,
+00000,00135,00165,00185,00153,00000,
+00218,00126,00232,00236,00142,00249,
+00000,00133,00208,00220,00143,00000,
+00229,00136,00165,00178,00141,00238,
+00000,00000,00259,00000,00273,00000,
+
+
+
+Raw Data 3
+00000,00000,01131,00000,01143,00000,
+00000,00975,01045,01053,00965,00000,
+01103,00965,01116,01101,00971,01113,
+00000,00967,01105,01105,00963,00000,
+01109,00971,01051,01052,00967,01099,
+00000,00000,01145,00000,01147,00000,
+
+
+
+Raw Data_UC
+00000,00000,01103,00000,01117,00000,
+00000,00917,00989,00995,00907,00000,
+01049,00915,01051,01041,00923,01057,
+00000,00917,01043,01045,00913,00000,
+01053,00911,00991,00991,00909,01045,
+00000,00000,01117,00000,01119,00000,
+2023-07-06 11:10:55,956 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:55,956 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Run
+2023-07-06 11:10:55,957 [DEBUG] WriteStoreValueToFileAction - FilePath: D:\log\DDW1\148944220B1\148944220B1_selftest.csv
+2023-07-06 11:10:55,960 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Result:True
+2023-07-06 11:10:55,960 [DEBUG] FATP_BWPM - TestCase:Backup_TP_Rawdata Run Result:True
+2023-07-06 11:10:55,963 [DEBUG] FATP_BWPM - TestCase:Backup_TP_Rawdata Run End
+2023-07-06 11:10:55,966 [DEBUG] FATP_BWPM - TestCase:Backup_G_Gyro_RawData Run Start
+2023-07-06 11:10:55,967 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:55,968 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:sns_client_example_cpp accel 10 100 > /data/acc_raw_data.log 2>&1
+2023-07-06 11:10:56,008 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:10:56,009 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:56,009 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:10:56,009 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /data/acc_raw_data.log D:\log\DDW1\148944220B1\148944220B1_acc_raw_data.log
+2023-07-06 11:10:56,092 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:10:56,092 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:10:56,093 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:56,093 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:sns_client_example_cpp gyro 10 100 > /data/gyro_raw_data.log 2>&1
+2023-07-06 11:10:56,143 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:10:56,143 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:56,144 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:10:56,144 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /data/gyro_raw_data.log D:\log\DDW1\148944220B1\148944220B1_gyro_raw_data.log
+2023-07-06 11:10:56,233 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:10:56,233 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:10:56,234 [DEBUG] FATP_BWPM - TestCase:Backup_G_Gyro_RawData Run Result:True
+2023-07-06 11:10:56,235 [DEBUG] FATP_BWPM - TestCase:Backup_G_Gyro_RawData Run End
+2023-07-06 11:10:56,239 [DEBUG] FATP_BWPM - TestCase:Write_Customer_SN Run Start
+2023-07-06 11:10:56,240 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:56,241 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,241 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Run
+2023-07-06 11:10:56,242 [DEBUG] StringStoreValueRegexMatchAction - Input is 704-E1-AAA0021A
+2023-07-06 11:10:56,242 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Result:True
+2023-07-06 11:10:56,242 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:56,243 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:btnvtool -N 704-E1-AAA0021A 
+2023-07-06 11:10:56,354 [DEBUG] AdbCommandAction - SeqNo:0 , Output:set=2, data=704-E1-AAA0021A
+Write: DEVINFO_SERIAL_NO 704-E1-AAA0021A
+----------------------
+Enter : cei_write_devinfo
+DEVINFO_SERIAL_NO 704-E1-AAA0021A
+Exit cei_write_devinfo
+----------------------
+Child Complete
+Write SN [704-E1-AAA0021A] success.
+2023-07-06 11:10:56,355 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:56,355 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:56,355 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:56,356 [DEBUG] FATP_BWPM - TestCase:Write_Customer_SN Run Result:True
+2023-07-06 11:10:56,358 [DEBUG] FATP_BWPM - TestCase:Write_Customer_SN Run End
+2023-07-06 11:10:56,362 [DEBUG] FATP_BWPM - TestCase:Write_BT_Mac Run Start
+2023-07-06 11:10:56,362 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:56,363 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,363 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Run
+2023-07-06 11:10:56,363 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Result:True
+2023-07-06 11:10:56,363 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:56,364 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:btnvtool -b 44:6F:F8:3C:FA:59
+2023-07-06 11:10:56,453 [DEBUG] AdbCommandAction - SeqNo:0 , Output:option 'b' BT_MAC = 44:6F:F8:3C:FA:59
+set=3, data=44:6F:F8:3C:FA:59
+Write: DEVINFO_BTMAC 44:6F:F8:3C:FA:59
+----------------------
+Enter : cei_write_devinfo
+DEVINFO_BTMAC 44:6F:F8:3C:FA:59
+Exit cei_write_devinfo
+----------------------
+Child Complete
+2023-07-06 11:10:56,453 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:56,454 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:56,454 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:56,455 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-07-06 11:10:56,455 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,455 [DEBUG] FATP_BWPM - TestCase:Write_BT_Mac Run Result:True
+2023-07-06 11:10:56,457 [DEBUG] FATP_BWPM - TestCase:Write_BT_Mac Run End
+2023-07-06 11:10:56,462 [DEBUG] FATP_BWPM - TestCase:Write_WIFI_Mac Run Start
+2023-07-06 11:10:56,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:56,463 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,463 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:56,463 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:btnvtool -w 446FF83CFCB1
+2023-07-06 11:10:56,551 [DEBUG] AdbCommandAction - SeqNo:0 , Output:option 'W' wifi_MAC = 446FF83CFCB1
+set=4, data=44:6F:F8:3C:FC:B1
+Write: DEVINFO_WIFIMAC 44:6F:F8:3C:FC:B1
+----------------------
+Enter : cei_write_devinfo
+DEVINFO_WIFIMAC 44:6F:F8:3C:FC:B1
+Exit cei_write_devinfo
+----------------------
+Child Complete
+2023-07-06 11:10:56,552 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:10:56,552 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Run
+2023-07-06 11:10:56,552 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Result:True
+2023-07-06 11:10:56,553 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:10:56,553 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:10:56,553 [DEBUG] FATP_BWPM - TestCase:Write_WIFI_Mac Run Result:True
+2023-07-06 11:10:56,555 [DEBUG] FATP_BWPM - TestCase:Write_WIFI_Mac Run End
+2023-07-06 11:10:56,560 [DEBUG] FATP_BWPM - TestCase:OEM_Customization_setup Run Start
+2023-07-06 11:10:56,561 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:56,561 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,561 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:56,562 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:56,562 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteOEMAction Run
+2023-07-06 11:10:56,562 [WARN ] WriteOEMAction - []OEMFolder     = [SDDCN_W2360006]
+2023-07-06 11:10:56,562 [WARN ] WriteOEMAction - []OEMFilename   = [oem-22]
+2023-07-06 11:10:56,563 [WARN ] WriteOEMAction - []OEMServerPath = [\\10.114.129.25\Non_AA8\E80]
+2023-07-06 11:10:56,563 [WARN ] WriteOEMAction - []targetpath    = [C:\DDW1_Test\CEI_BWPM\OEM_Config]
+2023-07-06 11:10:56,563 [WARN ] WriteOEMAction - []currDir       = [C:\DDW1_Test\CEI_BWPM]
+2023-07-06 11:10:56,565 [WARN ] WriteOEMAction - []7za.exe  e -aoa \\10.114.129.25\Non_AA8\E80\SDDCN_W2360006\oem-22.zip -oC:\DDW1_Test\CEI_BWPM\OEM_Config
+2023-07-06 11:10:56,569 [WARN ] WriteOEMAction - []Output:
+2023-07-06 11:10:56,621 [WARN ] WriteOEMAction - 
+2023-07-06 11:10:56,621 [WARN ] WriteOEMAction - 7-Zip (A) 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+2023-07-06 11:10:56,622 [WARN ] WriteOEMAction - 
+2023-07-06 11:10:56,622 [WARN ] WriteOEMAction - Processing archive: \\10.114.129.25\Non_AA8\E80\SDDCN_W2360006\oem-22.zip
+2023-07-06 11:10:56,623 [WARN ] WriteOEMAction - 
+2023-07-06 11:10:56,623 [WARN ] WriteOEMAction - Extracting  oem-22.prop
+2023-07-06 11:10:56,624 [WARN ] WriteOEMAction - Extracting  oem.bat
+2023-07-06 11:10:56,624 [WARN ] WriteOEMAction - 
+2023-07-06 11:10:56,624 [WARN ] WriteOEMAction - Everything is Ok
+2023-07-06 11:10:56,624 [WARN ] WriteOEMAction - 
+2023-07-06 11:10:56,625 [WARN ] WriteOEMAction - Files: 2
+2023-07-06 11:10:56,625 [WARN ] WriteOEMAction - Size:       310
+2023-07-06 11:10:56,625 [WARN ] WriteOEMAction - Compressed: 488
+2023-07-06 11:10:56,669 [WARN ] WriteOEMAction - []OEMbat.FileName = oem.bat
+2023-07-06 11:10:56,669 [WARN ] WriteOEMAction - []OEMbat.WorkingDirectory = C:\DDW1_Test\CEI_BWPM\OEM_Config
+2023-07-06 11:10:58,431 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteOEMAction Result:True
+2023-07-06 11:10:58,431 [DEBUG] FATP_BWPM - TestCase:OEM_Customization_setup Run Result:True
+2023-07-06 11:10:58,443 [DEBUG] FATP_BWPM - TestCase:OEM_Customization_setup Run End
+2023-07-06 11:10:58,447 [DEBUG] FATP_BWPM - TestCase:Security_Key_generate Run Start
+2023-07-06 11:10:58,448 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:10:58,448 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:10:58,449 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:10:58,449 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:sh /system/Factory/script/factory_provision.sh 704-E1-AAA0021A
+2023-07-06 11:11:00,302 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Generating a 3072 bit RSA private key
+.....................++
+..............++
+writing new private key to '/mnt/vendor/persist/identity/704-E1-AAA0021.key'
+-----
+writing RSA key
+Created....
+  private-key: /mnt/vendor/persist/identity/704-E1-AAA0021.key
+  certificate: /mnt/vendor/persist/identity/704-E1-AAA0021.crt
+   public-key: /mnt/vendor/persist/identity/704-E1-AAA0021_public.pem
+2023-07-06 11:11:00,303 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:/mnt/vendor/persist/identity/704-E1-AAA0021_public.pem
+2023-07-06 11:11:00,303 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:00,304 [DEBUG] FATP_BWPM - TestCase:Security_Key_generate Run Result:True
+2023-07-06 11:11:00,305 [DEBUG] FATP_BWPM - TestCase:Security_Key_generate Run End
+2023-07-06 11:11:00,308 [DEBUG] FATP_BWPM - TestCase:Check_BT_Mac_Address Run Start
+2023-07-06 11:11:00,309 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:00,309 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:00,310 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:00,310 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:btnvtool -p
+2023-07-06 11:11:00,374 [DEBUG] AdbCommandAction - SeqNo:0 , Output:--board-address: 59.fa.3c.f8.6f.44 
+--reference-clock: 19.2 MHz 
+--clock-sharing: Enabled
+2023-07-06 11:11:00,375 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:59.fa.3c.f8.6f.44
+2023-07-06 11:11:00,375 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:00,375 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Run
+2023-07-06 11:11:00,376 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Result:True
+2023-07-06 11:11:00,379 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Run
+2023-07-06 11:11:00,379 [DEBUG] StringStoreValueRegexMatchAction - Input is 44:6F:F8:3C:FA:59
+2023-07-06 11:11:00,380 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Result:True
+2023-07-06 11:11:00,380 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-07-06 11:11:00,380 [DEBUG] Main - value1 : 44:6F:F8:3C:FA:59 , value2 : 44:6F:F8:3C:FA:59
+2023-07-06 11:11:00,381 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-07-06 11:11:00,381 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:00,381 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:00,381 [DEBUG] FATP_BWPM - TestCase:Check_BT_Mac_Address Run Result:True
+2023-07-06 11:11:00,383 [DEBUG] FATP_BWPM - TestCase:Check_BT_Mac_Address Run End
+2023-07-06 11:11:00,386 [DEBUG] FATP_BWPM - TestCase:Check_WIFI_Mac_Address Run Start
+2023-07-06 11:11:00,386 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:00,387 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:00,387 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:00,387 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:getprop persist.sys.wifi.addr
+2023-07-06 11:11:00,443 [DEBUG] AdbCommandAction - SeqNo:0 , Output:44:6F:F8:3C:FC:B1
+2023-07-06 11:11:00,444 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:44:6F:F8:3C:FC:B1
+2023-07-06 11:11:00,444 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:00,445 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Run
+2023-07-06 11:11:00,445 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ConvertBTMacAction Result:True
+2023-07-06 11:11:00,445 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-07-06 11:11:00,445 [DEBUG] Main - value1 : 44:6F:F8:3C:FC:B1 , value2 : 44:6F:F8:3C:FC:B1
+2023-07-06 11:11:00,446 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-07-06 11:11:00,446 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:00,446 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:00,446 [DEBUG] FATP_BWPM - TestCase:Check_WIFI_Mac_Address Run Result:True
+2023-07-06 11:11:00,448 [DEBUG] FATP_BWPM - TestCase:Check_WIFI_Mac_Address Run End
+2023-07-06 11:11:00,452 [DEBUG] FATP_BWPM - TestCase:Check_Security_Keys Run Start
+2023-07-06 11:11:00,452 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:00,453 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:00,453 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:11:00,454 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /mnt/vendor/persist/identity/704-E1-AAA0021.crt D:\log\DDW1\704-E1-AAA0021\704-E1-AAA0021.crt
+2023-07-06 11:11:00,531 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:11:00,531 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:11:00,532 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:11:00,532 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /mnt/vendor/persist/identity/704-E1-AAA0021_public.pem D:\log\DDW1\704-E1-AAA0021\704-E1-AAA0021.pem
+2023-07-06 11:11:00,620 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:11:00,621 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:11:00,621 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Run
+2023-07-06 11:11:00,622 [DEBUG] AdbPullAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A pull /mnt/vendor/persist/identity/704-E1-AAA0021.key D:\log\DDW1\704-E1-AAA0021\704-E1-AAA0021.key
+2023-07-06 11:11:00,705 [DEBUG] AdbPullAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:11:00,705 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPullAction Result:True
+2023-07-06 11:11:00,706 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SecurityKeyHandler Run
+2023-07-06 11:11:00,706 [DEBUG] SecurityKeyHandler - COMPRESS : SourcePath = D:\log\DDW1\704-E1-AAA0021\ , TargetPath = D:\log\DDW1\CompressedFile\704-E1-AAA0021\
+2023-07-06 11:11:00,806 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SecurityKeyHandler Result:True
+2023-07-06 11:11:00,806 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SecurityKeyHandler Run
+2023-07-06 11:11:00,807 [DEBUG] SecurityKeyHandler - UPLOAD : strSourceFile = D:\log\DDW1\CompressedFile\704-E1-AAA0021\704-E1-AAA0021.zip , strTargetFile = \\10.114.129.73\E80_Log\DDW1\SecurityKey\20230706\704-E1-AAA0021\704-E1-AAA0021.zip
+2023-07-06 11:11:00,851 [DEBUG] CommonTestCase - SeqNo:0 TestAction:SecurityKeyHandler Result:True
+2023-07-06 11:11:00,851 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:00,852 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:rm /mnt/vendor/persist/identity/*.crt
+2023-07-06 11:11:00,928 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:11:00,929 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:00,929 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:00,930 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:rm /mnt/vendor/persist/identity/*.pem
+2023-07-06 11:11:00,979 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:11:00,979 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:00,980 [DEBUG] FATP_BWPM - TestCase:Check_Security_Keys Run Result:True
+2023-07-06 11:11:00,982 [DEBUG] FATP_BWPM - TestCase:Check_Security_Keys Run End
+2023-07-06 11:11:00,982 [WARN ] AdbCommandAction - VerifyOutput=true but ExpectOutput is empty!! <Command>cat /persist/sn</Command>
+2023-07-06 11:11:00,986 [DEBUG] FATP_BWPM - TestCase:Check_Customer_SN Run Start
+2023-07-06 11:11:00,986 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:00,987 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:00,987 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:00,987 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /persist/sn
+2023-07-06 11:11:01,057 [DEBUG] AdbCommandAction - SeqNo:0 , Output:704-E1-AAA0021A
+2023-07-06 11:11:01,057 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:01,058 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:01,058 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:01,059 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-07-06 11:11:01,059 [DEBUG] Main - value1 : 704-E1-AAA0021A , value2 : 704-E1-AAA0021A
+2023-07-06 11:11:01,059 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-07-06 11:11:01,060 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:01,060 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cei_devinfo_rw -r DEVINFO_SERIAL_NO
+2023-07-06 11:11:01,109 [DEBUG] AdbCommandAction - SeqNo:0 , Output:----------------------
+
+Read: DEVINFO_SERIAL_NO
+Enter : cei_read_devinfo
+DEVINFO_SERIAL_NO = 704-E1-AAA0021A
+Exit cei_read_devinfo
+serial number = 704-E1-AAA0021A
+----------------------
+2023-07-06 11:11:01,110 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:DEVINFO_SERIAL_NO = 704-E1-AAA00
+2023-07-06 11:11:01,110 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:01,110 [DEBUG] FATP_BWPM - TestCase:Check_Customer_SN Run Result:True
+2023-07-06 11:11:01,113 [DEBUG] FATP_BWPM - TestCase:Check_Customer_SN Run End
+2023-07-06 11:11:01,117 [DEBUG] FATP_BWPM - TestCase:Check_OEM_Prop Run Start
+2023-07-06 11:11:01,117 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:01,118 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:cat /oem/oem.prop
+2023-07-06 11:11:01,169 [DEBUG] AdbCommandAction - SeqNo:0 , Output:ro.boot.hardware.color=2
+ro.oem.sku=2
+ro.oem.sku_name=Prussian
+ro.oem.fastpair_id=891032
+ro.oem.brand=google
+ro.oem.device=blowfish
+2023-07-06 11:11:01,169 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:01,170 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Run
+2023-07-06 11:11:01,170 [DEBUG] WriteStoreValueToFileAction - FilePath: D:\log\DDW1\148944220B1\oem.prop
+2023-07-06 11:11:01,172 [DEBUG] CommonTestCase - SeqNo:0 TestAction:WriteStoreValueToFileAction Result:True
+2023-07-06 11:11:01,172 [DEBUG] CommonTestCase - SeqNo:0 TestAction:OEMprop Run
+2023-07-06 11:11:01,173 [DEBUG] OEMprop - Load Value - ro.boot.hardware.color=2
+ro.oem.sku=2
+ro.oem.sku_name=Prussian
+ro.oem.fastpair_id=891032
+ro.oem.brand=google
+ro.oem.device=blowfish
+2023-07-06 11:11:01,174 [DEBUG] OEMprop - Load Value - ro.boot.hardware.color=2
+ro.oem.sku=2
+ro.oem.sku_name=Prussian
+ro.oem.fastpair_id=891032
+ro.oem.brand=google
+ro.oem.device=blowfish
+2023-07-06 11:11:01,174 [DEBUG] CommonTestCase - SeqNo:0 TestAction:OEMprop Result:True
+2023-07-06 11:11:01,174 [DEBUG] FATP_BWPM - TestCase:Check_OEM_Prop Run Result:True
+2023-07-06 11:11:01,176 [DEBUG] FATP_BWPM - TestCase:Check_OEM_Prop Run End
+2023-07-06 11:11:01,180 [DEBUG] FATP_BWPM - TestCase:AttestKey_Injection Run Start
+2023-07-06 11:11:01,181 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:01,181 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:01,181 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:01,182 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:01,182 [DEBUG] CommonTestCase - SeqNo:0 TestAction:DownloadAndParsingAttestKeyAction Run
+2023-07-06 11:11:01,182 [DEBUG] DownloadAndParsingAttestKeyAction - Remote AttestKey file path \\10.114.129.188\cvc_test\Attestation\E80\DDW1\20230316\AttestKey.xml
+2023-07-06 11:11:01,211 [DEBUG] CommonTestCase - SeqNo:0 TestAction:DownloadAndParsingAttestKeyAction Result:True
+2023-07-06 11:11:01,212 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPushAction Run
+2023-07-06 11:11:01,212 [DEBUG] AdbPushAction - SeqNo:0 , Arguments:-s 704-E1-AAA0021A push D:\PCTool\KEY_INJ\AttestKey.xml /data/AttestKey.xml
+2023-07-06 11:11:01,312 [DEBUG] AdbPushAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , ExitCode:0
+2023-07-06 11:11:01,312 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPushAction Result:True
+2023-07-06 11:11:01,313 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:01,314 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:sync
+2023-07-06 11:11:01,404 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-07-06 11:11:01,404 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:01,405 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-07-06 11:11:01,405 [DEBUG] ThreadSleepAction - Sleep Time:1000
+2023-07-06 11:11:02,406 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-07-06 11:11:02,406 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-07-06 11:11:02,407 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:704-E1-AAA0021A , Command:LD_LIBRARY_PATH=/vendor/lib/hw KmInstallKeybox /data/AttestKey.xml COMPALE80Blowfish20230202 false
+2023-07-06 11:11:04,869 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Number of keyboxes 1
+myDeviceID: COMPALE80Blowfish20230202
+keyboxCtx.device_id.data: COMPALE80Blowfish20230202
+KeyMaster Attestation Key Provisioning success for KeyIDCOMPALE80Blowfish20230202
+TEE done
+InstallKeybox is done!
+2023-07-06 11:11:04,870 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:InstallKeybox is done
+2023-07-06 11:11:04,870 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-07-06 11:11:04,871 [DEBUG] FATP_BWPM - TestCase:AttestKey_Injection Run Result:True
+2023-07-06 11:11:04,873 [DEBUG] FATP_BWPM - TestCase:AttestKey_Injection Run End
+2023-07-06 11:11:04,877 [DEBUG] FATP_BWPM - TestCase:Label_Print Run Start
+2023-07-06 11:11:04,877 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,878 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,878 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,878 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,878 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-07-06 11:11:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-07-06 11:11:04,880 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Run
+2023-07-06 11:11:04,880 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-07-06 11:11:04,880 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-07-06 11:11:04,880 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Run
+2023-07-06 11:11:04,881 [DEBUG] StringStoreValueRegexMatchAction - Input is false
+2023-07-06 11:11:04,881 [WARN ] StringStoreValueRegexMatchAction - Pattern not match : true
+2023-07-06 11:11:04,881 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Result:False
+2023-07-06 11:11:04,881 [DEBUG] IfElseAction - =======ConditionActions End
+2023-07-06 11:11:04,881 [DEBUG] IfElseAction - =======FalseActions Start
+2023-07-06 11:11:04,882 [DEBUG] IfElseAction - SeqNo:0 SubActions:PrintLabelFFWA Run
+2023-07-06 11:11:04,882 [DEBUG] PrintLabelFFWA - labelfilename = [A09_MAC&MSN_LABEL.txt]
+2023-07-06 11:11:04,882 [DEBUG] PrintLabelFFWA - labelpath = [C:\DDW1_Test\CEI_BWPM\A09_MAC&MSN_LABEL.txt]
+2023-07-06 11:11:04,884 [WARN ] PrintLabelFFWA - []Labelgenerated. [C:\DDW1_Test\CEI_BWPM\temp.txt]
+2023-07-06 11:11:04,884 [WARN ] PrintLabelFFWA - []Label Printed to ssdal.
+2023-07-06 11:11:04,885 [DEBUG] IfElseAction - SeqNo:0 SubActions:PrintLabelFFWA Result:True
+2023-07-06 11:11:04,885 [DEBUG] IfElseAction - SeqNo:0 SubActions:StoreValueFormatAction Run
+2023-07-06 11:11:04,885 [DEBUG] IfElseAction - SeqNo:0 SubActions:StoreValueFormatAction Result:True
+2023-07-06 11:11:04,885 [DEBUG] IfElseAction - SeqNo:0 SubActions:RunProcessAction Run
+2023-07-06 11:11:04,886 [DEBUG] ProcessUtil - WorkingDirectory:, Command:C:\WINDOWS\SSDAL.exe, Arguments: /p "Zebra ZT610 (600 dpi)" send "C:\DDW1_Test\CEI_BWPM\temp.txt"
+2023-07-06 11:11:04,957 [DEBUG] ProcessUtil - Output: Executing 'Send' command.
+File sent to 'Zebra ZT610 (600 dpi)'.
+Finished processing command.
+2023-07-06 11:11:04,957 [DEBUG] IfElseAction - SeqNo:0 SubActions:RunProcessAction Result:True
+2023-07-06 11:11:04,957 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Run
+2023-07-06 11:11:04,958 [DEBUG] StringStoreValueRegexMatchAction - Input is Executing 'Send' command.
+File sent to 'Zebra ZT610 (600 dpi)'.
+Finished processing command.
+2023-07-06 11:11:04,958 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Result:True
+2023-07-06 11:11:04,958 [DEBUG] IfElseAction - =======FalseActions End
+2023-07-06 11:11:04,959 [DEBUG] IfElseAction - CheckResult:False Condition_result:False result:True
+2023-07-06 11:11:04,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Result:True
+2023-07-06 11:11:04,959 [DEBUG] FATP_BWPM - TestCase:Label_Print Run Result:True
+2023-07-06 11:11:04,961 [DEBUG] FATP_BWPM - TestCase:Label_Print Run End
+2023-07-06 11:11:04,963 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,963 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,964 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,964 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,964 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,964 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,965 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,965 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,965 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,966 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,966 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,966 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,966 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,967 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,967 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,967 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,968 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-07-06 11:11:04,968 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-07-06 11:11:04,968 [DEBUG] TestManager - SeqNo:0 PostTestAction:IfElseAction Run
+2023-07-06 11:11:04,968 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-07-06 11:11:04,968 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-07-06 11:11:04,969 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Run
+2023-07-06 11:11:04,969 [DEBUG] StringStoreValueRegexMatchAction - Input is FALSE
+2023-07-06 11:11:04,969 [DEBUG] IfElseAction - SeqNo:0 SubActions:StringStoreValueRegexMatchAction Result:True
+2023-07-06 11:11:04,969 [DEBUG] IfElseAction - =======ConditionActions End
+2023-07-06 11:11:04,969 [DEBUG] IfElseAction - =======TrueActions Start
+2023-07-06 11:11:04,970 [DEBUG] IfElseAction - SeqNo:0 SubActions:TmoClientUploadAction Run
+2023-07-06 11:11:04,970 [DEBUG] TmoClientUploadAction - Tmo Step3Socket = TMO_WATCH_MASTERDATA_OUT;148944220B1;101WR-A3;T2_BWPM_1;C140UHB;148944220B1$$$$$$$;PASS;$;704-E1-AAA0021A;;446FF83CFA59;446FF83CFCB1;;;;
+2023-07-06 11:11:05,073 [DEBUG] TmoClientUploadAction - Step4Socket = 148944220B1;PASS;T001;;;
+2023-07-06 11:11:05,075 [DEBUG] TmoClientUploadAction - Tmo Step4 PASS, Pass Code = T001
+2023-07-06 11:11:05,078 [DEBUG] IfElseAction - SeqNo:0 SubActions:TmoClientUploadAction Result:True
+2023-07-06 11:11:05,079 [DEBUG] IfElseAction - =======TrueActions End
+2023-07-06 11:11:05,079 [DEBUG] IfElseAction - CheckResult:False Condition_result:True result:True
+2023-07-06 11:11:05,079 [DEBUG] TestManager - SeqNo:0 PostTestAction:IfElseAction Result:True
+2023-07-06 11:11:05,079 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,080 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Result.log, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Simple_Log\, fileName = : 148944220B1_SimpleTest_OP_Result.log
+2023-07-06 11:11:05,082 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Result.log, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Simple_Log\148944220B1_SimpleTest_OP_Result.log
+2023-07-06 11:11:05,093 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,093 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,094 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Value.log, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Simple_Log\, fileName = : 148944220B1_SimpleTest_OP_Value.log
+2023-07-06 11:11:05,094 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_SimpleTest_OP_Value.log, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Simple_Log\148944220B1_SimpleTest_OP_Value.log
+2023-07-06 11:11:05,116 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,116 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,117 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_selftest.csv, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\TP_Log\, fileName = : 148944220B1_selftest.csv
+2023-07-06 11:11:05,119 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_selftest.csv, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\TP_Log\148944220B1_selftest.csv
+2023-07-06 11:11:05,147 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,147 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,148 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.bias, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\, fileName = : 148944220B1_ltr308_0_platform.ambient.fac_cal.bias
+2023-07-06 11:11:05,150 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.bias, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\148944220B1_ltr308_0_platform.ambient.fac_cal.bias
+2023-07-06 11:11:05,166 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,166 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,167 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.scale, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\, fileName = : 148944220B1_ltr308_0_platform.ambient.fac_cal.scale
+2023-07-06 11:11:05,167 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_ltr308_0_platform.ambient.fac_cal.scale, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\148944220B1_ltr308_0_platform.ambient.fac_cal.scale
+2023-07-06 11:11:05,181 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,181 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,182 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_acc_raw_data.log, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\, fileName = : 148944220B1_acc_raw_data.log
+2023-07-06 11:11:05,182 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_acc_raw_data.log, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\148944220B1_acc_raw_data.log
+2023-07-06 11:11:05,194 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,194 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Run
+2023-07-06 11:11:05,194 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_gyro_raw_data.log, RemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\, fileName = : 148944220B1_gyro_raw_data.log
+2023-07-06 11:11:05,195 [DEBUG] BackupToLogserverAction - LocalPath : D:\log\DDW1\148944220B1\148944220B1_gyro_raw_data.log, FullRemotePath : \\10.114.129.73\E80_Log\DDW1\T2_BWPM_1\20230706\Sensor_Log\148944220B1_gyro_raw_data.log
+2023-07-06 11:11:05,207 [DEBUG] TestManager - SeqNo:0 PostTestAction:BackupToLogserverAction Result:True
+2023-07-06 11:11:05,223 [WARN ] Main - Template is not exist - C:\DDW1_Test\CEI_BWPM\Configs\ReportDefaultTemplate.json
+2023-07-06 11:11:05,238 [INFO ] Main - FATP_BWPM: close N4010 BT
+2023-07-06 11:11:05,240 [DEBUG] Main - [1] res = -1073807345 , cmd = *RST
+2023-07-06 11:11:05,242 [DEBUG] Main - [1] res = -1073807345 , cmd = *CLS
+2023-07-06 11:11:05,244 [DEBUG] Main - [1] res = -1073807345 , cmd = *OPC

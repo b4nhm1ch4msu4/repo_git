@@ -1,0 +1,971 @@
+2023-05-29 17:20:36,335 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Run
+2023-05-29 17:20:36,335 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Result:True
+2023-05-29 17:20:36,335 [DEBUG] TestManager - SeqNo:0 PreTestAction:Agilent66319DAction Run
+2023-05-29 17:20:36,335 [DEBUG] Agilent66319DAction - OutputVoltage:0 , SamplingPoints:4096 , CurrentMeasureTime:5000 , CurrentRange:MAX, SeqNo:0
+2023-05-29 17:20:37,345 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:20:37,345 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 0
+2023-05-29 17:20:37,345 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:20:37,345 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MAX
+2023-05-29 17:20:37,345 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:20:37,355 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:20:37,355 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:20:37,355 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:20:37,355 [DEBUG] TestManager - SeqNo:0 PreTestAction:Agilent66319DAction Result:True
+2023-05-29 17:20:37,355 [DEBUG] TestManager - SeqNo:0 PreTestAction:ThreadSleepAction Run
+2023-05-29 17:20:37,355 [DEBUG] ThreadSleepAction - Sleep Time:100
+2023-05-29 17:20:37,465 [DEBUG] TestManager - SeqNo:0 PreTestAction:ThreadSleepAction Result:True
+2023-05-29 17:20:37,465 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Run
+2023-05-29 17:20:37,465 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07off
+2023-05-29 17:20:37,465 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:20:37,475 [DEBUG] FixtureControlManager - Output:07off
+2023-05-29 17:20:37,475 [DEBUG] FixtureCommandAction - Command:07off
+2023-05-29 17:20:37,475 [DEBUG] FixtureCommandAction - MatchOutput:07off
+2023-05-29 17:20:37,475 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Result:True
+2023-05-29 17:20:37,475 [DEBUG] TestManager - SeqNo:0 PreTestAction:ThreadSleepAction Run
+2023-05-29 17:20:37,475 [DEBUG] ThreadSleepAction - Sleep Time:500
+2023-05-29 17:20:37,995 [DEBUG] TestManager - SeqNo:0 PreTestAction:ThreadSleepAction Result:True
+2023-05-29 17:20:37,995 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Run
+2023-05-29 17:20:37,995 [DEBUG] FixtureControlManager - Try to SendCommand , Command:02off
+2023-05-29 17:20:37,995 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:20:38,005 [DEBUG] FixtureControlManager - Output:02off
+2023-05-29 17:20:38,005 [DEBUG] FixtureCommandAction - Command:02off
+2023-05-29 17:20:38,005 [DEBUG] FixtureCommandAction - MatchOutput:02off
+2023-05-29 17:20:38,005 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Result:True
+2023-05-29 17:20:38,005 [DEBUG] TestManager - SeqNo:0 PreTestAction:Agilent66319DAction Run
+2023-05-29 17:20:38,005 [DEBUG] Agilent66319DAction - OutputVoltage:3.9 , SamplingPoints:4096 , CurrentMeasureTime:5000 , CurrentRange:MAX, SeqNo:0
+2023-05-29 17:20:39,005 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:20:39,005 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:20:39,005 [DEBUG] Main - [95820384] res = 0 , cmd = VOLT 3.9
+2023-05-29 17:20:39,005 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:20:39,005 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MAX
+2023-05-29 17:20:39,015 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:20:39,015 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:20:39,015 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:20:39,015 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:20:39,015 [DEBUG] TestManager - SeqNo:0 PreTestAction:Agilent66319DAction Result:True
+2023-05-29 17:20:39,015 [DEBUG] PCBA_BB - TestCase:Get_Image_ver Run Start
+2023-05-29 17:20:39,015 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Run
+2023-05-29 17:20:39,025 [DEBUG] StringStoreValueRegexMatchAction - Input is 148944200B1
+2023-05-29 17:20:39,025 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Result:True
+2023-05-29 17:20:39,025 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,025 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,025 [DEBUG] PCBA_BB - TestCase:Get_Image_ver Run Result:True
+2023-05-29 17:20:39,025 [DEBUG] PCBA_BB - TestCase:Get_Image_ver Run End
+2023-05-29 17:20:39,025 [DEBUG] PCBA_BB - TestCase:TMO_Line_IN Run Start
+2023-05-29 17:20:39,035 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:20:39,035 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,035 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Run
+2023-05-29 17:20:39,035 [DEBUG] TmoClientAction - Tmo Step1Socket = TMO_TEST_LITE_IN;148944200B1;148944200B1;101WR-T3;BASEBAND_1;PCTools_PCBA_BB.exe;1.0.0.0;41$691$91;;;VC1202061;
+2023-05-29 17:20:39,175 [DEBUG] TmoClientAction - Cyclic info : [PK_41_6] = DDW1.0287.1304554.E1N.23160.F, address = 5
+2023-05-29 17:20:39,175 [DEBUG] TmoClientAction - pKHead info : [PK_691_5] = DDW1 GA-671, address = 4
+2023-05-29 17:20:39,175 [DEBUG] TmoClientAction - Step2Socket = 148944200;PASS;;0;;;60716901;691J8300010;DDW1;Dyson;F/WMB E80;DDW1 GA-671;;41DDW100010;SMT SW;DDW1.0287.1304554.E1N.23160.F;;SDDCN_W2340037;DDW1.0287.1304554.E1N.23160.F;;;;;;;;;;;;;
+2023-05-29 17:20:39,175 [DEBUG] TmoClientAction - Tmo Step2 PASS, retry time = 0
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:20:39,185 [DEBUG] PCBA_BB - TestCase:TMO_Line_IN Run Result:True
+2023-05-29 17:20:39,185 [DEBUG] PCBA_BB - TestCase:TMO_Line_IN Run End
+2023-05-29 17:20:39,185 [DEBUG] PCBA_BB - TestCase:off_current Run Start
+2023-05-29 17:20:39,185 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:20:39,185 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07off
+2023-05-29 17:20:39,185 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:20:39,195 [DEBUG] FixtureControlManager - Output:07off
+2023-05-29 17:20:39,195 [DEBUG] FixtureCommandAction - Command:07off
+2023-05-29 17:20:39,195 [DEBUG] FixtureCommandAction - MatchOutput:07off
+2023-05-29 17:20:39,195 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:20:39,195 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Run
+2023-05-29 17:20:39,195 [DEBUG] Agilent66319DAction - OutputVoltage:3.9 , SamplingPoints:4096 , CurrentMeasureTime:3000 , CurrentRange:MIN, SeqNo:0
+2023-05-29 17:20:39,205 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 0
+2023-05-29 17:20:44,215 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:20:50,235 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:20:50,235 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:20:50,235 [DEBUG] Main - [95820384] res = 0 , cmd = VOLT 3.9
+2023-05-29 17:20:50,235 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:20:50,235 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MIN
+2023-05-29 17:20:50,245 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:20:50,245 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:20:50,245 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:20:50,245 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:20:50,245 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:TINT 0.000732421875
+2023-05-29 17:20:50,255 [DEBUG] Main - [95820384] res = 0 , cmd = MEAS:CURR?
+2023-05-29 17:20:53,265 [DEBUG] Main - [95820384] try to get response
+2023-05-29 17:20:53,275 [DEBUG] Main - [95820384] res = 0 , response = 7.09574E-5
+
+2023-05-29 17:20:53,285 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 End
+2023-05-29 17:20:53,285 [DEBUG] Agilent66319DAction - Curr: 7.09574E-05 A
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Result:True
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Run
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Result:True
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Run
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Result:True
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-05-29 17:20:53,285 [DEBUG] DecimalRangeVerifyAction - Input: 0.071
+2023-05-29 17:20:53,285 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:0.071, Minimum:0, Maximum:0.2
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-05-29 17:20:53,285 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:20:53,285 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07on
+2023-05-29 17:20:53,285 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:20:53,295 [DEBUG] FixtureControlManager - Output:07on
+2023-05-29 17:20:53,295 [DEBUG] FixtureCommandAction - Command:07on
+2023-05-29 17:20:53,295 [DEBUG] FixtureCommandAction - MatchOutput:07on
+2023-05-29 17:20:53,295 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:20:53,295 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:20:53,295 [DEBUG] ThreadSleepAction - Sleep Time:3000
+2023-05-29 17:20:56,305 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:20:56,305 [DEBUG] PCBA_BB - TestCase:off_current Run Result:True
+2023-05-29 17:20:56,305 [DEBUG] PCBA_BB - TestCase:off_current Run End
+2023-05-29 17:20:56,305 [DEBUG] PCBA_BB - TestCase:Power_On_Testing_current Run Start
+2023-05-29 17:20:56,305 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:20:56,305 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07off
+2023-05-29 17:20:56,305 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:20:56,315 [DEBUG] FixtureControlManager - Output:07off
+2023-05-29 17:20:56,315 [DEBUG] FixtureCommandAction - Command:07off
+2023-05-29 17:20:56,315 [DEBUG] FixtureCommandAction - MatchOutput:07off
+2023-05-29 17:20:56,315 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:20:56,315 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Run
+2023-05-29 17:20:56,315 [DEBUG] Agilent66319DAction - OutputVoltage:3.9 , SamplingPoints:4096 , CurrentMeasureTime:3000 , CurrentRange:MAX, SeqNo:0
+2023-05-29 17:20:57,315 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:20:57,315 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:20:57,315 [DEBUG] Main - [95820384] res = 0 , cmd = VOLT 3.9
+2023-05-29 17:20:57,315 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:20:57,315 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MAX
+2023-05-29 17:20:57,325 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:20:57,325 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:20:57,325 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:20:57,325 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:20:57,325 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:TINT 0.000732421875
+2023-05-29 17:20:57,335 [DEBUG] Main - [95820384] res = 0 , cmd = MEAS:CURR?
+2023-05-29 17:21:00,345 [DEBUG] Main - [95820384] try to get response
+2023-05-29 17:21:00,365 [DEBUG] Main - [95820384] res = 0 , response = 1.33030E-1
+
+2023-05-29 17:21:00,365 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 End
+2023-05-29 17:21:00,365 [DEBUG] Agilent66319DAction - Curr: 0.13303 A
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Result:True
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Run
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Result:True
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Run
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Result:True
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-05-29 17:21:00,365 [DEBUG] DecimalRangeVerifyAction - Input: 133.03
+2023-05-29 17:21:00,365 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:133.03, Minimum:50, Maximum:600
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-05-29 17:21:00,365 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:21:00,365 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07on
+2023-05-29 17:21:00,365 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:21:00,375 [DEBUG] FixtureControlManager - Output:07on
+2023-05-29 17:21:00,375 [DEBUG] FixtureCommandAction - Command:07on
+2023-05-29 17:21:00,375 [DEBUG] FixtureCommandAction - MatchOutput:07on
+2023-05-29 17:21:00,375 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:21:00,385 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:21:44,952 [INFO ] AdbManager - ADB Device Connected:2fa9d384
+2023-05-29 17:21:44,962 [INFO ] AdbManager - ADB Device SN:2fa9d384 State:Online
+2023-05-29 17:21:45,822 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:21:45,822 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:21:45,822 [DEBUG] PCBA_BB - TestCase:Power_On_Testing_current Run Result:True
+2023-05-29 17:21:45,822 [DEBUG] PCBA_BB - TestCase:Power_On_Testing_current Run End
+2023-05-29 17:21:45,822 [DEBUG] PCBA_BB - TestCase:Write_OFF_Display Run Start
+2023-05-29 17:21:45,822 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:21:45,822 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:21:45,822 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:21:45,832 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:21:45,832 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:reboot bootloader
+2023-05-29 17:21:47,122 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:21:47,122 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:21:47,122 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:21:47,122 [DEBUG] ThreadSleepAction - Sleep Time:3000
+2023-05-29 17:21:47,132 [INFO ] AdbManager - ADB Device Disconnected:2fa9d384
+2023-05-29 17:21:50,142 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:21:50,142 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Run
+2023-05-29 17:21:50,142 [DEBUG] FastbootCommandAction - WorkingDirectory:C:\DDW1_Test\CEI_BASEBAND , Arguments:devices
+2023-05-29 17:21:50,172 [DEBUG] FastbootCommandAction - Fastboot :devices , std output result:
+2023-05-29 17:21:50,172 [DEBUG] FastbootCommandAction - Fastboot :devices , std error result:
+2023-05-29 17:21:51,191 [DEBUG] FastbootCommandAction - SeqNo:0 , Retry:1/100 , Command:devices
+2023-05-29 17:21:51,220 [DEBUG] FastbootCommandAction - SeqNo:0 , Output:2fa9d384	fastboot
+2023-05-29 17:21:51,220 [DEBUG] FastbootCommandAction - SeqNo:0 , MatchOutput:2fa9d384	fastboot
+2023-05-29 17:21:51,220 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Result:True
+2023-05-29 17:21:51,220 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Run
+2023-05-29 17:21:51,220 [DEBUG] FastbootCommandAction - WorkingDirectory:C:\DDW1_Test\CEI_BASEBAND , Arguments:oem select-display-panel none
+2023-05-29 17:21:51,270 [DEBUG] FastbootCommandAction - Fastboot :oem select-display-panel none , std output result:
+2023-05-29 17:21:51,270 [DEBUG] FastbootCommandAction - Fastboot :oem select-display-panel none , std error result:OKAY [  0.010s]
+Finished. Total time: 0.010s
+
+2023-05-29 17:21:51,270 [DEBUG] FastbootCommandAction - SeqNo:0 , Match Stderr Output:OKAY
+2023-05-29 17:21:51,270 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Result:True
+2023-05-29 17:21:51,270 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:21:51,270 [DEBUG] ThreadSleepAction - Sleep Time:3000
+2023-05-29 17:21:54,280 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:21:54,280 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Run
+2023-05-29 17:21:54,280 [DEBUG] FastbootCommandAction - WorkingDirectory:C:\DDW1_Test\CEI_BASEBAND , Arguments:reboot
+2023-05-29 17:21:54,310 [DEBUG] FastbootCommandAction - Fastboot :reboot , std output result:
+2023-05-29 17:21:54,310 [DEBUG] FastbootCommandAction - Fastboot :reboot , std error result:Rebooting                                          
+Finished. Total time: -0.000s
+
+2023-05-29 17:21:54,310 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FastbootCommandAction Result:True
+2023-05-29 17:21:54,320 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:27,369 [INFO ] AdbManager - ADB Device Connected:2fa9d384
+2023-05-29 17:22:27,369 [INFO ] AdbManager - ADB Device SN:2fa9d384 State:Online
+2023-05-29 17:22:27,649 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:27,649 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:27,649 [DEBUG] PCBA_BB - TestCase:Write_OFF_Display Run Result:True
+2023-05-29 17:22:27,649 [DEBUG] PCBA_BB - TestCase:Write_OFF_Display Run End
+2023-05-29 17:22:27,649 [DEBUG] PCBA_BB - TestCase:CHECK_FTM_MODE Run Start
+2023-05-29 17:22:27,649 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:22:27,649 [DEBUG] ThreadSleepAction - Sleep Time:5000
+2023-05-29 17:22:32,659 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:22:32,659 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:32,659 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:getprop ro.boot.ceibootmode
+2023-05-29 17:22:32,689 [DEBUG] AdbCommandAction - SeqNo:0 , Output:1
+2023-05-29 17:22:32,689 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:1
+2023-05-29 17:22:32,689 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:32,689 [DEBUG] PCBA_BB - TestCase:CHECK_FTM_MODE Run Result:True
+2023-05-29 17:22:32,699 [DEBUG] PCBA_BB - TestCase:CHECK_FTM_MODE Run End
+2023-05-29 17:22:32,699 [DEBUG] PCBA_BB - TestCase:Read_SW Run Start
+2023-05-29 17:22:32,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:32,699 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:32,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:32,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:32,699 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:getprop ro.build.version.software
+2023-05-29 17:22:32,729 [DEBUG] AdbCommandAction - SeqNo:0 , Output:DDW1.0287.1304554.E1N.23160.F
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Run
+2023-05-29 17:22:32,729 [DEBUG] StringStoreValueRegexMatchAction - Input is DDW1.0287.1304554.E1N.23160.F
+
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringStoreValueRegexMatchAction Result:True
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:22:32,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-05-29 17:22:32,739 [DEBUG] Main - value1 : DDW1.0287.1304554.E1N.23160.F , value2 : DDW1.0287.1304554.E1N.23160.F
+2023-05-29 17:22:32,739 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-05-29 17:22:32,739 [DEBUG] PCBA_BB - TestCase:Read_SW Run Result:True
+2023-05-29 17:22:32,739 [DEBUG] PCBA_BB - TestCase:Read_SW Run End
+2023-05-29 17:22:32,739 [DEBUG] PCBA_BB - TestCase:Write_Factory_SN Run Start
+2023-05-29 17:22:32,739 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:32,739 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:32,739 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:32,739 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:32,739 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:btnvtool -M 148944200B1
+2023-05-29 17:22:32,789 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Write FACT SN [148944200B1] success.
+2023-05-29 17:22:32,789 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:success
+2023-05-29 17:22:32,789 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:32,789 [DEBUG] PCBA_BB - TestCase:Write_Factory_SN Run Result:True
+2023-05-29 17:22:32,789 [DEBUG] PCBA_BB - TestCase:Write_Factory_SN Run End
+2023-05-29 17:22:32,789 [WARN ] AdbGetSNAction - VerifyOutput=true but ExpectOutput is empty!! 
+2023-05-29 17:22:32,789 [DEBUG] PCBA_BB - TestCase:Read_Factory_SN Run Start
+2023-05-29 17:22:32,789 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:32,789 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:32,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:32,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Run
+2023-05-29 17:22:32,799 [DEBUG] AdbGetSNAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /persist/factory_sn
+2023-05-29 17:22:32,829 [DEBUG] AdbGetSNAction - SeqNo:0 , Output:148944200B1
+2023-05-29 17:22:32,829 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Result:True
+2023-05-29 17:22:32,829 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Run
+2023-05-29 17:22:32,829 [DEBUG] Main - value1 : 148944200B1 , value2 : 148944200B1
+2023-05-29 17:22:32,829 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StringCompareAction Result:True
+2023-05-29 17:22:32,829 [DEBUG] PCBA_BB - TestCase:Read_Factory_SN Run Result:True
+2023-05-29 17:22:32,829 [DEBUG] PCBA_BB - TestCase:Read_Factory_SN Run End
+2023-05-29 17:22:32,839 [DEBUG] PCBA_BB - TestCase:Gsensor_Self_Test Run Start
+2023-05-29 17:22:32,839 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:32,839 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:32,839 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:32,839 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Run
+2023-05-29 17:22:32,839 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-05-29 17:22:32,839 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-05-29 17:22:32,839 [DEBUG] IfElseAction - SeqNo:0 SubActions:AdbCommandAction Run
+2023-05-29 17:22:32,839 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:find /data/vendor/sensors/ -name accel_STMicro_see_salt.json
+2023-05-29 17:22:32,869 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:32,869 [DEBUG] IfElseAction - SeqNo:0 SubActions:AdbCommandAction Result:False
+2023-05-29 17:22:32,879 [DEBUG] IfElseAction - =======ConditionActions End
+2023-05-29 17:22:32,879 [DEBUG] IfElseAction - =======FalseActions Start
+2023-05-29 17:22:32,879 [ERROR] IfElseAction - actions not found.
+2023-05-29 17:22:32,879 [DEBUG] IfElseAction - =======FalseActions End
+2023-05-29 17:22:32,879 [DEBUG] IfElseAction - CheckResult:False Condition_result:False result:True
+2023-05-29 17:22:32,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Result:True
+2023-05-29 17:22:32,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:32,879 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:see_selftest -sensor=accel -testtype=1
+2023-05-29 17:22:38,579 [DEBUG] AdbCommandAction - SeqNo:0 , Output:see_selftest version 1.4
+00:01:40.097 see_selftest -sensor=accel -testtype=1 
+begin usta_get_sensor_list
+diag:successfully connected to socket 16
+diag:CreateWaitThread: Failed to initialize block set
+end   usta_get_sensor_list
+por file: /data/sensors/por_spec.txt not found.
+00:01:40.660 lookup: accel
+00:01:40.660 found accel suid = 0xa993598532f4db85354639543f5014b0
+00:01:40.660 -sensor=accel  found suid = 0xa993598532f4db85354639543f5014b0
+00:01:40.660 self_test_sensor() testtype 1 - SNS_PHYSICAL_SENSOR_TEST_TYPE_HW
+00:01:40.675 self_test_sensor()
+00:01:40.675 sleep 5 seconds
+sleep( 5.000000) seconds
+00:01:45.676 disable_sensor( accel)
+00:01:45.684 disable_sensor()
+00:01:45.685 PASS see_selftest -sensor=accel -testtype=1 
+PASS see_selftest -sensor=accel -testtype=1
+2023-05-29 17:22:38,579 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:38,579 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:38,579 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /data/vendor/sensors/accel_STMicro_see_salt.json | grep test_type
+2023-05-29 17:22:38,619 [DEBUG] AdbCommandAction - SeqNo:0 , Output:   "test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW"
+    "test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW",
+2023-05-29 17:22:38,629 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:"test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW",
+2023-05-29 17:22:38,629 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:38,629 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:38,629 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /data/vendor/sensors/accel_STMicro_see_salt.json | grep test_pass
+2023-05-29 17:22:38,669 [DEBUG] AdbCommandAction - SeqNo:0 , Output:    "test_passed" : 1,
+2023-05-29 17:22:38,669 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:"test_passed" : 1,
+2023-05-29 17:22:38,669 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:38,679 [DEBUG] PCBA_BB - TestCase:Gsensor_Self_Test Run Result:True
+2023-05-29 17:22:38,679 [DEBUG] PCBA_BB - TestCase:Gsensor_Self_Test Run End
+2023-05-29 17:22:38,679 [DEBUG] PCBA_BB - TestCase:Gyro_Self_Test Run Start
+2023-05-29 17:22:38,679 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:38,679 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:38,679 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:38,679 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Run
+2023-05-29 17:22:38,679 [DEBUG] IfElseAction - ====================== SeqNo:0 Start
+2023-05-29 17:22:38,679 [DEBUG] IfElseAction - =======ConditionActions Start
+2023-05-29 17:22:38,679 [DEBUG] IfElseAction - SeqNo:0 SubActions:AdbCommandAction Run
+2023-05-29 17:22:38,679 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:find /data/vendor/sensors/ -name gyro_STMicro_see_salt.json
+2023-05-29 17:22:38,719 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:38,719 [DEBUG] IfElseAction - SeqNo:0 SubActions:AdbCommandAction Result:False
+2023-05-29 17:22:38,719 [DEBUG] IfElseAction - =======ConditionActions End
+2023-05-29 17:22:38,719 [DEBUG] IfElseAction - =======FalseActions Start
+2023-05-29 17:22:38,719 [ERROR] IfElseAction - actions not found.
+2023-05-29 17:22:38,719 [DEBUG] IfElseAction - =======FalseActions End
+2023-05-29 17:22:38,719 [DEBUG] IfElseAction - CheckResult:False Condition_result:False result:True
+2023-05-29 17:22:38,719 [DEBUG] CommonTestCase - SeqNo:0 TestAction:IfElseAction Result:True
+2023-05-29 17:22:38,719 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:38,719 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:see_selftest -sensor=gyro -testtype=1
+2023-05-29 17:22:44,399 [DEBUG] AdbCommandAction - SeqNo:0 , Output:see_selftest version 1.4
+00:01:45.915 see_selftest -sensor=gyro -testtype=1 
+begin usta_get_sensor_list
+diag:successfully connected to socket 16
+diag:CreateWaitThread: Failed to initialize block set
+end   usta_get_sensor_list
+por file: /data/sensors/por_spec.txt not found.
+00:01:46.482 lookup: gyro
+00:01:46.482 found gyro suid = 0x7c31db162ebc5090e94c1611b2adb83a
+00:01:46.483 -sensor=gyro  found suid = 0x7c31db162ebc5090e94c1611b2adb83a
+00:01:46.483 self_test_sensor() testtype 1 - SNS_PHYSICAL_SENSOR_TEST_TYPE_HW
+00:01:46.499 self_test_sensor()
+00:01:46.499 sleep 5 seconds
+sleep( 5.000000) seconds
+00:01:51.499 disable_sensor( gyro)
+00:01:51.507 disable_sensor()
+00:01:51.507 PASS see_selftest -sensor=gyro -testtype=1 
+PASS see_selftest -sensor=gyro -testtype=1
+2023-05-29 17:22:44,399 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:44,399 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:44,399 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /data/vendor/sensors/gyro_STMicro_see_salt.json | grep test_type
+2023-05-29 17:22:44,449 [DEBUG] AdbCommandAction - SeqNo:0 , Output:   "test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW"
+    "test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW",
+2023-05-29 17:22:44,449 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:"test_type" : "SNS_PHYSICAL_SENSOR_TEST_TYPE_HW",
+2023-05-29 17:22:44,449 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:44,449 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:44,449 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /data/vendor/sensors/gyro_STMicro_see_salt.json | grep test_pass
+2023-05-29 17:22:44,489 [DEBUG] AdbCommandAction - SeqNo:0 , Output:    "test_passed" : 1,
+2023-05-29 17:22:44,499 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:"test_passed" : 1,
+2023-05-29 17:22:44,499 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:44,499 [DEBUG] PCBA_BB - TestCase:Gyro_Self_Test Run Result:True
+2023-05-29 17:22:44,499 [DEBUG] PCBA_BB - TestCase:Gyro_Self_Test Run End
+2023-05-29 17:22:44,499 [DEBUG] PCBA_BB - TestCase:Ecompass_Sensor_Ping_Test Run Start
+2023-05-29 17:22:44,499 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:44,499 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:44,499 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:44,499 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:44,499 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:see_workhorse -ping=1 -sensor=mag
+2023-05-29 17:22:45,109 [DEBUG] AdbCommandAction - SeqNo:0 , Output:see_workhorse version 1.55
+00:01:51.701 see_workhorse -ping=1 -sensor=mag 
+begin usta_get_sensor_list
+diag:successfully connected to socket 16
+diag:CreateWaitThread: Failed to initialize block set
+end   usta_get_sensor_list
+por file: /data/sensors/por_spec.txt not found.
+00:01:52.222 psalt->begin() took 520 milliseconds
+00:01:52.222 get_sensor_suid( diag_sensor)
+00:01:52.222 + diag_sensor suid = [high 1292e618203987b5, low 94436fa912689085]
+00:01:52.222 lookup: mag
+00:01:52.222 suid = [high ebd5604d09d379bc, low a54dcf30ec041e0f]
+
+mag=1
+2023-05-29 17:22:45,119 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:mag=1
+2023-05-29 17:22:45,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:45,119 [DEBUG] PCBA_BB - TestCase:Ecompass_Sensor_Ping_Test Run Result:True
+2023-05-29 17:22:45,119 [DEBUG] PCBA_BB - TestCase:Ecompass_Sensor_Ping_Test Run End
+2023-05-29 17:22:45,119 [DEBUG] PCBA_BB - TestCase:Ecompass_streaming_test Run Start
+2023-05-29 17:22:45,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:45,119 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:45,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:45,119 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:45,119 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:sns_client_test_cpp mag 10 20
+2023-05-29 17:22:50,249 [DEBUG] AdbCommandAction - SeqNo:0 , Output:sesnor stream output for 20 counts
+starting sensors test for press ctrl-C to stop mag
+overwrite_transport_name:1157, not a sensor hal process
+get_qmi_debug_flag:248, qmi_debug: false
+get_qmi_debug_flag:250, support_qmi_debug : false
+qmi_connect:381, waiting for sensors qmi service
+qmi_connect:383, connecting to qmi service
+qmi_connect:426, connected to ssc for 0xb3614000
+ssc_qmi_connection:237, _service_accessed 0
+ssc_connection:1006, ssc connected
+get_tarnsport_name:1176, ssc_connection = 0xbe80f260 has _transport_name = ssc_qmi
+request_suid:73, requesting suid for mag, ts = 38.901405s
+get_tarnsport_name:1176, ssc_connection = 0xbe80f260 has _transport_name = ssc_qmi
+sample left: 20
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=63
+handle_ssc_event:121, suid_event for mag, num_suids=1, ts=38.908573s
+suid_cb:481, Received SUID event with length 1
+overwrite_transport_name:1157, not a sensor hal process
+get_qmi_debug_flag:248, qmi_debug: false
+get_qmi_debug_flag:250, support_qmi_debug : false
+qmi_connect:381, waiting for sensors qmi service
+qmi_connect:383, connecting to qmi service
+qmi_connect:426, connected to ssc for 0xb3614140
+ssc_qmi_connection:237, _service_accessed 0
+ssc_connection:1006, ssc connected
+suid_cb:488, Received SUID ebd5604d09d379bca54dcf30ec041e0f for 'mag'
+get_tarnsport_name:1176, ssc_connection = 0xb3769070 has _transport_name = ssc_qmi
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=539
+event_cb:201, Received QMI indication with length 539
+event_cb:208, event[0] msg_id=128, ts=2156959631
+event_cb:347, attribute ID :16
+event_cb:347, attribute ID :5
+event_cb:347, attribute ID :0
+event_cb:347, attribute ID :2
+event_cb:347, attribute ID :1
+event_cb:347, attribute ID :17
+event_cb:347, attribute ID :4
+event_cb:347, attribute ID :15
+event_cb:347, attribute ID :21
+event_cb:347, attribute ID :22
+event_cb:347, attribute ID :13
+event_cb:347, attribute ID :14
+event_cb:347, attribute ID :18
+event_cb:347, attribute ID :20
+event_cb:347, attribute ID :19
+event_cb:347, attribute ID :11
+event_cb:347, attribute ID :9
+event_cb:347, attribute ID :6
+event_cb:347, attribute ID :7
+event_cb:347, attribute ID :12
+event_cb:347, attribute ID :8
+event_cb:347, attribute ID :10
+event_cb:347, attribute ID :23
+event_cb:347, attribute ID :24
+event_cb:347, attribute ID :3
+print_sensor_info:140, --------------------- 
+print_sensor_info:141, ##### ATTRIBUTES #### 
+print_sensor_info:142, --------------------- 
+print_sensor_info:144, SNS_STD_SENSOR_ATTRID_NAME: ak0991x 
+
+print_sensor_info:145, SNS_STD_SENSOR_ATTRID_VENDOR : akm 
+
+print_sensor_info:146, SNS_STD_SENSOR_ATTRID_TYPE :mag 
+
+print_sensor_info:160, max_delay: 100000 uSec
+
+print_sensor_info:161, min_delay: 10000 uSec
+
+print_sensor_info:170, -----------------------
+print_sensor_info:171, supported resolutions: 
+print_sensor_info:172, -----------------------
+print_sensor_info:174, 0.150000
+print_sensor_info:176, -----------------------
+print_sensor_info:179, supported ranges: 
+print_sensor_info:180, -----------------------
+print_sensor_info:182, 4912.000000
+print_sensor_info:184, -----------------------
+sample left: 20
+sample left: 20
+sample left: 20
+send_config_req:434, sending on normal config request and sample rate 10
+get_tarnsport_name:1176, ssc_connection = 0xb3769070 has _transport_name = ssc_qmi
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=74
+event_cb:201, Received QMI indication with length 74
+handle_indication:604, msg_id 34 
+event_cb:208, event[0] msg_id=768, ts=2216714549
+event_cb:222, Received config event with sample rate 10.000000
+handle_indication:672, indication, payload_len=97
+event_cb:201, Received QMI indication with length 97
+event_cb:208, event[0] msg_id=1022, ts=2216719234
+event_cb:354, Received unknown message ID 1022
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2216813852
+event_cb:321, Received mag sample <102.000008, -3.000000, 6.150000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2218733851
+event_cb:321, Received mag sample <101.250008, -3.000000, 5.400000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2220653850
+event_cb:321, Received mag sample <102.150002, -3.900000, 6.750000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2222573849
+event_cb:321, Received mag sample <101.700005, -1.200000, 5.850000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2224493848
+event_cb:321, Received mag sample <102.150002, -2.850000, 5.700000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2226413847
+event_cb:321, Received mag sample <102.600006, -2.100000, 6.300000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2228333846
+event_cb:321, Received mag sample <101.850006, -3.150000, 6.300000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2230253845
+event_cb:321, Received mag sample <100.050003, -3.150000, 4.200000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2232173844
+event_cb:321, Received mag sample <100.800003, -1.350000, 6.300000>, sample status<3>
+sample left: 11
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2234093843
+event_cb:321, Received mag sample <100.350006, -3.150000, 5.700000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2236013842
+event_cb:321, Received mag sample <102.150002, -2.850000, 6.000000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2237933841
+event_cb:321, Received mag sample <100.500008, -1.950000, 7.650000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2239853840
+event_cb:321, Received mag sample <100.200005, -1.950000, 5.100000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2241773839
+event_cb:321, Received mag sample <99.150002, -2.700000, 4.800000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2243693838
+event_cb:321, Received mag sample <102.000008, -1.950000, 4.800000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2245613837
+event_cb:321, Received mag sample <102.300003, -4.050000, 6.150000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2247533836
+event_cb:321, Received mag sample <101.250008, -3.000000, 7.650000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2249453835
+event_cb:321, Received mag sample <102.600006, -2.400000, 7.800000>, sample status<3>
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2251373834
+event_cb:321, Received mag sample <102.750008, -3.300000, 5.850000>, sample status<3>
+sample left: 1
+handle_indication:604, msg_id 34 
+handle_indication:672, indication, payload_len=54
+event_cb:201, Received QMI indication with length 54
+event_cb:208, event[0] msg_id=1025, ts=2253293833
+event_cb:321, Received mag sample <101.850006, -3.600000, 4.950000>, sample status<3>
+get_tarnsport_name:1176, ssc_connection = 0xb3769070 has _transport_name = ssc_qmi
+qmi_disconnect:449, disconnected from ssc for 0xb3614140
+~ssc_connection:1070, ssc disconnected
+2023-05-29 17:22:50,249 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:50,249 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckEcompassData Run
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - Length = 20, FailCounter = 4
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 1, 102.000008,-3.000000,6.150000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 2, 101.250008,-3.000000,5.400000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 3, 102.150002,-3.900000,6.750000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 4, 101.700005,-1.200000,5.850000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 5, 102.150002,-2.850000,5.700000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 6, 102.600006,-2.100000,6.300000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 7, 101.850006,-3.150000,6.300000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 8, 100.050003,-3.150000,4.200000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 9, 100.800003,-1.350000,6.300000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 10, 100.350006,-3.150000,5.700000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 11, 102.150002,-2.850000,6.000000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 12, 100.500008,-1.950000,7.650000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 13, 100.200005,-1.950000,5.100000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 14, 99.150002,-2.700000,4.800000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 15, 102.000008,-1.950000,4.800000
+2023-05-29 17:22:50,249 [DEBUG] CheckEcompassData - 16, 102.300003,-4.050000,6.150000
+2023-05-29 17:22:50,259 [DEBUG] CheckEcompassData - 17, 101.250008,-3.000000,7.650000
+2023-05-29 17:22:50,259 [DEBUG] CheckEcompassData - 18, 102.600006,-2.400000,7.800000
+2023-05-29 17:22:50,259 [DEBUG] CheckEcompassData - 19, 102.750008,-3.300000,5.850000
+2023-05-29 17:22:50,259 [DEBUG] CheckEcompassData - 20, 101.850006,-3.600000,4.950000
+2023-05-29 17:22:50,259 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckEcompassData Result:True
+2023-05-29 17:22:50,259 [DEBUG] PCBA_BB - TestCase:Ecompass_streaming_test Run Result:True
+2023-05-29 17:22:50,259 [DEBUG] PCBA_BB - TestCase:Ecompass_streaming_test Run End
+2023-05-29 17:22:50,259 [DEBUG] PCBA_BB - TestCase:NFC_Ping_Test Run Start
+2023-05-29 17:22:50,259 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:50,259 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:50,259 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:50,259 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:50,259 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:svc nfc disable
+2023-05-29 17:22:51,299 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Got a null NfcAdapter, is the system running?
+2023-05-29 17:22:51,309 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:51,309 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:51,309 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:/system/bin/simple_nfc 0
+2023-05-29 17:22:51,689 [DEBUG] AdbCommandAction - SeqNo:0 , Output:NFC 5 => argc=2, argv[1]=0
+NFC => reset !! 0 0 0
+
+***Get NQ information***
+NQ NFCC chip_type = a4
+NQ Firmware version = 1.10.34
+
+================================================
+nfc_ping_device(): Ping success
+================================================
+2023-05-29 17:22:51,689 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:Ping success
+2023-05-29 17:22:51,689 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:51,689 [DEBUG] PCBA_BB - TestCase:NFC_Ping_Test Run Result:True
+2023-05-29 17:22:51,689 [DEBUG] PCBA_BB - TestCase:NFC_Ping_Test Run End
+2023-05-29 17:22:51,689 [DEBUG] PCBA_BB - TestCase:eSE_Ping_Test Run Start
+2023-05-29 17:22:51,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:51,699 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:51,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:51,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:51,699 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:./system/bin/simple_nfc 7
+2023-05-29 17:22:54,959 [DEBUG] AdbCommandAction - SeqNo:0 , Output:NFC 5 => argc=2, argv[1]=7
+NFC => reset !! 0 0 0
+=> NFC eSE test
+Open ese dev node success: open() returned 4
+NFC eSE test send data = 5a.c4.0.c4
+Write[0x5a, 0xc4, 0x00, 0xc4, ]
+
+Write succeed (4 bytes)
+simple_nfc_write_SE(): Write success
+
+simple_nfc_read(), Reading 258 bytes
+Read success: simple_nfc_read_SE : Times<1> 
+NFC eSE test response data = a5.83.0.83.0
+
+simple_nfc_read_SE(): Read success
+
+================================================
+NFC eSE Ping result = success
+================================================
+2023-05-29 17:22:54,959 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:NFC eSE Ping result = success
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:54,959 [DEBUG] PCBA_BB - TestCase:eSE_Ping_Test Run Result:True
+2023-05-29 17:22:54,959 [DEBUG] PCBA_BB - TestCase:eSE_Ping_Test Run End
+2023-05-29 17:22:54,959 [DEBUG] PCBA_BB - TestCase:PSRAM_Test Run Start
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:54,959 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:22:54,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-05-29 17:22:54,959 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:root
+2023-05-29 17:22:55,009 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-05-29 17:22:55,009 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,009 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 13 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_item
+2023-05-29 17:22:55,039 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,039 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,039 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,039 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 1 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_instance
+2023-05-29 17:22:55,069 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,069 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,069 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,069 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 0 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_iomode
+2023-05-29 17:22:55,099 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,099 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,099 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,109 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 0 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_set_offset
+2023-05-29 17:22:55,139 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,149 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,149 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,149 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 1024 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_num_bytes
+2023-05-29 17:22:55,179 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,179 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_start
+2023-05-29 17:22:55,319 [DEBUG] AdbCommandAction - SeqNo:0 , Output:0
+2023-05-29 17:22:55,319 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:0
+2023-05-29 17:22:55,319 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,319 [DEBUG] PCBA_BB - TestCase:PSRAM_Test Run Result:True
+2023-05-29 17:22:55,319 [DEBUG] PCBA_BB - TestCase:PSRAM_Test Run End
+2023-05-29 17:22:55,329 [DEBUG] PCBA_BB - TestCase:NorFlash_Test Run Start
+2023-05-29 17:22:55,329 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:22:55,329 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:22:55,329 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:22:55,329 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:22:55,329 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:22:55,329 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-05-29 17:22:55,329 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:root
+2023-05-29 17:22:55,369 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-05-29 17:22:55,369 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,369 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 6 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_item
+2023-05-29 17:22:55,399 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,399 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,399 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,399 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 2 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_instance
+2023-05-29 17:22:55,439 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,439 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,439 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,439 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 0 > /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_send_iomode
+2023-05-29 17:22:55,469 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,469 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,469 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,469 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /sys/bus/platform/drivers/slate-rsb/soc:qcom,slate-rsb/slatemem_mem_test_start
+2023-05-29 17:22:55,639 [DEBUG] AdbCommandAction - SeqNo:0 , Output:0
+2023-05-29 17:22:55,639 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:0
+2023-05-29 17:22:55,639 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,639 [DEBUG] PCBA_BB - TestCase:NorFlash_Test Run Result:True
+2023-05-29 17:22:55,639 [DEBUG] PCBA_BB - TestCase:NorFlash_Test Run End
+2023-05-29 17:22:55,649 [DEBUG] PCBA_BB - TestCase:Charging_Current Run Start
+2023-05-29 17:22:55,649 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:22:55,649 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:22:55,649 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-05-29 17:22:55,649 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:root
+2023-05-29 17:22:55,689 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-05-29 17:22:55,689 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:22:55,689 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 0 > /sys/class/power_supply/battery/input_current_limit
+2023-05-29 17:22:55,709 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:22:55,709 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:22:55,709 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:22:55,709 [DEBUG] ThreadSleepAction - Sleep Time:5000
+2023-05-29 17:23:00,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:00,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:00,729 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /sys/class/power_supply/battery/current_now
+2023-05-29 17:23:00,769 [DEBUG] AdbCommandAction - SeqNo:0 , Output:363189
+2023-05-29 17:23:00,769 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:00,769 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:00,769 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 1 > /sys/class/power_supply/battery/input_current_limit
+2023-05-29 17:23:00,789 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:23:00,789 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:00,789 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:23:00,789 [DEBUG] ThreadSleepAction - Sleep Time:1000
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Run
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Result:True
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-05-29 17:23:01,799 [DEBUG] DecimalRangeVerifyAction - Input: 363.189
+2023-05-29 17:23:01,799 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:363.189, Minimum:200, Maximum:420
+2023-05-29 17:23:01,799 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-05-29 17:23:01,799 [DEBUG] PCBA_BB - TestCase:Charging_Current Run Result:True
+2023-05-29 17:23:01,799 [DEBUG] PCBA_BB - TestCase:Charging_Current Run End
+2023-05-29 17:23:01,809 [DEBUG] PCBA_BB - TestCase:Read_Batt_Voltage Run Start
+2023-05-29 17:23:01,809 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:23:01,809 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:23:01,809 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:23:01,809 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:01,809 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:echo 1 > /sys/class/power_supply/battery/input_current_limit
+2023-05-29 17:23:01,829 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:23:01,829 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:01,829 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:23:01,829 [DEBUG] ThreadSleepAction - Sleep Time:3000
+2023-05-29 17:23:04,839 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:04,839 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:04,839 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /sys/class/power_supply/battery/voltage_now
+2023-05-29 17:23:04,879 [DEBUG] AdbCommandAction - SeqNo:0 , Output:3895653
+2023-05-29 17:23:04,879 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:3895653
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Run
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Result:True
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-05-29 17:23:04,879 [DEBUG] DecimalRangeVerifyAction - Input: 3.895653
+2023-05-29 17:23:04,879 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:3.895653, Minimum:3.85, Maximum:3.95
+2023-05-29 17:23:04,879 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-05-29 17:23:04,879 [DEBUG] PCBA_BB - TestCase:Read_Batt_Voltage Run Result:True
+2023-05-29 17:23:04,879 [DEBUG] PCBA_BB - TestCase:Read_Batt_Voltage Run End
+2023-05-29 17:23:04,889 [DEBUG] PCBA_BB - TestCase:Key_RPMB Run Start
+2023-05-29 17:23:04,889 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:23:04,889 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:23:04,889 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Run
+2023-05-29 17:23:04,889 [DEBUG] ProcessUtil - WorkingDirectory:, Command:adb.exe, Arguments:root
+2023-05-29 17:23:04,929 [DEBUG] CommonTestCase - SeqNo:0 TestAction:RunProcessAction Result:True
+2023-05-29 17:23:04,929 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPushAction Run
+2023-05-29 17:23:04,929 [DEBUG] AdbPushAction - SeqNo:0 , Arguments:-s 2fa9d384 push Extra\rpmb.sh /data/rpmb.sh
+2023-05-29 17:23:05,019 [DEBUG] AdbPushAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , ExitCode:0
+2023-05-29 17:23:05,019 [DEBUG] AdbPushAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:chmod 777 /data/rpmb.sh
+2023-05-29 17:23:05,049 [DEBUG] AdbPushAction - SeqNo:0 , Output:
+2023-05-29 17:23:05,049 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbPushAction Result:True
+2023-05-29 17:23:05,049 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:05,049 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:/data/rpmb.sh
+2023-05-29 17:23:05,149 [DEBUG] AdbCommandAction - SeqNo:0 , Output:Note: Command line arguments do not belong to legacy test
+	-------------------------------------------------------
+	 WARNING!!! You are about to provision the RPMB key.
+	 This is a ONE time operation and CANNOT be reversed.
+	-------------------------------------------------------
+	 0 -> Provision Production key
+	 1 -> Provision Test key
+	 2 -> Check RPMB key provision status
+	-------------------------------------------------------
+	 Select an option to proceed: RPMB key provisioning failed (-1)
+2023-05-29 17:23:05,149 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:05,149 [DEBUG] PCBA_BB - TestCase:Key_RPMB Run Result:True
+2023-05-29 17:23:05,159 [DEBUG] PCBA_BB - TestCase:Key_RPMB Run End
+2023-05-29 17:23:05,169 [DEBUG] PCBA_BB - TestCase:Power_off_current Run Start
+2023-05-29 17:23:05,169 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:23:05,169 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07on
+2023-05-29 17:23:05,169 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:23:05,179 [DEBUG] FixtureControlManager - Output:07on
+2023-05-29 17:23:05,179 [DEBUG] FixtureCommandAction - Command:07on
+2023-05-29 17:23:05,179 [DEBUG] FixtureCommandAction - MatchOutput:07on
+2023-05-29 17:23:05,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:23:05,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Run
+2023-05-29 17:23:05,179 [DEBUG] Main - CheckDevice:true
+2023-05-29 17:23:05,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbWaitForDeviceAction Result:True
+2023-05-29 17:23:05,179 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:23:05,179 [DEBUG] ThreadSleepAction - Sleep Time:500
+2023-05-29 17:23:05,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:05,699 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:23:05,699 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:setprop cei_current_test poweroff
+2023-05-29 17:23:05,729 [DEBUG] AdbCommandAction - SeqNo:0 , Output:
+2023-05-29 17:23:05,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:23:05,729 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:23:05,729 [DEBUG] ThreadSleepAction - Sleep Time:1000
+2023-05-29 17:23:06,749 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:06,749 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Run
+2023-05-29 17:23:06,749 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07off
+2023-05-29 17:23:06,749 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:23:06,759 [DEBUG] FixtureControlManager - Output:07off
+2023-05-29 17:23:06,759 [DEBUG] FixtureCommandAction - Command:07off
+2023-05-29 17:23:06,759 [DEBUG] FixtureCommandAction - MatchOutput:07off
+2023-05-29 17:23:06,759 [DEBUG] CommonTestCase - SeqNo:0 TestAction:FixtureCommandAction Result:True
+2023-05-29 17:23:06,759 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:23:06,759 [DEBUG] ThreadSleepAction - Sleep Time:22000
+2023-05-29 17:23:06,789 [INFO ] AdbManager - ADB Device Disconnected:2fa9d384
+2023-05-29 17:23:28,769 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:28,769 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Run
+2023-05-29 17:23:28,769 [DEBUG] Agilent66319DAction - OutputVoltage:3.9 , SamplingPoints:4096 , CurrentMeasureTime:3000 , CurrentRange:MIN, SeqNo:0
+2023-05-29 17:23:29,769 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:23:29,769 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:23:29,769 [DEBUG] Main - [95820384] res = 0 , cmd = VOLT 3.9
+2023-05-29 17:23:29,769 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:23:29,769 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MIN
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:TINT 0.000732421875
+2023-05-29 17:23:29,779 [DEBUG] Main - [95820384] res = 0 , cmd = MEAS:CURR?
+2023-05-29 17:23:32,799 [DEBUG] Main - [95820384] try to get response
+2023-05-29 17:23:32,819 [DEBUG] Main - [95820384] res = 0 , response = 6.20134E-5
+
+2023-05-29 17:23:32,819 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 End
+2023-05-29 17:23:32,819 [DEBUG] Agilent66319DAction - Curr: 6.20134E-05 A
+2023-05-29 17:23:32,819 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Result:True
+2023-05-29 17:23:32,819 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Run
+2023-05-29 17:23:32,819 [DEBUG] Agilent66319DAction - OutputVoltage:3.9 , SamplingPoints:4096 , CurrentMeasureTime:3000 , CurrentRange:MAX, SeqNo:0
+2023-05-29 17:23:33,819 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:23:33,819 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 1
+2023-05-29 17:23:33,819 [DEBUG] Main - [95820384] res = 0 , cmd = VOLT 3.9
+2023-05-29 17:23:33,819 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:23:33,819 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MAX
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:TINT 0.000732421875
+2023-05-29 17:23:33,829 [DEBUG] Main - [95820384] res = 0 , cmd = MEAS:CURR?
+2023-05-29 17:23:36,849 [DEBUG] Main - [95820384] try to get response
+2023-05-29 17:23:36,869 [DEBUG] Main - [95820384] res = 0 , response = 4.35960E-5
+
+2023-05-29 17:23:36,869 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 End
+2023-05-29 17:23:36,869 [DEBUG] Agilent66319DAction - Curr: 4.3596E-05 A
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:Agilent66319DAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Run
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathematicalOperationAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Run
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:MathRoundAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Run
+2023-05-29 17:23:36,869 [DEBUG] DecimalRangeVerifyAction - Input: 0.062
+2023-05-29 17:23:36,869 [DEBUG] DecimalRangeVerifyAction - Result:True , Value:0.062, Minimum:0, Maximum:0.5
+2023-05-29 17:23:36,869 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CriteriaVerifyAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] PCBA_BB - TestCase:Power_off_current Run Result:True
+2023-05-29 17:23:36,869 [DEBUG] PCBA_BB - TestCase:Power_off_current Run End
+2023-05-29 17:23:36,869 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:23:36,869 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:23:36,869 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:23:36,869 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:23:36,879 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:23:36,879 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:23:36,879 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:23:36,879 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:23:36,879 [DEBUG] TestManager - SeqNo:0 PostTestAction:TmoClientUploadAction Run
+2023-05-29 17:23:36,879 [DEBUG] TmoClientUploadAction - Tmo Step3Socket = TMO_RETEST_OUT;148944200B1;101WR-T3;BASEBAND_1;VC1202061;148944200B1;PASS;;;;;;;;;
+2023-05-29 17:23:37,009 [DEBUG] TmoClientUploadAction - Step4Socket = 148944200;PASS;T001,@0@3;;;
+2023-05-29 17:23:37,009 [DEBUG] TmoClientUploadAction - Tmo Step4 PASS, Pass Code = T001,@0@3
+2023-05-29 17:23:37,009 [DEBUG] TestManager - SeqNo:0 PostTestAction:TmoClientUploadAction Result:True
+2023-05-29 17:23:37,009 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Skip - Only for fail
+2023-05-29 17:23:37,009 [DEBUG] TestManager - SeqNo:0 PostTestAction:AdbWaitForDeviceAction Skip - Only for fail
+2023-05-29 17:23:37,009 [DEBUG] TestManager - SeqNo:0 PostTestAction:Agilent66319DAction Run
+2023-05-29 17:23:37,019 [DEBUG] Agilent66319DAction - OutputVoltage:0 , SamplingPoints:4096 , CurrentMeasureTime:5000 , CurrentRange:MAX, SeqNo:0
+2023-05-29 17:23:38,019 [DEBUG] Agilent66319DAction - ====================== SeqNo:0 Start
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = OUTP 0
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:SWE:POIN 4096
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = SENS:CURR:RANG MAX
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = *CLS
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = STAT:PRES
+2023-05-29 17:23:38,019 [DEBUG] Main - [95820384] res = 0 , cmd = *SRE 0
+2023-05-29 17:23:38,029 [DEBUG] Main - [95820384] res = 0 , cmd = *ESE 0
+2023-05-29 17:23:38,029 [DEBUG] TestManager - SeqNo:0 PostTestAction:Agilent66319DAction Result:True
+2023-05-29 17:23:38,029 [DEBUG] TestManager - SeqNo:0 PostTestAction:ThreadSleepAction Run
+2023-05-29 17:23:38,029 [DEBUG] ThreadSleepAction - Sleep Time:100
+2023-05-29 17:23:38,139 [DEBUG] TestManager - SeqNo:0 PostTestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:38,139 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Run
+2023-05-29 17:23:38,139 [DEBUG] FixtureControlManager - Try to SendCommand , Command:07off
+2023-05-29 17:23:38,139 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:23:38,149 [DEBUG] FixtureControlManager - Output:07off
+2023-05-29 17:23:38,149 [DEBUG] FixtureCommandAction - Command:07off
+2023-05-29 17:23:38,149 [DEBUG] FixtureCommandAction - MatchOutput:07off
+2023-05-29 17:23:38,149 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Result:True
+2023-05-29 17:23:38,149 [DEBUG] TestManager - SeqNo:0 PostTestAction:ThreadSleepAction Run
+2023-05-29 17:23:38,149 [DEBUG] ThreadSleepAction - Sleep Time:500
+2023-05-29 17:23:38,659 [DEBUG] TestManager - SeqNo:0 PostTestAction:ThreadSleepAction Result:True
+2023-05-29 17:23:38,659 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Run
+2023-05-29 17:23:38,659 [DEBUG] FixtureControlManager - Try to SendCommand , Command:02on
+2023-05-29 17:23:38,659 [DEBUG] FixtureControlManager - Try to ReadLine
+2023-05-29 17:23:38,669 [DEBUG] FixtureControlManager - Output:02on
+2023-05-29 17:23:38,669 [DEBUG] FixtureCommandAction - Command:02on
+2023-05-29 17:23:38,669 [DEBUG] FixtureCommandAction - MatchOutput:02on
+2023-05-29 17:23:38,669 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Result:True
+2023-05-29 17:23:38,679 [WARN ] Main - Template is not exist - C:\DDW1_Test\CEI_BASEBAND\Configs\ReportDefaultTemplate.json

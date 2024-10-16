@@ -1,0 +1,213 @@
+2023-05-29 17:23:59,836 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Run
+2023-05-29 17:23:59,836 [DEBUG] TestManager - SeqNo:0 PreTestAction:StoreValueFormatAction Result:True
+2023-05-29 17:23:59,837 [DEBUG] TestManager - SeqNo:0 PreTestAction:MessageBoxYesNoAction Run
+2023-05-29 17:24:00,595 [DEBUG] TestManager - SeqNo:0 PreTestAction:MessageBoxYesNoAction Result:True
+2023-05-29 17:24:00,595 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Run
+2023-05-29 17:24:00,595 [DEBUG] FixtureControlManager - Try to SendCommand , Command:close
+2023-05-29 17:24:00,596 [DEBUG] FixtureCommandAction - Command:close
+2023-05-29 17:24:00,596 [DEBUG] TestManager - SeqNo:0 PreTestAction:FixtureCommandAction Result:True
+2023-05-29 17:24:00,596 [DEBUG] FATP_GPS - TestCase:Get_Image_ver Run Start
+2023-05-29 17:24:00,597 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Run
+2023-05-29 17:24:00,597 [DEBUG] CommonTestCase - SeqNo:0 TestAction:StoreValueFormatAction Result:True
+2023-05-29 17:24:00,597 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbDeviceWaitAction Run
+2023-05-29 17:24:35,277 [INFO ] AdbManager - ADB Device Connected:2fa9d384
+2023-05-29 17:24:35,280 [INFO ] AdbManager - ADB Device SN:2fa9d384 State:Online
+2023-05-29 17:24:35,281 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbDeviceWaitAction Result:True
+2023-05-29 17:24:35,282 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:24:35,282 [DEBUG] ThreadSleepAction - Sleep Time:3000
+2023-05-29 17:24:38,283 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:24:38,284 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:24:38,285 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:getprop ro.build.version.software
+2023-05-29 17:24:38,319 [DEBUG] AdbCommandAction - SeqNo:0 , Output:DDW1.0287.1304554.E1N.23160.F
+2023-05-29 17:24:38,319 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:DDW1.0287.1304554.E1N.23160.F
+2023-05-29 17:24:38,320 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:24:38,320 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:38,321 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:38,321 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,321 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,321 [DEBUG] FATP_GPS - TestCase:Get_Image_ver Run Result:True
+2023-05-29 17:24:38,322 [DEBUG] FATP_GPS - TestCase:Get_Image_ver Run End
+2023-05-29 17:24:38,322 [DEBUG] FATP_GPS - TestCase:TMO_Line_IN Run Start
+2023-05-29 17:24:38,323 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:38,323 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,323 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Run
+2023-05-29 17:24:38,323 [DEBUG] TmoClientAction - Tmo Step1Socket = TMO_TEST_LITE_IN;148944200B1;148944200B1;101WR-T3;T1_GPS_1;;;41;;VC1202061;
+2023-05-29 17:24:38,455 [DEBUG] TmoClientAction - Step2Socket = 148944200;PASS;;0;;;60716901;691J8300010;DDW1;Dyson;F/WMB E80;DDW1 GA-671;;41DDW100010;SMT SW;DDW1.0287.1304554.E1N.23160.F;;SDDCN_W2340037;DDW1.0287.1304554.E1N.23160.F;;;;;;;;;;;;;
+2023-05-29 17:24:38,458 [DEBUG] TmoClientAction - Tmo Step2 PASS, retry time = 0
+2023-05-29 17:24:38,459 [DEBUG] CommonTestCase - SeqNo:0 TestAction:TmoClientAction Result:True
+2023-05-29 17:24:38,460 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Run
+2023-05-29 17:24:38,460 [DEBUG] CommonTestCase - SeqNo:0 TestAction:CheckToolProjectCodeAction Result:True
+2023-05-29 17:24:38,461 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,461 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,461 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,462 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,463 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Run
+2023-05-29 17:24:38,463 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ExportToGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,463 [DEBUG] FATP_GPS - TestCase:TMO_Line_IN Run Result:True
+2023-05-29 17:24:38,465 [DEBUG] FATP_GPS - TestCase:TMO_Line_IN Run End
+2023-05-29 17:24:38,465 [DEBUG] FATP_GPS - TestCase:CHECK_FTM_MODE Run Start
+2023-05-29 17:24:38,466 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Run
+2023-05-29 17:24:38,466 [DEBUG] AdbCommandAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:getprop ro.boot.ceibootmode
+2023-05-29 17:24:38,497 [DEBUG] AdbCommandAction - SeqNo:0 , Output:1
+2023-05-29 17:24:38,498 [DEBUG] AdbCommandAction - SeqNo:0 , MatchOutput:1
+2023-05-29 17:24:38,499 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbCommandAction Result:True
+2023-05-29 17:24:38,499 [DEBUG] FATP_GPS - TestCase:CHECK_FTM_MODE Run Result:True
+2023-05-29 17:24:38,502 [DEBUG] FATP_GPS - TestCase:CHECK_FTM_MODE Run End
+2023-05-29 17:24:38,503 [DEBUG] FATP_GPS - TestCase:GPS_Calibration Run Start
+2023-05-29 17:24:38,504 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:38,504 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:38,504 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:38,513 [DEBUG] GPSTxAction - Send CMW500 cmd:SYSTem:RESet
+2023-05-29 17:24:38,545 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:38,545 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:38,546 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbDeviceWaitAction Run
+2023-05-29 17:24:38,546 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbDeviceWaitAction Result:True
+2023-05-29 17:24:38,546 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,596 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_Read_NVData
+2023-05-29 17:24:38,600 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,600 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,654 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_ConfigureTimeOut
+2023-05-29 17:24:38,654 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,654 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,707 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_GEN8_Get_GNSS_Engine_Revision
+2023-05-29 17:24:38,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,711 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,764 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_DIAG_SetPhoneLoggingState
+2023-05-29 17:24:38,764 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,764 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,818 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_DIAG_EventReportControl
+2023-05-29 17:24:38,826 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,826 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,881 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_ClearStatus
+2023-05-29 17:24:38,881 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:38,881 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:38,937 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_StartCGPS_AsyncMessages
+2023-05-29 17:24:39,070 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:39,071 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:39,071 [DEBUG] GPSTxAction - Send CMW500 cmd:ROUT:GPRF:GEN:SCEN:SAL RFAC,TX1
+2023-05-29 17:24:39,095 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:39,096 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:BBM CW
+2023-05-29 17:24:39,121 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:39,122 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:STAT ON
+2023-05-29 17:24:39,146 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:39,147 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:RFS:FREQ 1575.62 MHZ
+2023-05-29 17:24:39,172 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:39,173 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:RFS:LEV -109
+2023-05-29 17:24:39,198 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:39,198 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:39,199 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:24:39,199 [DEBUG] ThreadSleepAction - Sleep Time:2000
+2023-05-29 17:24:41,201 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:24:41,202 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:41,266 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_GNSS_XO_Factory_Cal_Request_WithWait
+2023-05-29 17:24:41,930 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:41,930 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:24:41,931 [DEBUG] ThreadSleepAction - Sleep Time:2000
+2023-05-29 17:24:43,933 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:24:43,934 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:43,935 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:STAT OFF
+2023-05-29 17:24:43,958 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:43,959 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:43,960 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:44,024 [DEBUG] QLibCommandAction - SeqNo:0 , Action:QLIB_EFS2_SyncWithWait
+2023-05-29 17:24:44,573 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:44,574 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Run
+2023-05-29 17:24:44,575 [DEBUG] AdbGetSNAction - SeqNo:0 , DeviceSerialNumber:2fa9d384 , Command:cat /persist/factory_sn
+2023-05-29 17:24:44,617 [DEBUG] AdbGetSNAction - SeqNo:0 , Output:148944200B1
+2023-05-29 17:24:44,619 [DEBUG] AdbGetSNAction - SeqNo:0 , MatchOutput:148944200B1
+2023-05-29 17:24:44,619 [DEBUG] CommonTestCase - SeqNo:0 TestAction:AdbGetSNAction Result:True
+2023-05-29 17:24:44,620 [DEBUG] FATP_GPS - TestCase:GPS_Calibration Run Result:True
+2023-05-29 17:24:44,623 [DEBUG] FATP_GPS - TestCase:GPS_Calibration Run End
+2023-05-29 17:24:44,624 [DEBUG] FATP_GPS - TestCase:GPS_Test Run Start
+2023-05-29 17:24:44,624 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:44,624 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:44,625 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:44,625 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:44,625 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:44,625 [DEBUG] GPSTxAction - Send CMW500 cmd:ROUT:GPRF:GEN:SCEN:SAL RFAC,TX1
+2023-05-29 17:24:44,648 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,651 [DEBUG] GPSTxAction - CMW500 readResult:1
+
+2023-05-29 17:24:44,651 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:BBM CW
+2023-05-29 17:24:44,675 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,678 [DEBUG] GPSTxAction - CMW500 readResult:1
+
+2023-05-29 17:24:44,679 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:STAT ON
+2023-05-29 17:24:44,702 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,704 [DEBUG] GPSTxAction - CMW500 readResult:1
+
+2023-05-29 17:24:44,705 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:RFS:FREQ 1575.42 MHZ
+2023-05-29 17:24:44,728 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,729 [DEBUG] GPSTxAction - Send CMW500 cmd:SOUR:GPRF:GEN:RFS:LEV -128
+2023-05-29 17:24:44,751 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,753 [DEBUG] GPSTxAction - CMW500 readResult:1
+
+2023-05-29 17:24:44,753 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:44,754 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:44,754 [DEBUG] GPSTxAction - Send CMW500 cmd:CONFigure:BASE:FDCorrection:CTABle:CREate 'GPS_DLLoss',100MHz,3
+2023-05-29 17:24:44,778 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,779 [DEBUG] GPSTxAction - Send CMW500 cmd:CONFigure:BASE:FDCorrection:CTABle:ADD 'GPS_DLLoss',1575420000,01.00
+2023-05-29 17:24:44,801 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,802 [DEBUG] GPSTxAction - Send CMW500 cmd:CONFigure:FDCorrection:ACTivate RFAO,'GPS_DLLoss', RXTX
+2023-05-29 17:24:44,826 [DEBUG] GPSTxAction - CMW500 readResult:0,"No error"
+
+2023-05-29 17:24:44,827 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:44,827 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:24:44,828 [DEBUG] ThreadSleepAction - Sleep Time:200
+2023-05-29 17:24:45,029 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:24:45,030 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:45,095 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_SA_RF_VERIF_MODE_SWITCH_WithWait
+2023-05-29 17:24:46,556 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:46,558 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Run
+2023-05-29 17:24:46,558 [DEBUG] ThreadSleepAction - Sleep Time:1000
+2023-05-29 17:24:47,561 [DEBUG] CommonTestCase - SeqNo:0 TestAction:ThreadSleepAction Result:True
+2023-05-29 17:24:47,562 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:47,636 [DEBUG] QLibCommandAction - SeqNo:0 , Action:GPS_DIAG_GEN8_GET_EMBEDDED_CALCULATED_CTON
+2023-05-29 17:24:48,433 [DEBUG] QLibCommandAction - GPS CN = 41.2, Freq = -61
+2023-05-29 17:24:48,436 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:48,436 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Run
+2023-05-29 17:24:48,438 [DEBUG] CommonTestCase - SeqNo:0 TestAction:GPSTxAction Result:True
+2023-05-29 17:24:48,438 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Run
+2023-05-29 17:24:48,490 [DEBUG] QLibCommandAction - SeqNo:0 , Action:QLib_Disconnet
+2023-05-29 17:24:48,496 [DEBUG] CommonTestCase - SeqNo:0 TestAction:QLibCommandAction Result:True
+2023-05-29 17:24:48,496 [DEBUG] FATP_GPS - TestCase:GPS_Test Run Result:True
+2023-05-29 17:24:48,497 [DEBUG] FATP_GPS - TestCase:GPS_Test Run End
+2023-05-29 17:24:48,498 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:48,498 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:48,498 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:48,499 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:48,499 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:48,499 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:48,499 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Run
+2023-05-29 17:24:48,499 [DEBUG] TestManager - SeqNo:0 PostTestAction:ImportFromGlobalStoreValueAction Result:True
+2023-05-29 17:24:48,500 [DEBUG] TestManager - SeqNo:0 PostTestAction:TmoClientUploadAction Run
+2023-05-29 17:24:48,500 [DEBUG] TmoClientUploadAction - Tmo Step3Socket = TMO_RETEST_OUT;148944200B1;101WR-T3;T1_GPS_1;VC1202061;148944200B1;PASS;;;;;;;;;;;;;;;
+2023-05-29 17:24:48,642 [DEBUG] TmoClientUploadAction - Step4Socket = 148944200;PASS;T001,@0@3;;;
+2023-05-29 17:24:48,647 [DEBUG] TmoClientUploadAction - Tmo Step4 PASS, Pass Code = T001,@0@3
+2023-05-29 17:24:48,651 [DEBUG] TestManager - SeqNo:0 PostTestAction:TmoClientUploadAction Result:True
+2023-05-29 17:24:48,651 [DEBUG] TestManager - SeqNo:0 PostTestAction:QLibCommandAction Run
+2023-05-29 17:24:48,721 [DEBUG] QLibCommandAction - SeqNo:0 , Action:Disconnect
+2023-05-29 17:24:48,731 [DEBUG] TestManager - SeqNo:0 PostTestAction:QLibCommandAction Result:True
+2023-05-29 17:24:48,731 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Run
+2023-05-29 17:24:48,731 [DEBUG] FixtureControlManager - Try to SendCommand , Command:open
+2023-05-29 17:24:48,732 [DEBUG] FixtureCommandAction - Command:open
+2023-05-29 17:24:48,732 [DEBUG] TestManager - SeqNo:0 PostTestAction:FixtureCommandAction Result:True
+2023-05-29 17:24:48,742 [WARN ] Main - Template is not exist - C:\DDW1_Test\CEI_GPS\Configs\ReportDefaultTemplate.json

@@ -1,0 +1,61 @@
+2023-11-11 14:00:55 - visa address: GPIB0::20::INSTR
+2023-11-11 14:00:55 - Connect to Instrument successfully
+2023-11-11 14:00:58 - Check error: 0,"No error"
+
+2023-11-11 14:01:43 - Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/CMW500_commands.txt' mode='r' encoding='cp1252'> successful.
+2023-11-11 14:01:43 - Send command /CMW500 commands for test
+ successfull
+2023-11-11 14:01:44 - Send command SYSTem:RESet
+ successfull
+2023-11-11 14:01:45 - Send command ROUT:GPRF:GEN:SCEN:SAL RFAC,TX1
+ successfull
+2023-11-11 14:01:46 - Send command SOUR:GPRF:GEN:BBM CW
+ successfull
+2023-11-11 14:01:47 - Send command SOUR:GPRF:GEN:STAT ON
+ successfull
+2023-11-11 14:01:48 - Send command SOUR:GPRF:GEN:RFS:FREQ 1575.62 MHZ
+ successfull
+2023-11-11 14:01:49 - Send command SOUR:GPRF:GEN:RFS:LEV -109 successfull
+2023-11-11 14:01:50 - Send commands from file F:/Mike/Common/Control_Equiment/CMW500_commands.txt success
+2023-11-11 14:02:13 - Check error: -113,"Undefined header;/CMW500 commands for test"
+
+2023-11-11 14:06:46 - visa address: GPIB0::20::INSTR
+2023-11-11 14:06:47 - Connect to Instrument successfully
+2023-11-11 14:07:03 - Open file <_io.TextIOWrapper name='F:/Mike/Common/Control_Equiment/CMW500_commands.txt' mode='r' encoding='cp1252'> successful.
+2023-11-11 14:07:03 - Send command SYSTem:RESet
+ successfull
+2023-11-11 14:07:04 - Send command ROUT:GPRF:GEN:SCEN:SAL RFAC,TX1
+ successfull
+2023-11-11 14:07:05 - Send command SOUR:GPRF:GEN:BBM CW
+ successfull
+2023-11-11 14:07:06 - Send command SOUR:GPRF:GEN:STAT ON
+ successfull
+2023-11-11 14:07:07 - Send command SOUR:GPRF:GEN:RFS:FREQ 1575.62 MHZ
+ successfull
+2023-11-11 14:07:08 - Send command SOUR:GPRF:GEN:RFS:LEV -109 successfull
+2023-11-11 14:07:09 - Send commands from file F:/Mike/Common/Control_Equiment/CMW500_commands.txt success
+2023-11-11 14:07:15 - Check error: 0,"No error"
+
+2023-11-11 14:14:55 - visa address: GPIB0::20::INSTR
+2023-11-11 14:14:56 - Connect to Instrument successfully
+2023-11-11 14:14:59 - Send command *IDN? to Instrument
+2023-11-11 14:14:59 - Get respond: Rohde&Schwarz,CMW,1201.0002k50/144202,3.5.42.1 beta
+
+2023-11-11 14:15:23 - Clear output screen.
+2023-11-11 14:15:49 - Can't query command: *IDN
+2023-11-11 14:16:00 - Send command *IDN to Instrument
+2023-11-11 14:16:16 - Read respond Fail!!!
+2023-11-11 14:16:23 - Check error: -113,"Undefined header;*IDN"
+
+2023-11-11 14:16:30 - Clear output screen.
+2023-11-11 15:07:47 - visa address: visaAddr.CMW500
+2023-11-11 15:07:47 - Connect to Instrument fail!!!
+2023-11-11 15:08:15 - visa address: GPIB0::20::INSTR
+2023-11-11 15:08:16 - Connect to Instrument successfully
+2023-11-11 15:08:18 - Check error: -113,"Undefined header;*IDN"
+
+2023-11-11 15:08:21 - Check error: 0,"No error"
+
+2023-11-11 15:08:34 - Send command *idn? to Instrument
+2023-11-11 15:08:34 - Get respond: Rohde&Schwarz,CMW,1201.0002k50/144202,3.5.42.1 beta
+

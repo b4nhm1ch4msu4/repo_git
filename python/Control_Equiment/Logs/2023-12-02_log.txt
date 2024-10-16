@@ -1,0 +1,10 @@
+2023-12-02 10:45:15 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-02 10:46:34 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: GPIB0::20::INSTR
+2023-12-02 10:47:19 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: TCPIP0::199.199.0.2::inst0::INSTR
+2023-12-02 10:47:33 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-02 10:47:39 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-02 10:47:39 Main.py              Connect_btn_clicked            INFO     Line:56   Connect to Instrument successfully
+2023-12-02 10:51:07 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: USB0::0x2A8D::0x1301::MY57213238::0::INSTR
+2023-12-02 10:51:07 Main.py              Connect_btn_clicked            ERROR    Line:60   Connect to Instrument fail!!!
+2023-12-02 10:51:14 Main.py              Connect_btn_clicked            INFO     Line:45   visa address: GPIB0::20::INSTR
+2023-12-02 10:51:15 Main.py              Connect_btn_clicked            ERROR    Line:60   Connect to Instrument fail!!!
