@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "B1oUWKS0/Er1Ko8JIq0m4+TOsJHfFnUu9Gyj7JYcKmoJHXXmMDXkBzJC+ASi4yh8Wz+MT7ijW+7aAVm7G8punQ==",
+  "success": true,
+  "projectFilePath": "/home/mike/repo_git/csharp/codeforce/codeforce.csproj",
+  "expectedPackageFiles": [
+    "/home/mike/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

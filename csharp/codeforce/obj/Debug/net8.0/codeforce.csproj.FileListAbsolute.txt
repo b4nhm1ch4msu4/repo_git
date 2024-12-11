@@ -1,0 +1,15 @@
+/home/mike/repo_git/csharp/codeforce/bin/Debug/net8.0/codeforce
+/home/mike/repo_git/csharp/codeforce/bin/Debug/net8.0/codeforce.deps.json
+/home/mike/repo_git/csharp/codeforce/bin/Debug/net8.0/codeforce.runtimeconfig.json
+/home/mike/repo_git/csharp/codeforce/bin/Debug/net8.0/codeforce.dll
+/home/mike/repo_git/csharp/codeforce/bin/Debug/net8.0/codeforce.pdb
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.GeneratedMSBuildEditorConfig.editorconfig
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.AssemblyInfoInputs.cache
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.AssemblyInfo.cs
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.csproj.CoreCompileInputs.cache
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.sourcelink.json
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.dll
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/refint/codeforce.dll
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.pdb
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/codeforce.genruntimeconfig.cache
+/home/mike/repo_git/csharp/codeforce/obj/Debug/net8.0/ref/codeforce.dll
