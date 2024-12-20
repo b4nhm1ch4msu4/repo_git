@@ -1,100 +1,145 @@
+#include "array.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-#define INIT_CAP 10
+/*
+ * description:
+ * input:
+ * output:
+ */
 
-typedef struct {
-  int length;
-  int cap;
-  int *arr;
-} ARRAY;
-
-// Khởi tạo Array
-int arr_init(ARRAY *my_arr_ptr) {
-  my_arr_ptr->length = 0;
-  my_arr_ptr->cap = INIT_CAP;
-  int arr[my_arr_ptr->cap];
-  my_arr_ptr->arr = arr;
-  for (int i = 0; i < my_arr_ptr->cap; i++) {
-    my_arr_ptr->arr[i] = 0;
+/*
+ * description: Print all elements in MYARRAY
+ * input: MYARRAY need to print elements
+ * output: none
+ */
+void arr_print(MYARRAY *arr) {
+  for (int i = 0; i < arr->cap; i++) {
+    printf("%d ", arr->arr_ptr[i]);
   }
-  return 0;
+  printf("\n");
+  printf("Size: %d\nCapacity: %d\n", arr->size, arr->cap);
 }
 
-// Thêm phần tử vào arr
-// độ dài của array là cố định, khi thêm một phần tử vào giữa array, các p.tử
-// bên phải sẽ dịch chuyển sang 1 đơn vị
-int arr_insert(ARRAY *my_arr_ptr, int val, int pos) {
-  if (my_arr_ptr->length + 1 > my_arr_ptr->cap) {
-    return -1;
-  }
-
-  for (int i = my_arr_ptr->length; i > pos; i--) {
-    my_arr_ptr->arr[i] = my_arr_ptr->arr[i - 1];
-  }
-  my_arr_ptr->arr[pos] = val;
-  ++(my_arr_ptr->length);
-  return 0;
+/*
+ * description: Create new MYARRAY
+ * input: array capacity
+ * output: MYARRAY
+ */
+MYARRAY arr_init(int cap) {
+  int *arr_ptr = (int *)calloc(cap, sizeof(int));
+  MYARRAY my_arr = {0, cap, arr_ptr};
+  return my_arr;
 }
-
-// Xóa 1 p.tử khỏi array.
-int arr_remove(int arr[], int *length, int *cap, int pos) {
-  if (*length < 1) {
-    return -1;
-  }
-  for (int i = pos; i < *length; i++) {
-    arr[i] = arr[i + 1];
-  }
-  --(*length);
-  return 0;
-}
-
-// Tìm kiếm p.tử trong array
-int arr_find(int arr[], int *length, int *cap, int val) {
-  for (int i = 0; i < *length; i++) {
-    if (arr[i] == val) {
-      printf("found val: %d at position: %d\n", val, i);
-      return 0;
+/*
+ * description: find a value in MYARRAY
+ * input:
+ *  arr: pointer to MYARRAY
+ *  val: value to find
+ * output: the position of value, if value not in MYARRAY return -1
+ *
+ */
+int arr_find(MYARRAY *arr, int val) {
+  for (int i = 0; i < arr->size; i++) {
+    if (arr->arr_ptr[i] == val) {
+      printf("found val %d at position %d\n", val, i);
+      return i;
     }
   }
+  printf("val %d not in array!!!\n", val);
   return -1;
 }
 
-// Mở rộng array
-int arr_expend(ARRAY *my_arr_ptr) {
-  int new_arr[my_arr_ptr->cap * 2];
-  for(int i = 0; i < my_arr_ptr->length; i++){
-    new_arr[i] = my_arr_ptr->arr[i];
+/*
+ * description:
+ *  Insert a value to specifix position in MYARRAY
+ *  Expend MYARRAY if not enough space
+ * input:
+ *  arr: pointer to MYARRAY
+ *  val: value of element to Insert
+ *  pos: position where we want to insert value
+ * output: none
+ */
+void arr_insert(MYARRAY *arr, int val, int pos) {
+  if ((arr->size + 1) > arr->cap) {
+    arr_expend(arr);
   }
-  my_arr_ptr->arr = new_arr;
+
+  // if position out of size, add value at the end of MYARRAY
+  if (pos > arr->size) {
+    arr->arr_ptr[arr->size] = val;
+  }
+  // if MYARRAY is empty, add value at beginning of MYARRAY
+  else if (arr->size == 0) {
+    arr->arr_ptr[0] = val;
+  } 
+  // if position in middle of middle of MYARRAY shifting all subsequent elements back by one position
+  else {
+    for (int i = arr->size; i > pos; i--) {
+      arr->arr_ptr[i] = arr->arr_ptr[i - 1];
+    }
+    arr->arr_ptr[pos] = val;
+  }
+
+  arr->size++;
+}
+
+/*
+ * description: remove a val if it exist in MYARRAY
+ * input:
+ *  arr: pointer to MYARRAY
+ *  val: value want to remove
+ * output:
+ *  return -1 if value not exist in MYARRAY
+ *  else return 0 (success)
+ */
+int arr_remove(MYARRAY *arr, int val) {
+  int pos = arr_find(arr, val);
+  if (pos == -1) {
+    return -1;
+  }
+  for (int i = pos; i < (arr->size) - 1; i++) {
+    arr->arr_ptr[i] = arr->arr_ptr[i + 1];
+  }
+  arr->size--;
+  arr->arr_ptr[arr->size] = 0;
   return 0;
 }
 
-// In các p.tử của mảng
-void arr_print(ARRAY *my_arr_ptr) {
-  printf("Array :");
-  for (int i = 0; i < my_arr_ptr->cap; i++) {
-    printf("%d ", my_arr_ptr->arr[i]);
-  }
-  printf("\n");
-  printf("Length: %d\n", my_arr_ptr->length);
-  printf("Capacity: %d\n", my_arr_ptr->cap);
+/*
+ * description:double capacity of MYARRAY
+ * input: arr: pointer to MYARRAY
+ * output: none
+ */
+void arr_expend(MYARRAY *arr) {
+  int new_cap = arr->cap * 2;
+  arr->arr_ptr = realloc(arr->arr_ptr, sizeof(int[new_cap]));
+  arr->cap = new_cap;
 }
 
-/////////////////////////
-///// MAIN FUNCTION /////
-/////////////////////////
+/////////////////////////////
+///// MAIN ENTRY POINT /////
+////////////////////////////
 int main(int argc, char *argv[]) {
-
-  ARRAY container;
-  ARRAY *my_arr_ptr = &container;
-  arr_init(my_arr_ptr, container);
-  for(int i = 1; i <= 5; i++){
-    my_arr_ptr->arr[i] = i;
-    my_arr_ptr->length++;
-  }
+  MYARRAY my_arr = arr_init(5);
+  MYARRAY *my_arr_ptr = &my_arr;
   arr_print(my_arr_ptr);
-  arr_insert(my_arr_ptr, 10, 4);
+  /*arr_find(my_arr_ptr, 20);*/
+  arr_insert(my_arr_ptr, 1, 1);
+  arr_insert(my_arr_ptr, 2, 10);
+  arr_insert(my_arr_ptr, 3, 10);
+  arr_insert(my_arr_ptr, 4, 10);
+  arr_insert(my_arr_ptr, 5, 10);
+  arr_print(my_arr_ptr);
+  arr_insert(my_arr_ptr, 6, 10);
+  arr_insert(my_arr_ptr, 7, 10);
+  arr_insert(my_arr_ptr, 8, 10);
+  arr_insert(my_arr_ptr, 9, 10);
+  arr_insert(my_arr_ptr, 10, 10);
+  /*arr_remove(my_arr_ptr, 0);*/
   arr_print(my_arr_ptr);
 
+  free(my_arr_ptr->arr_ptr);
+  my_arr_ptr = NULL;
   return 0;
 }
