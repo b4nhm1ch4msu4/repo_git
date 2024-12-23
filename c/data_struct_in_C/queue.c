@@ -33,6 +33,9 @@ Queue *newQueue(int val) {
 int peek(Queue *my_queue) { return my_queue->head->val; }
 
 Node *pop(Queue *my_queue) {
+  if (my_queue->size == 0) {
+    return NULL;
+  }
   Node *del_node = my_queue->head;
   my_queue->head = del_node->next;
   (my_queue->size)--;
@@ -44,6 +47,7 @@ void push(Queue *my_queue, int val) {
   new_node->val = val;
   my_queue->tail->next = new_node;
   my_queue->tail = new_node;
+  my_queue->size++;
 }
 
 void queue_print(Queue *my_queue) {
