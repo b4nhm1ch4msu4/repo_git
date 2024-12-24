@@ -4,3 +4,5 @@ typedef struct Heap{
   int cap;
 } Heap;
 
+Heap *heap_init();
+Heap *heap_left(Heap *)
