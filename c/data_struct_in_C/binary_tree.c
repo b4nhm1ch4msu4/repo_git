@@ -3,6 +3,7 @@
 
 #define TRUE 1
 #define FALSE 0
+#define QUEUE_CAP 10
 
 typedef struct TreeNode {
   int value;
@@ -10,53 +11,74 @@ typedef struct TreeNode {
   struct TreeNode *right;
 } TreeNode;
 
+typedef struct QueueNode {
+  TreeNode *node;
+  struct QueueNode *next;
+} QueueNode;
+
 typedef struct Queue {
-  int head;
-  int tail;
-  TreeNode *container;
+  QueueNode *head;
+  QueueNode *tail;
+  int size;
 } Queue;
 
+// Queue function
+QueueNode *new_node(TreeNode *new_node);
 Queue *queue_init();
 void queue_push(Queue *my_queue, TreeNode *node);
 TreeNode *queue_pop(Queue *my_queue);
 int queue_isempty(Queue *my_queue);
 
+// Tree function
+TreeNode *newTreeNode(int value);
+void level_order_traversal(TreeNode *root);
+void preOrder(TreeNode *root);
+void inOrder(TreeNode *root);
+void postOrder(TreeNode *root);
+
+QueueNode *new_node(TreeNode *new_node) {
+  QueueNode *node = malloc(sizeof(QueueNode));
+  node->node = new_node;
+  node->next = NULL;
+  return node;
+}
+
 Queue *queue_init() {
-  Queue *my_queue = calloc(1, sizeof(Queue));
-  my_queue->head = 0;
-  my_queue->tail = 0;
-  TreeNode *container = calloc(10, sizeof(TreeNode));
-  my_queue->container = container;
+  Queue *my_queue = malloc(sizeof(Queue));
+  my_queue->size = 0;
+  my_queue->head = NULL;
+  my_queue->tail = NULL;
   return my_queue;
 }
 
 int queue_isempty(Queue *my_queue) {
-  int head_idx = my_queue->head % 10;
-  int tail_idx = my_queue->tail % 10;
-  if (head_idx - tail_idx < 0) {
+  if (my_queue->size == 0) {
     return TRUE;
-  } else {
-    return FALSE;
   }
+  return FALSE;
 }
 
 void queue_push(Queue *my_queue, TreeNode *node) {
-  my_queue->tail++;
-  int index = my_queue->tail % 10;
-  my_queue->container[index] = *node;
+  QueueNode *queue_node = new_node(node);
+  if (queue_isempty(my_queue) == TRUE) {
+    my_queue->head = queue_node;
+    my_queue->tail = queue_node;
+  } else {
+    my_queue->tail->next = queue_node;
+    my_queue->tail = queue_node;
+  }
+  my_queue->size++;
 }
 
 TreeNode *queue_pop(Queue *my_queue) {
   if (queue_isempty(my_queue) == TRUE) {
     return NULL;
   }
-  TreeNode *head = my_queue->container[my_queue->head % 10];
-  my_queue->head++;
-  return head;
+  QueueNode *node = my_queue->head;
+  my_queue->head = node->next;
+  my_queue->size--;
+  return node->node;
 }
-
-TreeNode *newTreeNode(int value);
-void level_order_traversal(TreeNode *root);
 
 TreeNode *newTreeNode(int value) {
   TreeNode *newNode = calloc(1, sizeof(TreeNode));
@@ -65,21 +87,46 @@ TreeNode *newTreeNode(int value) {
 }
 
 void level_order_traversal(TreeNode *root) {
-  Queue *my_queue = queue_init();
-  queue_push(my_queue, root);
-  while (queue_isempty(my_queue) == FALSE) {
-    TreeNode *node = queue_pop(my_queue);
-    printf("%d ", node->value);
-    if (node->left != NULL) {
-      queue_push(my_queue, node->left);
+  Queue *queue = queue_init();
+  queue_push(queue, root);
+  while (queue_isempty(queue) == FALSE) {
+    TreeNode *cur = queue_pop(queue);
+    printf("%d ", cur->value);
+    if (cur->left != NULL) {
+      queue_push(queue, cur->left);
     }
-
-    if (node->right != NULL) {
-      queue_push(my_queue, node->right);
+    if (cur->right != NULL) {
+      queue_push(queue, cur->right);
     }
   }
 }
+void preOrder(TreeNode *root){
+  if (root == NULL) {
+    return;
+  }
+  printf("%d ", root->value);
+  preOrder(root->left);
+  preOrder(root->right);
+}
 
+void inOrder(TreeNode *root){
+  if (root == NULL) {
+    return;
+  }
+  inOrder(root->left);
+  printf("%d ",root->value);
+  inOrder(root->right);
+}
+
+void postOrder(TreeNode *root){
+  if (root == NULL) {
+    return;
+  }
+  postOrder(root->left);
+  postOrder(root->right);
+  printf("%d ", root->value);
+
+}
 int main(int argc, char *argv[]) {
   TreeNode *n1 = newTreeNode(1);
   TreeNode *n2 = newTreeNode(2);
@@ -100,13 +147,14 @@ int main(int argc, char *argv[]) {
   n1->left = n2;
   n0->left = NULL;
 
-  Queue *my_queue = queue_init();
-  queue_push(my_queue, n1);
-  for(int i = 0 ; i < 10; i++){
-    printf("%d ", my_queue->container[i]->value);
-  }
-
-  /*level_order_traversal(n1);*/
+  printf("level order: ");
+  level_order_traversal(n1);
+  printf("\npre Order: ");
+  preOrder(n1);
+  printf("\nin Order: ");
+  inOrder(n1);
+  printf("\npost Order: ");
+  postOrder(n1);
 
   free(n1);
   free(n2);
