@@ -1,3 +1,0 @@
-/home/tienp/Documents/repo_git/cpp/tetris_rework/build/CMakeFiles/tetris.dir
-/home/tienp/Documents/repo_git/cpp/tetris_rework/build/CMakeFiles/edit_cache.dir
-/home/tienp/Documents/repo_git/cpp/tetris_rework/build/CMakeFiles/rebuild_cache.dir
