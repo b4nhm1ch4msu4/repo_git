@@ -1,49 +1,55 @@
-/*#include <iostream>*/
-/**/
-/*using namespace std;*/
-/**/
-/*void resize(int *arr, int newSize) {*/
-/*  // allocate arr to new pointer*/
-/*  arr = new int[newSize];*/
-/*}*/
-/**/
-/*int main() {*/
-/*  int *arr = new int[1];*/
-/*  resize(arr, 10);*/
-/**/
-/*  for (int i = 0; i < 10; i++) {*/
-/*    arr[i] = i;*/
-/*  }*/
-/*  for (int i = 0; i < 10; i++) {*/
-/*    cout << arr[i] << " ";*/
-/*  }*/
-/*  delete[] arr;*/
-/*  return 0;*/
-/*}*/
-
 #include <iostream>
-
 using namespace std;
 
-void resize(int *arr, int newSize) {
-  // allocate arr to new pointer*/
-  /*delete[] arr;*/
-  /*cout << arr << endl;*/
-  arr = new int[newSize];
-  /*cout << arr << endl;*/
-  /*arr = new int[newSize + 10];*/
-  /*cout << "address of arr: " << arr << "\n";*/
+void resize(int *array_address2, int size) {
+  std::cout << "[Resize] array_address2 address (itslef): " << &array_address2
+            << "\n";
+  std::cout << "[Resize] array_address2 size : " << sizeof(array_address2)
+            << "\n";
+  std::cout << "[Resize] array_address2 point to address : " << array_address2
+            << "\n";
+  std::cout << "[Resize] value : " << *array_address2 << "\n";
+  std::cout << "============================================================\n";
+
+  array_address2 = new int[size];
+
+  std::cout << "[Resize] array_address2 address (itslef): " << &array_address2
+            << "\n";
+  std::cout << "[Resize] array_address2 size : " << sizeof(array_address2)
+            << "\n";
+  std::cout << "[Resize] array_address2 point to address : " << array_address2
+            << "\n";
+  std::cout << "[Resize] value : " << *array_address2 << "\n";
+  std::cout << "============================================================\n";
 }
 
 int main() {
+  int aiArray[1];
+  int *int_pointer = &aiArray[0];
+
   int *arr = new int[1];
-  cout << arr << endl;
-  for (int i = 0; i < 10; i++) {
-    cout << arr[i];
-  }
-  resize(arr, 10);
-  /*cout << &arr[0] << "\n";*/
-  cout << arr << endl;
-  delete[] arr;
-  return 0;
+
+  // Array first item's address is the same as pointer
+  std::cout << "[Main] Integer Pointer address (itslef): " << &int_pointer
+            << "\n";
+  std::cout << "[Main] Integer Pointer size : " << sizeof(int_pointer) << "\n";
+  std::cout << "[Main] Integer Pointer point to address : " << int_pointer
+            << "\n";
+  std::cout << "[Main] Integer array address : " << &aiArray[0] << "\n";
+  std::cout << "============================================================\n";
+
+  //  Use the pointer to change the value in array
+  *int_pointer = 10;
+  std::cout << "[Main] aiArray[0] value : " << aiArray[0] << "\n";
+  std::cout << "[Main] Pointer value : " << *int_pointer << "\n";
+  std::cout << "============================================================\n";
+
+  // Call resize function
+  resize(arr, 100);
+
+  // Pointer to another array
+  int aiArray2[13];
+  int_pointer = &aiArray2[0];
+  std::cout << "[Main] Integer Pointer address (itslef): " << &int_pointer
+            << "\n";
 }
