@@ -1,8 +1,13 @@
+/*#include "check.cpp"*/
+#include <cstdio>
 #include <iostream>
 #include <istream>
 #include <string>
 
+extern int myage;
+
 int main(int argc, char *argv[]) {
+  std::cout << myage;
   int age_1{};
   int age_2{};
   std::string name_1{};
