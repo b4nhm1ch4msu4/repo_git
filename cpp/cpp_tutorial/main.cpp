@@ -1,15 +1,11 @@
-#include "constants.h"
 #include <iostream>
 
 int main() {
-  std::cout << "How many students are in your class? ";
-  int students{};
-  std::cin >> students;
+  int n1{5};
+  unsigned int u1{n1};
 
-  if (students > Constants::maxClassSize)
-    std::cout << "There are too many students in this class";
-  else
-    std::cout << "This class isn't too large";
+  int n2{-5};
+  unsigned int u2{n2};
 
   return 0;
 }
