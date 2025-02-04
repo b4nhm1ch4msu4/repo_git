@@ -1,11 +1,15 @@
 #include <iostream>
 
+void print(int num) {
+  std::cout << "int function print number: " << num << '\n';
+}
+
+void print(double num) {
+  std::cout << "int function print double: " << num << '\n';
+}
+
 int main() {
-  int n1{5};
-  unsigned int u1{n1};
-
-  int n2{-5};
-  unsigned int u2{n2};
-
-  return 0;
+  float num = 10999;
+  print('c');
+  print(num);
 }
