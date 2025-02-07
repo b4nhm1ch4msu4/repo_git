@@ -1,11 +1,17 @@
 #include <iostream>
 
-template <typename T, typename Y> auto sub(T a, Y b) { return a - b; }
-
 int main() {
-  std::cout << sub(2, 3) << '\n';
-  std::cout << sub(1.2, 3) << '\n';
-  std::cout << sub(3, 2) << '\n';
-  std::cout << sub(3.5, 2) << '\n';
-  std::cout << sub(4, 1.5) << '\n';
+  int bombs{1}; // I can has a bomb
+
+  const long &you{bombs}; // You likes to set bombs off
+  --bombs;                // I can disarmed a bomb
+  std::cout << bombs << '\n';
+  std::cout << you << '\n';
+
+  if (you) // If you can still has a bomb
+  {
+    std::cout << "Bombs away!  Goodbye, cruel world.\n";
+  }
+
+  return 0;
 }
