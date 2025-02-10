@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oB19HHI4RmBhHl9YwYXmFCcAcb7y/7nriyVVE3DPosAOVJx4+RIv09SMu4zm+V2R6SPR1rd/egIVkyu6/7C3OQ==",
+  "success": true,
+  "projectFilePath": "/home/mike/repo_git/csharp/practice/practice.csproj",
+  "expectedPackageFiles": [
+    "/home/mike/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

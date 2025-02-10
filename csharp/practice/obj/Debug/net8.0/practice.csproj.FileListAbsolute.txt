@@ -1,0 +1,15 @@
+/home/mike/repo_git/csharp/practice/bin/Debug/net8.0/practice
+/home/mike/repo_git/csharp/practice/bin/Debug/net8.0/practice.deps.json
+/home/mike/repo_git/csharp/practice/bin/Debug/net8.0/practice.runtimeconfig.json
+/home/mike/repo_git/csharp/practice/bin/Debug/net8.0/practice.dll
+/home/mike/repo_git/csharp/practice/bin/Debug/net8.0/practice.pdb
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.GeneratedMSBuildEditorConfig.editorconfig
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.AssemblyInfoInputs.cache
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.AssemblyInfo.cs
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.csproj.CoreCompileInputs.cache
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.sourcelink.json
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.dll
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/refint/practice.dll
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.pdb
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/practice.genruntimeconfig.cache
+/home/mike/repo_git/csharp/practice/obj/Debug/net8.0/ref/practice.dll
