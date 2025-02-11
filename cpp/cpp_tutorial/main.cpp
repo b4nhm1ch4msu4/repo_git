@@ -1,14 +1,13 @@
 #include <iostream>
+int main()
+{
+  int x{5};           // non-const
+  int* const ptr{&x}; // ptr points to a "const int"
+  std::cout << *ptr << '\n';
 
-void printRef(const int &x) { std::cout << "x :" << x << '\n'; }
+  /**ptr = 6;*/
+  x = 6; // allowed: the value is still non-const when accessed through
+  std::cout << *ptr << '\n';
 
-int main() {
-  int x = 10;
-  int &ref{x};
-  printRef(x);
-  printRef(10);
-  int age {100};
-  std::cout << age;
-  printRef(ref);
   return 0;
 }
