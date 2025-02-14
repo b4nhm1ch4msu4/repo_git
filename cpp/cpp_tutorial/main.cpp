@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 
 using namespace std;
@@ -10,12 +9,11 @@ private:
   int age;
 
 public:
+  static int count;
   Student(string name, int age)
   {
-    static int count = 0;
     this->name = name;
     this->age = age;
-    count++;
   }
 };
 
@@ -23,6 +21,6 @@ int main()
 {
   Student s1("Manh", 19);
   Student s2("Trung", 19);
-  cout << Student::numberOfStudents << '\n';
+  std::cout << "Hello World" << '\n';
   return 0;
 }
