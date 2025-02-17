@@ -1,26 +1,19 @@
-#include <iostream>
-
-using namespace std;
-
-class Student
+namespace Hell
 {
-private:
-  string name;
-  int age;
-
-public:
-  static int count;
-  Student(string name, int age)
-  {
-    this->name = name;
-    this->age = age;
-  }
+enum MonsterType
+{
+  orc,
+  goblin,
+  troll,
+  ogre,
+  skeleton,
 };
+}
 
-int main()
+using Hell::troll;
+
+int main(int argc, char* argv[])
 {
-  Student s1("Manh", 19);
-  Student s2("Trung", 19);
-  std::cout << "Hello World" << '\n';
+  Hell::MonsterType m{troll};
   return 0;
 }
