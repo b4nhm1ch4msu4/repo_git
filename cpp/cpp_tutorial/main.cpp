@@ -1,19 +1,8 @@
-namespace Hell
-{
-enum MonsterType
-{
-  orc,
-  goblin,
-  troll,
-  ogre,
-  skeleton,
-};
-}
-
-using Hell::troll;
+#include "main.h"
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-  Hell::MonsterType m{troll};
+  std::cout << Hell::troll << std::endl;
   return 0;
 }

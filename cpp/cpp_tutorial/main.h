@@ -1,5 +1,11 @@
-class Test
+namespace Hell
 {
-public:
-  void test() { std::cout << "test" << std::endl; }
+enum MonsterType
+{
+  orc,
+  goblin,
+  troll,
+  ogre,
+  skeleton,
+};
 }

@@ -8,8 +8,4 @@ void printDivision(int x, int y)
   std::cout << static_cast<double>(x) / y;
 }
 
-int main(int argc, char* argv[])
-{
-  printDivision(10, 0);
-  return 0;
-}
+int main(int argc, char* argv[]) { return 0; }
