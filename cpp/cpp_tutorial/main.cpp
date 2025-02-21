@@ -14,7 +14,11 @@ std::ostream& operator<<(std::ostream& out, const Employee& e)
 
 int main(int argc, char* argv[])
 {
-  Employee joe{"Joe", 1};
+  Employee joe{.name = "Joe", .id = 1};
+  std::cout << joe << "\n";
+
+  joe.id = 2;
+  joe.name = "John";
   std::cout << joe << "\n";
   return 0;
 }
