@@ -1,24 +1,23 @@
 #include <iostream>
-#include <string>
-
-struct Employee
+template <typename T> struct Triad
 {
-  std::string name;
-  int id{};
+  T first{};
+  T second{};
+  T third{};
 };
-
-std::ostream& operator<<(std::ostream& out, const Employee& e)
+template <typename T> void print(Triad<T> triad)
 {
-  return out << e.name << " has id is " << e.id;
+  std::cout << triad.first << " " << triad.second << " " << triad.third << "\n";
 }
 
-int main(int argc, char* argv[])
+int main()
 {
-  Employee joe{.name = "Joe", .id = 1};
-  std::cout << joe << "\n";
+  Triad<int> t1{1, 2, 3}; // note: uses CTAD to deduce template arguments
+  print(t1);
 
-  joe.id = 2;
-  joe.name = "John";
-  std::cout << joe << "\n";
+  Triad<double> t2{1.2, 3.4,
+                   5.6}; // note: uses CTAD to deduce template arguments
+  print(t2);
+
   return 0;
 }
