@@ -1,58 +1,28 @@
 #include <iostream>
-#include <string_view>
-enum class Animal
+
+template <typename T> struct Triad
 {
-  pig,
-  chicken,
-  goat,
-  cat,
-  dog,
-  duck,
+  T first{};
+  T second{};
+  T third{};
 };
 
-std::string_view getAnimalName(Animal a)
+// If using C++17, we need to provide a deduction guide (not required in C++20)
+// A Triad with three arguments of the same type should deduce to a Triad<T>
+/*template <typename T> Triad(T, T, T) -> Triad<T>;*/
+
+template <typename T> void print(const Triad<T>& t)
 {
-  switch (a)
-  {
-  case Animal::pig:
-    return "pig";
-  case Animal::chicken:
-    return "chicken";
-  case Animal::goat:
-    return "goat";
-  case Animal::cat:
-    return "cat";
-  case Animal::dog:
-    return "dog";
-  case Animal::duck:
-    return "duck";
-  default:
-    return "unknown";
-  }
+  std::cout << '[' << t.first << ", " << t.second << ", " << t.third << ']';
 }
 
-void printNumberOfLegs(Animal a)
+int main()
 {
-  switch (a)
-  {
-  case Animal::pig:
-  case Animal::goat:
-  case Animal::cat:
-  case Animal::dog:
-    std::cout << "A " << getAnimalName(a) << " has " << "4 " << "legs.\n";
-    break;
-  case Animal::chicken:
-  case Animal::duck:
-    std::cout << "A " << getAnimalName(a) << " has " << "2 " << "legs.\n";
-    break;
-  default:
-    std::cout << "unknown\n";
-  }
-}
-int main(int argc, char* argv[])
-{
+  Triad t1{1, 2, 3};
+  print(t1);
 
-  printNumberOfLegs(Animal::cat);
-  printNumberOfLegs(Animal::chicken);
+  Triad t2{1.2, 3.4, 5.6};
+  print(t2);
+
   return 0;
 }
