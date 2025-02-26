@@ -12,7 +12,7 @@ struct IntPair
 
 int main(int argc, char* argv[])
 {
-  IntPair p1{1, 2};
+  const IntPair p1{1, 2};
   IntPair p2{1, 4};
 
   std::cout << "p1: ";
