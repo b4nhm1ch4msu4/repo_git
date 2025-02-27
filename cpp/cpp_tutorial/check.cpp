@@ -1,28 +1,24 @@
 #include <iostream>
+#include <string>
+#include <string_view>
 
-template <typename T> struct Triad
+class Employee
 {
-  T first{};
-  T second{};
-  T third{};
+  std::string m_name{};
+
+public:
+  void setName(std::string_view name) { m_name = name; }
+  const std::string& getName() const
+  {
+    return m_name;
+  } //  getter returns by const reference
 };
 
-// If using C++17, we need to provide a deduction guide (not required in C++20)
-// A Triad with three arguments of the same type should deduce to a Triad<T>
-/*template <typename T> Triad(T, T, T) -> Triad<T>;*/
-
-template <typename T> void print(const Triad<T>& t)
+Employee createEmployee(std::string_view name)
 {
-  std::cout << '[' << t.first << ", " << t.second << ", " << t.third << ']';
+  Employee e;
+  e.setName(name);
+  return e;
 }
 
-int main()
-{
-  Triad t1{1, 2, 3};
-  print(t1);
-
-  Triad t2{1.2, 3.4, 5.6};
-  print(t2);
-
-  return 0;
-}
+int main(int argc, char* argv[]) { return 0; }
