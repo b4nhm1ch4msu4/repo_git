@@ -1,24 +1,27 @@
 #include <iostream>
-#include <string>
-#include <string_view>
-
-class Employee
+struct Point3d
 {
-  std::string m_name{};
+  double m_x;
+  double m_y;
+  double m_z;
 
-public:
-  void setName(std::string_view name) { m_name = name; }
-  const std::string& getName() const
-  {
-    return m_name;
-  } //  getter returns by const reference
+  /*public:*/
+  /*  void setValues(double x, double y, double z)*/
+  /*  {*/
+  /*    m_x = x;*/
+  /*    m_y = y;*/
+  /*    m_z = z;*/
+  /*  }*/
+  void print() const { std::cout << m_x << ", " << m_y << ", " << m_z << '\n'; }
+  /*  bool isEqual(const Point3d& other) const*/
+  /*  {*/
+  /*    return m_x == other.m_x && m_y == other.m_y && m_z == other.m_z;*/
+  /*  }*/
 };
 
-Employee createEmployee(std::string_view name)
+int main(int argc, char* argv[])
 {
-  Employee e;
-  e.setName(name);
-  return e;
+  Point3d point1{1, 2, 3};
+  point1.print();
+  return 0;
 }
-
-int main(int argc, char* argv[]) { return 0; }
