@@ -1,23 +1,32 @@
 #include <iostream>
-template <typename T> struct Triad
-{
-  T first{};
-  T second{};
-  T third{};
-};
-template <typename T> void print(Triad<T> triad)
-{
-  std::cout << triad.first << " " << triad.second << " " << triad.third << "\n";
-}
+#include <string>
 
+class Ball
+{
+public:
+  Ball(std::string_view color, double radius) : m_color{color}, m_radius{radius}
+  {
+  }
+  const std::string& getColor() const { return m_color; }
+  double getRadius() const { return m_radius; }
+
+private:
+  std::string m_color{"none"};
+  double m_radius{0.0};
+};
+
+void print(const Ball& ball)
+{
+  std::cout << "Ball ( " << ball.getColor() << ", " << ball.getRadius()
+            << ")\n";
+}
 int main()
 {
-  Triad<int> t1{1, 2, 3}; // note: uses CTAD to deduce template arguments
-  print(t1);
+  Ball blue{"blue", 10.0};
+  print(blue);
 
-  Triad<double> t2{1.2, 3.4,
-                   5.6}; // note: uses CTAD to deduce template arguments
-  print(t2);
+  Ball red{"red", 12.0};
+  print(red);
 
   return 0;
 }
