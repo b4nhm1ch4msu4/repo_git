@@ -1,32 +1,32 @@
 #include <iostream>
-#include <string>
+#include <string_view>
 
 class Ball
 {
 public:
-  Ball(std::string_view color, double radius) : m_color{color}, m_radius{radius}
+  Ball(std::string_view color = "black", double radius = 10.0)
+      : m_color{color}, m_radius{radius}
   {
+    print();
   }
-  const std::string& getColor() const { return m_color; }
-  double getRadius() const { return m_radius; }
+
+  Ball(double radius) : Ball{"black", radius} {}
+  void print()
+  {
+    std::cout << "Ball (" << m_color << ", " << m_radius << ")\n";
+  }
 
 private:
-  std::string m_color{"none"};
-  double m_radius{0.0};
+  std::string m_color;
+  double m_radius;
 };
 
-void print(const Ball& ball)
-{
-  std::cout << "Ball ( " << ball.getColor() << ", " << ball.getRadius()
-            << ")\n";
-}
 int main()
 {
-  Ball blue{"blue", 10.0};
-  print(blue);
-
-  Ball red{"red", 12.0};
-  print(red);
+  Ball def{};
+  Ball blue{"blue"};
+  Ball twenty{20.0};
+  Ball blueTwenty{"blue", 20.0};
 
   return 0;
 }
