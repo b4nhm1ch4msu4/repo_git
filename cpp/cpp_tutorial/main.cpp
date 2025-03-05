@@ -1,32 +1,41 @@
 #include <iostream>
-#include <string_view>
 
-class Ball
-{
-public:
-  Ball(std::string_view color = "black", double radius = 10.0)
-      : m_color{color}, m_radius{radius}
-  {
-    print();
+class Fraction {
+ private:
+  int m_numerator{0};
+  int m_denominator{1};
+
+ public:
+  // Default constructor
+  Fraction(int numerator = 0, int denominator = 1)
+      : m_numerator{numerator}, m_denominator{denominator} {}
+
+  // Copy constructor
+  Fraction(const Fraction &fraction)
+      : m_numerator{fraction.m_numerator},
+        m_denominator{fraction.m_denominator} {
+    std::cout << "Copy constructor called\n";
   }
 
-  Ball(double radius) : Ball{"black", radius} {}
-  void print()
-  {
-    std::cout << "Ball (" << m_color << ", " << m_radius << ")\n";
+  void print() const {
+    std::cout << "Fraction(" << m_numerator << ", " << m_denominator << ")\n";
   }
-
-private:
-  std::string m_color;
-  double m_radius;
 };
 
-int main()
+void printFraction(Fraction f)  // f is pass by value
 {
-  Ball def{};
-  Ball blue{"blue"};
-  Ball twenty{20.0};
-  Ball blueTwenty{"blue", 20.0};
+  f.print();
+}
+
+Fraction generateFraction(int n, int d) {
+  Fraction f{n, d};
+  return f;
+}
+
+int main() {
+  Fraction f2{generateFraction(1, 2)};
+
+  /*printFraction(f2);*/
 
   return 0;
 }
