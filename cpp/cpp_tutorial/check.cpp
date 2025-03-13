@@ -1,20 +1,34 @@
+#include <chrono>
 #include <iostream>
-class Foo
-{
-public:
-  Foo(int x, int y = 0) : m_value{x}, m_another_value{y}
-  {
-    std::cout << "Foo constructor\n";
-  }
-  ~Foo() { std::cout << "Foo destructor\n"; }
+#include <random>
 
-private:
-  int m_value;
-  int m_another_value;
+class Random {
+ public:
+  static std::mt19937 generate() {
+    std::random_device rd;
+    std::seed_seq ss{
+        static_cast<std::seed_seq::result_type>(
+            std::chrono::steady_clock::now().time_since_epoch().count()),
+        rd(),
+        rd(),
+        rd(),
+        rd(),
+        rd(),
+        rd(),
+        rd()};
+    return std::mt19937{ss};
+  }
+  static std::mt19937 mt{generate()};
+
+  static int get(int min, int max) {
+    return std::uniform_int_distribution{min, max}(mt);
+  }
 };
 
-int main(int argc, char* argv[])
-{
-  Foo f{1, 2};
+int main(int argc, char *argv[]) {
+  for (int count{1}; count <= 10; ++count)
+    std::cout << Random::get(1, 6) << '\t';
+
+  std::cout << '\n';
   return 0;
 }
