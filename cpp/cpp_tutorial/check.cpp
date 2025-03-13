@@ -18,12 +18,14 @@ class Random {
         rd()};
     return std::mt19937{ss};
   }
-  static std::mt19937 mt{generate()};
+  static std::mt19937 mt;
 
   static int get(int min, int max) {
     return std::uniform_int_distribution{min, max}(mt);
   }
 };
+
+std::mt19937 Random::mt{Random::generate()};
 
 int main(int argc, char *argv[]) {
   for (int count{1}; count <= 10; ++count)
