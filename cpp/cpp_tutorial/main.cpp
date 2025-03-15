@@ -1,12 +1,16 @@
+#include <cstddef>
 #include <iostream>
 #include <vector>
 
+template <typename T>
+void printArray(const std::vector<T> &arr) {
+  for (std::size_t i = 0; i < arr.size(); ++i)
+    std::cout << arr[i] << ' ';
+  std::cout << std::endl;
+}
+
 int main(int argc, char *argv[]) {
-  std::vector<int> v(3);
-  for (int i = 0; i < v.size(); i++) {
-    std::cin >> v[i];
-  }
-  std::cout << v[0] + v[1] + v[2] << '\n';
-  std::cout << v[0] * v[1] * v[2] << '\n';
+  std::vector arr{4, 6, 7, 3, 8, 2, 1, 9};
+  printArray(arr);
   return 0;
 }
