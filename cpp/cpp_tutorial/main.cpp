@@ -33,9 +33,8 @@ bool isContainChar(char c, const std::vector<char>& vec) {
 }
 
 namespace WordList {
-std::vector<std::string_view> words{"mystery",   "broccoli",  "account",
-                                    "almost",    "spaghetti", "opinion",
-                                    "beautiful", "distance",  "luggage"};
+std::vector<std::string_view> words{"mystery", "broccoli",  "account",  "almost", "spaghetti",
+                                    "opinion", "beautiful", "distance", "luggage"};
 std::string_view get_word() {
   auto index = Random::get(0, words.size() - 1);
   return words[index];
