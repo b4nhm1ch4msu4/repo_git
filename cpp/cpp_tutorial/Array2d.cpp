@@ -24,8 +24,8 @@ int main(int argc, char* argv[]) {
   std::cout<< "array row: " << rowLength(my_2dArray) << "\n";
   std::cout<< "array col: " << colLength(my_2dArray) << "\n";
   for(auto& row:my_2dArray){
-    for(auto& col:row){
-      std::cout << col << ' ';
+    for(auto& item:row){
+      std::cout << item << ' ';
     }
     std::cout << "\n";
   }
