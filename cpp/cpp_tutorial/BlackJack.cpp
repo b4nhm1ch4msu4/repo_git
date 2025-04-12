@@ -1,5 +1,6 @@
 #include <algorithm>  // for std::shuffle
 #include <array>
+#include <cassert>
 #include <iostream>
 #include "random.h"  // for Random::mt
 
@@ -57,7 +58,7 @@ struct Card {
 
 class Deck {
   std::array<Card, 52> m_cards{};
-  std::size_t m_cardIndex{0};
+  std::size_t m_nextCardIndex{0};
 
  public:
   Deck() {
@@ -67,13 +68,13 @@ class Deck {
   }
 
   Card dealCard() {
-    assert(m_cardIndex < 52 && "Deck is empty");
-    return m_cards[m_cardIndex++];
+    assert(m_nextCardIndex < 52 && "Deck is empty");
+    return m_cards[m_nextCardIndex++];
   }
 
   void shuffle() {
     std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
-    m_cardIndex = 0;
+    m_nextCardIndex = 0;
   }
 };
 
