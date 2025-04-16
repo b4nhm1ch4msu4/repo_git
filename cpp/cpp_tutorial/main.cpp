@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <array>
+#include <cstddef>
 #include <iostream>
 #include <thread>
 #include "Timer.h"
@@ -9,12 +10,18 @@ bool greater(int a, int b) {
 }
 
 int main() {
-  std::array arr{13, 90, 99, 5, 40, 80};
-  Timer t;
-  std::sort(arr.begin(), arr.end(), greater);
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-  std::cout << "Time elapsed: " << t.elapsed() << " seconds\n";
-  for (auto i : arr) {
-    std::cout << i << " ";
+  std::cout << "How many names would you like to enter ? ";
+  std::size_t num{};
+  std::cin >> num;
+  std::cin.clear();
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  std::string* name{new std::string[num]{}};
+  for (std::size_t i{0}; i < num; i++) {
+    std::cout << "Enter name " << i + 1 << ": ";
+    std::getline(std::cin, name[i]);
+  }
+
+  for (std::size_t i{0}; i < num; i++) {
+    std::cout << name[i] << '\n';
   }
 }
