@@ -1,10 +1,50 @@
+#include <cassert>
+#include <cstddef>
+#include <iostream>
+
+class IntArray {
+ private:
+  int* m_array{};
+  int m_length{};
+
+ public:
+  IntArray(int length)  // constructor
+  {
+    assert(length > 0);
+
+    m_array = new int[static_cast<std::size_t>(length)]{};
+    m_length = length;
+  }
+  IntArray(int* arr, int length): m_array{arr}, m_length{length}{}
+
+  ~IntArray()  // destructor
+  {
+    // Dynamically delete the array we allocated earlier
+    delete[] m_array;
+  }
+
+  void setValue(int index, int value) { m_array[index] = value; }
+
+  int getValue(int index) { return m_array[index]; }
+
+  int getLength() { return m_length; }
+};
+
 int main() {
-  int x = 10;
-  int* ptr{};   // declare a __pointer__
-  ptr = &x;     // assign the __address of__ x to ptr
-  int& ref{x};  // ref is a __reference to__ x
-  *ptr = 20;    // __dereference__ ptr, change x to 20
-  ref = 30;     // Changes x to 30 via reference
+  // int* arr{new int[10]};
+  // IntArray my_arr(arr,10);
+  // for (int i = 0; i < 10; i++) {
+  //   my_arr.setValue(i, i);
+  //   std::cout << my_arr.getValue(i) << " ";
+  // }
+  // for (int i = 0; i < 10; i++) {
+  //   std::cout << arr[i] << " ";
+  // }
+  IntArray ar{10};  // allocate 10 integers
+  for (int count{0}; count < ar.getLength(); ++count)
+    ar.setValue(count, count + 1);
+
+  std::cout << "The value of element 5 is: " << ar.getValue(5) << '\n';
 
   return 0;
-}
+}  // ar is destroyed here, so the ~IntArray() destructor function is called here
