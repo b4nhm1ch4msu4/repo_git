@@ -1,50 +1,72 @@
-#include <cassert>
-#include <cstddef>
 #include <iostream>
+#include <functional>
 
-class IntArray {
- private:
-  int* m_array{};
-  int m_length{};
+int getInteger()
+{
+    std::cout << "Enter an integer: ";
+    int x{};
+    std::cin >> x;
+    return x;
+}
 
- public:
-  IntArray(int length)  // constructor
-  {
-    assert(length > 0);
+char getOperation()
+{
+    char op{};
 
-    m_array = new int[static_cast<std::size_t>(length)]{};
-    m_length = length;
-  }
-  IntArray(int* arr, int length): m_array{arr}, m_length{length}{}
+    do
+    {
+        std::cout << "Enter an operation ('+', '-', '*', '/'): ";
+        std::cin >> op;
+    }
+    while (op!='+' && op!='-' && op!='*' && op!='/');
 
-  ~IntArray()  // destructor
-  {
-    // Dynamically delete the array we allocated earlier
-    delete[] m_array;
-  }
+    return op;
+}
 
-  void setValue(int index, int value) { m_array[index] = value; }
+int add(int x, int y)
+{
+    return x + y;
+}
 
-  int getValue(int index) { return m_array[index]; }
+int subtract(int x, int y)
+{
+    return x - y;
+}
 
-  int getLength() { return m_length; }
-};
+int multiply(int x, int y)
+{
+    return x * y;
+}
 
-int main() {
-  // int* arr{new int[10]};
-  // IntArray my_arr(arr,10);
-  // for (int i = 0; i < 10; i++) {
-  //   my_arr.setValue(i, i);
-  //   std::cout << my_arr.getValue(i) << " ";
-  // }
-  // for (int i = 0; i < 10; i++) {
-  //   std::cout << arr[i] << " ";
-  // }
-  IntArray ar{10};  // allocate 10 integers
-  for (int count{0}; count < ar.getLength(); ++count)
-    ar.setValue(count, count + 1);
+int divide(int x, int y)
+{
+    return x / y;
+}
 
-  std::cout << "The value of element 5 is: " << ar.getValue(5) << '\n';
+using ArithmeticFunction = std::function<int(int, int)>;
 
-  return 0;
-}  // ar is destroyed here, so the ~IntArray() destructor function is called here
+ArithmeticFunction getArithmeticFunction(char op)
+{
+    switch (op)
+    {
+    case '+': return &add;
+    case '-': return &subtract;
+    case '*': return &multiply;
+    case '/': return &divide;
+    }
+
+    return nullptr;
+}
+
+int main()
+{
+    int x{ getInteger() };
+    char op{ getOperation() };
+    int y{ getInteger() };
+
+    ArithmeticFunction fcn{ getArithmeticFunction(op) };
+    if (fcn)
+        std::cout << x << ' ' << op << ' ' << y << " = " << fcn(x, y) << '\n';
+
+    return 0;
+}
