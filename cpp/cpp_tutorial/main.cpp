@@ -1,24 +1,16 @@
 #include <iostream>
+#include "random.h"
 
-int factorial(int a){
-  if(a == 1){
-    return 1;
-  }
-  return a * factorial(a-1);
-}
-
-int individual_digit_sum(int a){
-  if(a == 0){
-    return 0;
-  }
-  return a % 10 + individual_digit_sum(a / 10);
-}
-
-int main (int argc, char *argv[]) {
-  std::cout << "Enter a number: ";
-  int num{};
-  std::cin >> num;
-  std::cout << "Factorial: " << factorial(num) << std::endl;
-  std::cout << "Sum of digits: " << individual_digit_sum(num) << std::endl;
+int main(int argc, char* argv[]) {
+  int start{};
+  int quantity{};
+  std::cout << "Start where? ";
+  std::cin >> start;
+  std::cout << "How many? ";
+  std::cin >> quantity;
+  int multiplier {Random::get(2, 4)};
+  std::cout << "I generated " << quantity
+            << " square numbers. Do you know what each number is after multiplying it by "
+            << multiplier << "?";
   return 0;
 }

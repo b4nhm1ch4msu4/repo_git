@@ -1,0 +1,6 @@
+[Unit]
+Description=Get user info from GitHub
+
+[Service]
+Type=oneshot
+ExecStart=/home/mike/Documents/repo_git/bash/gh_user_info/gh_user_info.sh

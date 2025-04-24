@@ -1,0 +1,4 @@
+[Unit]
+Description=Run gh_user_info every hour
+[Timer]
+OnCalender=hourly
