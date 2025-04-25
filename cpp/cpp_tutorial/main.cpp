@@ -1,16 +1,22 @@
-#include <iostream>
-#include "random.h"
+double max(const double a, const double b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
 
-int main(int argc, char* argv[]) {
-  int start{};
-  int quantity{};
-  std::cout << "Start where? ";
-  std::cin >> start;
-  std::cout << "How many? ";
-  std::cin >> quantity;
-  int multiplier {Random::get(2, 4)};
-  std::cout << "I generated " << quantity
-            << " square numbers. Do you know what each number is after multiplying it by "
-            << multiplier << "?";
-  return 0;
+void swap(int& a, int& b) {
+  int temp = a;
+  a = b;
+  b = temp;
+}
+int& getLargestElement(int* array, int length){
+  int& largest = array[0];
+  for(int i = 1; i < length; i++){
+    if(array[i] > largest){
+      largest = array[i];
+    }
+  }
+  return largest;
 }
