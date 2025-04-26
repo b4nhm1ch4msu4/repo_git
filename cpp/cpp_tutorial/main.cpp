@@ -1,22 +1,52 @@
-double max(const double a, const double b) {
-  if (a > b) {
-    return a;
-  } else {
-    return b;
-  }
+#include <iostream>
+
+class Digit {
+ private:
+  int m_digit{};
+
+ public:
+  Digit(int digit = 0) : m_digit{digit} {}
+
+  void operator++();
+  Digit& operator--();
+
+  friend std::ostream& operator<<(std::ostream& out, const Digit& d);
+};
+
+void Digit::operator++() {
+  // If our number is already at 9, wrap around to 0
+  if (m_digit == 9)
+    m_digit = 0;
+  // otherwise just increment to next number
+  else
+    ++m_digit;
+
 }
 
-void swap(int& a, int& b) {
-  int temp = a;
-  a = b;
-  b = temp;
+Digit& Digit::operator--() {
+  // If our number is already at 0, wrap around to 9
+  if (m_digit == 0)
+    m_digit = 9;
+  // otherwise just decrement to next number
+  else
+    --m_digit;
+
+  return *this;
 }
-int& getLargestElement(int* array, int length){
-  int& largest = array[0];
-  for(int i = 1; i < length; i++){
-    if(array[i] > largest){
-      largest = array[i];
-    }
-  }
-  return largest;
+
+std::ostream& operator<<(std::ostream& out, const Digit& d) {
+  out << d.m_digit;
+  return out;
+}
+
+int main() {
+  Digit digit{8};
+
+  std::cout << digit;
+  std::cout << ++digit;
+  std::cout << ++digit;
+  std::cout << --digit;
+  std::cout << --digit;
+
+  return 0;
 }

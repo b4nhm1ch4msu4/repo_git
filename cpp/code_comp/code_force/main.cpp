@@ -1,27 +1,29 @@
+#include <algorithm> // for transform
+#include <cctype>    // for tolower
 #include <iostream>
+#include <string>
 
-int main(int argc, char *argv[]) {
-  std::string input{};
-  std::cin >> input;
-  std::size_t input_size = input.size();
-  std::size_t i = 0;
-  while (i < input_size) {
-    char cur = input[i];
-    bool found = true;
-    int j = 1;
-    while ( j < 7) {
-      if (input[i + j] != cur) {
-        found = false;
-        break;
-      }
-      ++j;
-    }
-    if (found) {
-      std::cout << "yes\n";
-      return 0;
-    }
-    i = i + j;
-  }
-  std::cout << "no\n";
+int main() {
+  std::string input1, input2;
+
+  std::getline(std::cin, input1);
+  std::getline(std::cin, input2);
+
+  // Convert to lowercase
+  std::transform(input1.begin(), input1.end(), input1.begin(),
+                 [](unsigned char c) { return std::tolower(c); });
+  std::transform(input2.begin(), input2.end(), input2.begin(),
+                 [](unsigned char c) { return std::tolower(c); });
+
+  // Compare the strings
+  if (input1 == input2)
+    std::cout << "0\n";
+  else if (input1 < input2)
+    std::cout << "-1\n";
+  else
+    std::cout << "1\n";
+
+  // Output the result
+
   return 0;
 }
