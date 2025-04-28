@@ -1,39 +1,21 @@
-#include <algorithm>
 #include <iostream>
 #include <string>
-#include <vector>
 
-struct StudentGrade {
-  std::string name{};
-  char grade{};
-};
-
-class GradeMap {
-  std::vector<StudentGrade> m_map{};
+class MyString {
+  std::string str{};
 
  public:
-  char& operator[](std::string name) {
-    auto found = std::find_if(m_map.begin(), m_map.end(),
-                              [&](StudentGrade& student) { return student.name == name; });
-
-    if (found != m_map.end())
-      return found->grade;
-
-    m_map.push_back({
-        name,
-    });
-    return m_map.back().grade;
+  MyString(std::string s) : str{s} {}
+  friend std::ostream& operator<<(std::ostream& out, const MyString& s) { return out << s.str; }
+  std::string operator()(std::size_t index, std::size_t length) const {
+    return str.substr(index, length);
   }
 };
 
-int main() {
-  GradeMap grades{};
+int main()
+{
+    MyString s { "Hello, world!" };
+    std::cout << s(7, 5) << '\n'; // start at index 7 and return 5 characters
 
-  grades["Joe"] = 'A';
-  grades["Frank"] = 'B';
-
-  std::cout << "Joe has a grade of " << grades["Joe"] << '\n';
-  std::cout << "Frank has a grade of " << grades["Frank"] << '\n';
-
-  return 0;
+    return 0;
 }
