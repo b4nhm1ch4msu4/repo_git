@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_HelloWorld_FILE /home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld)
+set(__QT_DEPLOY_TARGET_HelloWorld_TYPE EXECUTABLE)

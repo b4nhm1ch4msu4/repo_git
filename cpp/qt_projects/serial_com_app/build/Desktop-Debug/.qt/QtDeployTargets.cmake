@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_serial_com_app_FILE /home/tienp/Documents/repo_git/cpp/qt_projects/serial_com_app/build/Desktop-Debug/serial_com_app)
+set(__QT_DEPLOY_TARGET_serial_com_app_TYPE EXECUTABLE)

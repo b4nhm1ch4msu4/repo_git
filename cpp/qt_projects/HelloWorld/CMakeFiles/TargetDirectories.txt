@@ -1,0 +1,9 @@
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/HelloWorld.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/edit_cache.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/rebuild_cache.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/list_install_components.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/install.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/install/local.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/install/strip.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/HelloWorld_autogen_timestamp_deps.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/CMakeFiles/HelloWorld_autogen.dir

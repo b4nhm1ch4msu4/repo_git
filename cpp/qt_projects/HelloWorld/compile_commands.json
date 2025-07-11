@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/HelloWorld.dir/HelloWorld_autogen/mocs_compilation.cpp.o -c /home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld_autogen/mocs_compilation.cpp",
+  "file": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/HelloWorld_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/HelloWorld.dir/main.cpp.o -c /home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/main.cpp",
+  "file": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/main.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/main.cpp.o"
+},
+{
+  "directory": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/HelloWorld_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/HelloWorld.dir/mainwindow.cpp.o -c /home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/mainwindow.cpp",
+  "file": "/home/tienp/Documents/repo_git/cpp/qt_projects/HelloWorld/mainwindow.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/mainwindow.cpp.o"
+}
+]

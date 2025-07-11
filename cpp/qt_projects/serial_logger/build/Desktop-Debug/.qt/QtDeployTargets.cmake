@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_serial_logger_FILE /home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/serial_logger)
+set(__QT_DEPLOY_TARGET_serial_logger_TYPE EXECUTABLE)

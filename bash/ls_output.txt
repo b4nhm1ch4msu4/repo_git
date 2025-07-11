@@ -1,7 +1,0 @@
-.rw-r--r-- 298 mike 19 Apr 13:04 auto.cmd
-.rw-r--r-- 296 mike 19 Apr 13:04 auto.sh
-drwxr-xr-x   - mike 19 Apr 13:04 auto_git
-drwxr-xr-x   - mike 24 Apr 13:33 gh_user_info
-drwxr-xr-x   - mike 19 Apr 13:04 learnBashyminutes
-.rwxr-xr-x 808 mike 19 Apr 13:04 search_regex.sh
-drwxr-xr-x   - mike 10 May 13:31 text_processing_Linux

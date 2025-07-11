@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-abb2119f318745d979c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "serial_logger",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_logger::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_logger-Debug-9b3d746a96593b38e160.json",
+					"name" : "serial_logger",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_logger_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_logger_autogen-Debug-8bde0352b6db0c0b92c1.json",
+					"name" : "serial_logger_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "serial_logger_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-serial_logger_autogen_timestamp_deps-Debug-5f7b24272f04a661f805.json",
+					"name" : "serial_logger_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug",
+		"source" : "/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

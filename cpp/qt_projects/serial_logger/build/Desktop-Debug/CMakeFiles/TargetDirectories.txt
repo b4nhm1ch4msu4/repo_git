@@ -1,0 +1,9 @@
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/serial_logger.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/install.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/serial_logger_autogen_timestamp_deps.dir
+/home/tienp/Documents/repo_git/cpp/qt_projects/serial_logger/build/Desktop-Debug/CMakeFiles/serial_logger_autogen.dir
