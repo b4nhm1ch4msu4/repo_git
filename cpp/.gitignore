@@ -1,0 +1,26 @@
+# Compiled object files
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled binaries
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+*.dll
+
+# Build directories
+build/
+bin/
+obj/
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.user
