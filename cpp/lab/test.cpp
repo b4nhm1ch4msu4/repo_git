@@ -2,27 +2,22 @@
 
 using namespace std;
 
-void resize(int *arr, int newSize) { arr = new int[newSize]; }
+class Animal {
+public:
+  virtual void makeSound() { std::cout << "animal sound!!" << '\n'; }
+};
 
-int main() {
-  int *arr = new int[1];
-  /*cout << "before change: " << "\n";*/
-  /*cout << "arr address : " << &arr << "\n";*/
-  /*cout << "arr point to address : " << arr << "\n";*/
-  /*cout << "arr value: " << *arr << "\n";*/
- 
-  resize(arr, 10);
-  /*cout << "after change: " << "\n";*/
-  /*cout << "arr address : " << &arr << "\n";*/
-  /*cout << "arr point to address : " << arr << "\n";*/
-  /*cout << "arr value: " << *arr << "\n";*/
-  for (int i = 0; i < 10; i++) {
-    arr[i] = i;
-  }
-  for (int i = 0; i < 10; i++) {
-    cout << arr[i] << " ";
-  }
-  delete[] arr;
+class Dog : public Animal {
+public:
+  void makeSound() { std::cout << "gou gou" << '\n'; }
+};
+
+int main(int argc, char *argv[]) {
+  Animal *a;
+  // a->makeSound();
+  Dog d;
+  d.makeSound();
+  a = &d;
+  a->makeSound();
   return 0;
 }
-
