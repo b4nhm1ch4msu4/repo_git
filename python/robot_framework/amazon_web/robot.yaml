@@ -1,0 +1,2 @@
+robot:
+  - pythonPath: ../venv/bin/python

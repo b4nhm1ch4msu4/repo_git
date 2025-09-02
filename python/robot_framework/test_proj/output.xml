@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on linux)" generated="2025-08-20T20:16:40.777798" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase1" source="/home/tienp/Documents/repo_git/python/robot_framework/test_proj/TestCase1.robot">
+<test id="s1-t1" name="Test" line="9">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-20T20:16:40.807352" level="INFO">This is sample log</msg>
+<arg>This is sample log</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-20T20:16:40.807202" elapsed="0.000223"/>
+</kw>
+<status status="PASS" start="2025-08-20T20:16:40.806502" elapsed="0.001075"/>
+</test>
+<status status="PASS" start="2025-08-20T20:16:40.778567" elapsed="0.029489"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCase1" id="s1" pass="1" fail="0" skip="0">TestCase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

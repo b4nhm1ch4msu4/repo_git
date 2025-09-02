@@ -18,7 +18,7 @@ case "$1" in
     mem)mem_check ;;
     disk)disk_check ;;
     *)
-        echo "nothing"
+        echo "cpu | mem | disk . Select one arg..."
         ;;
 esac
 
