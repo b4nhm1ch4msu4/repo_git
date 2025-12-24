@@ -1,0 +1,29 @@
+#include <iostream>
+
+int sum_of_n(int n) {
+  if (n == 0) {
+    return 0;
+  }
+  return n + sum_of_n(n - 1);
+};
+
+int factorial_of_n(int n) {
+  if (n == 0) {
+    return 1;
+  }
+  return n * factorial_of_n(n - 1);
+}
+
+int exponent(int m, int n){
+    if(n == 0){
+        return 1;
+    }
+    return m * exponent(m, n-1);
+}
+
+int main(int argc, char* argv[]) {
+  std::cout << "sum of 5: " << sum_of_n(5) << std::endl;
+  std::cout << "factorial of 5: " << factorial_of_n(5) << std::endl;
+  std::cout << "exponent of 5 and 2: " << exponent(2, 5) << std::endl;
+  return 0;
+}
