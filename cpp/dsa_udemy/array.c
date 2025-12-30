@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 struct Array {
@@ -138,13 +139,69 @@ void Reverse_swap(struct Array *a) {
   }
 }
 
+void Insert_Sort(struct Array *a, int x) {
+  printf("Insert value %d to sorted array!\n", x);
+  int i = a->length - 1;
+  if (a->length == a->size) {
+    return;
+  }
+  while (i >= 0 && a->arr[i] > x) {
+    a->arr[i + 1] = a->arr[i];
+    i--;
+  }
+  a->arr[i + 1] = x;
+  a->length++;
+}
+
+int Is_Sorted(struct Array *a) {
+  for (int i = 0; i < a->length - 1; i++) {
+    if (a->arr[i] > a->arr[i + 1]) {
+      printf("This array is not sorted.\n");
+      return 0;
+    }
+  }
+  printf("This array is sorted.\n");
+  return 1;
+}
+
+struct Array *Merge_Sorted_Array(struct Array *a, struct Array *b) {
+  int i, j, k;
+  i = j = k = 0;
+  struct Array *c = (struct Array *)malloc(sizeof(struct Array));
+  c->size = a->size + b->size;
+  c->length = a->length + b->length;
+  c->arr = (int *)malloc(sizeof(int) * c->size);
+  while (i < a->length && j < b->length) {
+    if (a->arr[i] <= b->arr[j]) {
+      c->arr[k] = a->arr[i];
+      i++;
+    } else {
+      c->arr[k] = b->arr[j];
+      j++;
+    }
+    k++;
+  }
+  while (i < a->length) {
+    c->arr[k] = a->arr[i];
+    i++;
+    k++;
+  }
+  while (j < b->length) {
+    c->arr[k] = b->arr[j];
+    j++;
+    k++;
+  }
+
+  return c;
+}
+
 int main(int argc, char *argv[]) {
   struct Array a;
   a.length = 5;
   a.size = 10;
   a.arr = (int *)malloc(sizeof(int) * a.size);
   for (int i = 0; i < a.length; i++) {
-    a.arr[i] = i;
+    a.arr[i] = i + 5;
   }
   Display(&a);
 
@@ -163,7 +220,11 @@ int main(int argc, char *argv[]) {
   // printf("Binary_Search_Recursive for value 50\n");
   // Binary_Search_Recursive(&a, 50, 0, a.length - 1);
   // Reverse(&a);
-  Reverse_swap(&a);
+  // Reverse_swap(&a);
   Display(&a);
+  Is_Sorted(&a);
+  Insert(&a, 2, 15);
+  Display(&a);
+  Is_Sorted(&a);
   return 0;
 }
