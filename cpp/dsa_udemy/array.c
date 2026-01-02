@@ -165,6 +165,7 @@ int Is_Sorted(struct Array *a) {
 }
 
 struct Array *Merge_Sorted_Array(struct Array *a, struct Array *b) {
+  printf("Merge 2 sorted array !\n");
   int i, j, k;
   i = j = k = 0;
   struct Array *c = (struct Array *)malloc(sizeof(struct Array));
@@ -196,14 +197,12 @@ struct Array *Merge_Sorted_Array(struct Array *a, struct Array *b) {
 }
 
 int main(int argc, char *argv[]) {
-  struct Array a;
-  a.length = 5;
-  a.size = 10;
-  a.arr = (int *)malloc(sizeof(int) * a.size);
-  for (int i = 0; i < a.length; i++) {
-    a.arr[i] = i + 5;
-  }
+  struct Array a = {.arr = (int[]){1, 3, 5, 7, 9}, .length = 5, .size = 10};
+  struct Array b = {.arr = (int[]){2, 4, 6, 8, 10}, .length = 5, .size = 10};
   Display(&a);
+  Display(&b);
+  struct Array *c = Merge_Sorted_Array(&a, &b);
+  Display(c);
 
   // Append(&a, 20);
   // Display(&a);
@@ -221,10 +220,10 @@ int main(int argc, char *argv[]) {
   // Binary_Search_Recursive(&a, 50, 0, a.length - 1);
   // Reverse(&a);
   // Reverse_swap(&a);
-  Display(&a);
-  Is_Sorted(&a);
-  Insert(&a, 2, 15);
-  Display(&a);
-  Is_Sorted(&a);
+  // Display(&a);
+  // Is_Sorted(&a);
+  // Insert(&a, 2, 15);
+  // Display(&a);
+  // Is_Sorted(&a);
   return 0;
 }
