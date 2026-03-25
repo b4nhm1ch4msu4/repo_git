@@ -1,58 +1,151 @@
-from formatters import *
-from decorators import *
+from main import *
+
+try:
+    (
+        CSVExportStatus.PENDING
+        and CSVExportStatus.PROCESSING
+        and CSVExportStatus.SUCCESS
+        and CSVExportStatus.FAILURE
+    )
+except Exception as error:
+    print(f"Error: Missing attribute {error} from enum")
+
+    class CSVExportStatus(Enum):
+        PENDING = None
+        PROCESSING = None
+        SUCCESS = None
+        FAILURE = None
+
 
 run_cases = [
     (
-        ("# We like to play it all", "## Welcome to Tally Hall"),
-        {},
-        concat,
-        """  First: We like to play it all
-  Second: Welcome to Tally Hall""",
+        CSVExportStatus.PENDING,
+        [
+            ["Customer ID", "Billed", "Paid"],
+            [1, 100, 100],
+            [2, 400, 99],
+            [3, 50, 25],
+        ],
+        (
+            "Pending...",
+            [
+                ["Customer ID", "Billed", "Paid"],
+                ["1", "100", "100"],
+                ["2", "400", "99"],
+                ["3", "50", "25"],
+            ],
+        ),
     ),
     (
-        set(),
-        {
-            "title": "Why Python is Great",
-            "body": "Maybe it isn't",
-            "conclusion": "## That's why Python is great!",
-        },
-        format_as_essay,
-        """  Title: Why Python is Great
-  Body: Maybe it isn't
-  Conclusion: That's why Python is great!""",
+        CSVExportStatus.PROCESSING,
+        [
+            ["Customer ID", "Billed", "Paid"],
+            ["1", "100", "100"],
+            ["2", "400", "99"],
+            ["3", "50", "25"],
+        ],
+        (
+            "Processing...",
+            "Customer ID,Billed,Paid\n1,100,100\n2,400,99\n3,50,25",
+        ),
+    ),
+    (
+        CSVExportStatus.SUCCESS,
+        "Customer ID,Billed,Paid\n1,100,100\n2,400,99\n3,50,25",
+        (
+            "Success!",
+            "Customer ID,Billed,Paid\n1,100,100\n2,400,99\n3,50,25",
+        ),
+    ),
+    (
+        CSVExportStatus.FAILURE,
+        [
+            ["Customer ID", "Billed", "Paid"],
+            [1, 100, 100],
+            [2, 400, 99],
+            [3, 50, 25],
+        ],
+        (
+            "Unknown error, retrying...",
+            "Customer ID,Billed,Paid\n1,100,100\n2,400,99\n3,50,25",
+        ),
     ),
 ]
 
 submit_cases = run_cases + [
     (
-        ("# Boots' grocery list", "Salmon, gems, arcanum crystals"),
-        {
-            "conclusion": "## Don't forget!",
-        },
-        format_as_essay,
-        """  Title: Boots' grocery list
-  Body: Salmon, gems, arcanum crystals
-  Conclusion: Don't forget!""",
+        CSVExportStatus.PENDING,
+        [
+            ["Card Name", "Condition", "Value"],
+            ["Sparky Mouse", "Fair", 100],
+            ["Moist Turtle", "Good", 200],
+            ["Burning Lizard", "Very Good", 1000],
+            ["Mossy Frog", "Poor", 10],
+        ],
+        (
+            "Pending...",
+            [
+                ["Card Name", "Condition", "Value"],
+                ["Sparky Mouse", "Fair", "100"],
+                ["Moist Turtle", "Good", "200"],
+                ["Burning Lizard", "Very Good", "1000"],
+                ["Mossy Frog", "Poor", "10"],
+            ],
+        ),
     ),
+    (
+        CSVExportStatus.PROCESSING,
+        [
+            ["Card Name", "Condition", "Value"],
+            ["Sparky Mouse", "Fair", "100"],
+            ["Moist Turtle", "Good", "200"],
+            ["Burning Lizard", "Very Good", "1000"],
+            ["Mossy Frog", "Poor", "10"],
+        ],
+        (
+            "Processing...",
+            "Card Name,Condition,Value\nSparky Mouse,Fair,100\nMoist Turtle,Good,200\nBurning Lizard,Very Good,1000\nMossy Frog,Poor,10",
+        ),
+    ),
+    (
+        CSVExportStatus.SUCCESS,
+        "Card Name,Condition,Value\nSparky Mouse,Fair,100\nMoist Turtle,Good,200\nBurning Lizard,Very Good,1000\nMossy Frog,Poor,10",
+        (
+            "Success!",
+            "Card Name,Condition,Value\nSparky Mouse,Fair,100\nMoist Turtle,Good,200\nBurning Lizard,Very Good,1000\nMossy Frog,Poor,10",
+        ),
+    ),
+    (
+        CSVExportStatus.FAILURE,
+        [
+            ["Card Name", "Condition", "Value"],
+            ["Sparky Mouse", "Fair", 100],
+            ["Moist Turtle", "Good", 200],
+            ["Burning Lizard", "Very Good", 1000],
+            ["Mossy Frog", "Poor", 10],
+        ],
+        (
+            "Unknown error, retrying...",
+            "Card Name,Condition,Value\nSparky Mouse,Fair,100\nMoist Turtle,Good,200\nBurning Lizard,Very Good,1000\nMossy Frog,Poor,10",
+        ),
+    ),
+    (1, None, ("Exception Raised:", "unknown export status")),
 ]
 
 
-def test(args, kwargs, func, expected_output):
+def test(status, data, expected_output):
     print("---------------------------------")
-    print(f"Positional Arguments:")
-    for arg in args:
-        print(f" * {arg}")
-    print(f"Keyword Arguments:")
-    for key, value in kwargs.items():
-        print(f" * {key}: {value}")
-    print(f"Expected:")
-    print(expected_output)
+    print(f"Checking: {status}")
+    print("Expected:")
+    print(f"{expected_output[0]}")
+    print(f"{expected_output[1]}")
     try:
-        result = func(*args, **kwargs)
-    except Exception as error:
-        result = f"Error: {error}"
-    print(f"Actual:")
-    print(result)
+        result = get_csv_status(status, data)
+    except Exception as e:
+        result = expected_output[0], str(e)
+    print("Actual:")
+    print(f"{result[0]}")
+    print(f"{result[1]}")
     if result == expected_output:
         print("Pass")
         return True

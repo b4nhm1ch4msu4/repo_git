@@ -1,23 +1,15 @@
-from logger import args_logger
+from enum import Enum
+
+CSVExportStatus = Enum(
+    "CSVExportStatus", ["PENDING", "PROCESSING", "SUCCESS", "FAILURE"]
+)
 
 
-def test(*args, **kwargs):
-    args_logger(*args, **kwargs)
-    print("========================================")
-
-
-def main():
-    print("--- Test 1: Mix of args & kwargs -------")
-    test("Good", "riddance", date_str="01/01/2023")
-
-    print("--- Test 2: Only kwargs ----------------")
-    test(message="Hello World", to_delete="l")
-
-    print("--- Test 3: Only args ------------------")
-    test("two", "star-crossed", "lovers")
-
-    print("--- Test 4: Mix of args & kwargs -------")
-    test("hi", True, f_name="Lane", l_name="Wagner", age=28)
-
-
-main()
+def get_csv_status(status, data):
+    match status:
+        case CSVExportStatus.PENDING:
+            return ("Pending...",list(map(lambda x:map(lambda y:str(y),x),data))) 
+        case CSVExportStatus.PROCESSING:
+            return ("Processing...",'\n'.join(','.join(row) for row in data))
+        case _:
+            raise Exception("unknown export status")
