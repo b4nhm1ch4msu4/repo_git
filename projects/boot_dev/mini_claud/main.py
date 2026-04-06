@@ -12,12 +12,12 @@ if api_key is None:
 client = genai.Client(api_key=api_key)
 
 
-def read_response(respond):
-    print(f"Respond: {respond.text}")
+def print_token(respond):
+    # print(f"Respond: {respond.text}")
     if respond.usage_metadata is None:
         raise RuntimeError("Failed API request")
     print(f"Prompt tokens: {respond.usage_metadata.prompt_token_count}")
-    print(f"Response tokens: {respond.usage_metadata.candidates_token_count}")
+    print(f"Response tokens: {respond.usage_metadata.candidates_tokeuucount}")
 
 
 def main():
@@ -33,7 +33,7 @@ def main():
         contents=messages,
     )
     if (args.verbose):
-        read_response(res)
+        print_token(res)
     print(res.text)
 
 
