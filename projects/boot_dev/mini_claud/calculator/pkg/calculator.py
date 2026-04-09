@@ -9,28 +9,44 @@ class Calculator:
             "/": lambda a, b: a / b,
         }
         self.precedence = {
-            "+": 1,
-            "-": 1,
-            "*": 2,
-            "/": 2,
+            "+": 2,
+            "-": 2,
+            "*": 3,
+            "/": 3,
         }
 
     def evaluate(self, expression):
         if not expression or expression.isspace():
             return None
-        tokens = expression.strip().split()
+        tokens = self._tokenize(expression)
         return self._evaluate_infix(tokens)
+
+    def _tokenize(self, expression):
+        # Add spaces around operators and parentheses to easily split
+        expression = expression.replace("(", " ( ").replace(")", " ) ")
+        for op in self.operators:
+            expression = expression.replace(op, f" {op} ")
+        return [token for token in expression.split() if token]
 
     def _evaluate_infix(self, tokens):
         values = []
         operators = []
 
         for token in tokens:
-            if token in self.operators:
+            if token == "(":
+                operators.append(token)
+            elif token == ")":
+                while operators and operators[-1] != "(":
+                    self._apply_operator(operators, values)
+                if operators and operators[-1] == "(":
+                    operators.pop()  # Pop the "("
+                else:
+                    raise ValueError("Mismatched parentheses")
+            elif token in self.operators:
                 while (
                     operators
-                    and operators[-1] in self.operators
-                    and self.precedence[operators[-1]] >= self.precedence[token]
+                    and operators[-1] != "("
+                    and self.precedence.get(operators[-1], 0) >= self.precedence[token]
                 ):
                     self._apply_operator(operators, values)
                 operators.append(token)
@@ -41,6 +57,8 @@ class Calculator:
                     raise ValueError(f"invalid token: {token}")
 
         while operators:
+            if operators[-1] == "(":
+                raise ValueError("Mismatched parentheses")
             self._apply_operator(operators, values)
 
         if len(values) != 1:

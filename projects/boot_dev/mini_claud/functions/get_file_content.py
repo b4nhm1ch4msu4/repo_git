@@ -1,4 +1,5 @@
 import os
+from google.genai import types
 from config import MAX_CHARS
 
 
@@ -8,10 +9,10 @@ def get_file_content(working_directory, file_path):
         abs_file_path = os.path.join(abs_work_path, file_path)
         valid_target_dir = os.path.commonpath([abs_work_path, abs_file_path]) == abs_work_path
         if not valid_target_dir:
-            print(f'Error: Cannot list "{file_path}" as it is outside the permitted working directory')
+            # print(f'Error: Cannot list "{file_path}" as it is outside the permitted working directory')
             return f'Error: Cannot list "{file_path}" as it is outside the permitted working directory'
         if not os.path.isfile(abs_file_path):
-            print(f'Error: "{file_path}" is not a file path')
+            # print(f'Error: "{file_path}" is not a file path')
             return f'Error: "{file_path}" is not a file path'
         with open(abs_file_path,'r') as f:
             file_content = f.read(MAX_CHARS)
@@ -19,6 +20,20 @@ def get_file_content(working_directory, file_path):
                 file_content += f'[...File "{f}" truncated at {MAX_CHARS} characters]'
             return file_content
     except Exception as e:
-        print(f'Error: {e}') 
+        # print(f'Error: {e}') 
         return f'Error: {e}'
 
+schema_get_file_content = types.FunctionDeclaration(
+    name="get_file_content",
+    description="Get content of a specific file in working directory",
+    parameters=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "file_path": types.Schema(
+                type=types.Type.STRING,
+                description="File path to get content from, relative to the working directory",
+            ),
+        },
+        required=["file_path"]
+    ),
+)
