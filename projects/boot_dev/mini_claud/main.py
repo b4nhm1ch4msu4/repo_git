@@ -1,4 +1,5 @@
 import sys
+import time
 import os
 import argparse
 from dotenv import load_dotenv
@@ -23,6 +24,24 @@ def print_token(respond):
     print(f"Response tokens: {respond.usage_metadata.candidates_tokeuucount}")
 
 
+def send_request_with_retry(messages, max_retries=10)-> types.GenerateContentResponse:
+    for attempt in range(max_retries):
+        try:
+            res = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=messages,
+                config=types.GenerateContentConfig(
+                    tools=[available_functions], system_instruction=system_prompt
+                ),
+            )
+            return res
+        except Exception as e:
+        # retry
+            print(f"Error: {e}")
+            print("Error: Retry after 15s")
+            time.sleep(15)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Mini Claude Chatbot")
     parser.add_argument("user_prompt", type=str, help="User prompt")
@@ -32,13 +51,7 @@ def main():
     messages = [types.Content(role="user", parts=[types.Part(text=args.user_prompt)])]
     function_results = []
     for _ in range(10):
-        res = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=messages,
-            config=types.GenerateContentConfig(
-                tools=[available_functions], system_instruction=system_prompt
-            ),
-        )
+        res = send_request_with_retry(messages)
         if res.candidates:
             for can in res.candidates:
                 if not can.content:
@@ -64,6 +77,7 @@ def main():
             if args.verbose:
                 print(f"-> {function_call_result.parts[0].function_response.response}")
         messages.append(types.Content(role="user", parts=function_results))
+        time.sleep(60)
     sys.exit("Error: Reach max loop")
 
 
