@@ -1,4 +1,5 @@
 import sys
+import re
 import time
 import os
 import argparse
@@ -37,9 +38,15 @@ def send_request_with_retry(messages, max_retries=10)-> types.GenerateContentRes
             return res
         except Exception as e:
         # retry
+            delay_pattern = r"retryDelay':\s'(\d+)s"
+            delay_time = re.search(delay_pattern,str(e))
+            if delay_time is None:
+                delay_time = 15
+            else:
+                delay_time = int(delay_time.group(1))
             print(f"Error: {e}")
-            print("Error: Retry after 15s")
-            time.sleep(15)
+            print(f"Error: Retry after {delay_time}s")
+            time.sleep(int(delay_time))
 
 
 def main():
@@ -52,6 +59,8 @@ def main():
     function_results = []
     for _ in range(10):
         res = send_request_with_retry(messages)
+        if res is None:
+            continue
         if res.candidates:
             for can in res.candidates:
                 if not can.content:
