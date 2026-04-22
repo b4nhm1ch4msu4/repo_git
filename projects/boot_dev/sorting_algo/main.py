@@ -34,7 +34,13 @@
 
 
 def merge_sort(nums):
-    pass
+    leng = len(nums)
+    if leng < 2:
+        return nums
+    mid = leng // 2
+    sorted_left_side = merge_sort(nums[:mid])
+    sorted_right_side = merge_sort(nums[mid:])
+    return merge(sorted_left_side, sorted_right_side)
 
 
 def merge(first, second):
