@@ -1,49 +1,62 @@
-from main import *
-import time
+from main import letter_combinations
 
-run_cases = [
-    ([2, 1, 3], 0, 2, [1, 2, 3]),
-    ([9, 6, 2, 1, 8, 7], 0, 5, [1, 2, 6, 7, 8, 9]),
+# input; output length; first three output strings; a string that should be present
+TestCase = tuple[str, int, list[str], str]
+
+run_cases: list[TestCase] = [
+    ("", 0, [], ""),
+    ("67", 12, ["mp", "mq", "mr"], "op"),
+    ("43556", 243, ["gdjjm", "gdjjn", "gdjjo"], "hello"),
+    ("2668338", 2187, ["ammtddt", "ammtddu", "ammtddv"], "bootdev"),
 ]
 
-submit_cases = run_cases + [
-    ([], 0, -1, []),
-    ([1], 0, 0, [1]),
-    ([1, 2, 3, 4, 5], 0, 4, [1, 2, 3, 4, 5]),
-    ([5, 4, 3, 2, 1], 0, 4, [1, 2, 3, 4, 5]),
-    ([0, 1, 6, 4, 7, 3, 2, 8, 5, -9], 0, 9, [-9, 0, 1, 2, 3, 4, 5, 6, 7, 8]),
+submit_cases: list[TestCase] = run_cases + [
+    ("420", 0, [], "ValueError"),
+    ("7878326", 3888, ["ptptdam", "ptptdan", "ptptdao"], "rustfan"),
+    ("4568346", 2187, ["gjmtdgm", "gjmtdgn", "gjmtdgo"], "ilovego"),
 ]
 
 
-def test(input1, input2, input3, expected_output):
+def test(
+    digits: str,
+    expected_length: int,
+    expected_initial: list[str],
+    expected_contains: str,
+) -> bool:
     print("---------------------------------")
-    print(f"Inputs:")
-    print(f" * nums: {input1}")
-    print(f" * low: {input2}")
-    print(f" * high: {input3}")
-    print(f"Expected: {expected_output}")
-    start = time.time()
-    result = input1.copy()
-    quick_sort(result, input2, input3)
-    end = time.time()
-    timeout = 1.00
-    if (end - start) < timeout:
-        print(f"test completed in less than {timeout * 1000} milliseconds!")
-        if result == expected_output:
-            print(f"Actual: {result}")
+    print(f"Input: '{digits}'")
+    try:
+        result = letter_combinations(digits)
+        print(f"Expected combos: {expected_length}")
+        actual_length = len(result)
+        print(f"Actual combos:   {actual_length}")
+        if expected_length == 0 and actual_length == expected_length:
             print("Pass")
             return True
-        print(f"Actual: {result}")
-        print("Fail")
-        return False
-    else:
-        print(f"test took longer than {timeout * 1000} milliseconds!")
-        print(f"Actual: {result}")
-        print("Fail")
-        return False
+        print(f"Expected initial combos: {expected_initial}")
+        actual_initial = result[:3]
+        print(f"Actual initial combos:   {actual_initial}")
+        print(f"Expected to contain: '{expected_contains}'")
+        actual_contains = expected_contains in result
+        print(f"Actual contains '{expected_contains}'? {actual_contains}")
+        if (
+            actual_length == expected_length
+            and actual_initial == expected_initial
+            and actual_contains
+        ):
+            print("Pass")
+            return True
+    except ValueError as ve:
+        print(f"Caught ValueError: {ve}")
+        if expected_length == 0 and expected_contains == "ValueError":
+            print("Expected ValueError")
+            print("Pass")
+            return True
+    print("Fail")
+    return False
 
 
-def main():
+def main() -> None:
     passed = 0
     failed = 0
     skipped = len(submit_cases) - len(test_cases)
@@ -63,7 +76,7 @@ def main():
         print(f"{passed} passed, {failed} failed")
 
 
-test_cases = submit_cases
+test_cases: list[TestCase] = submit_cases
 if "__RUN__" in globals():
     test_cases = run_cases
 

@@ -77,3 +77,60 @@ def partition(nums, low, high):
             nums[i], nums[j] = nums[j], nums[i]
     nums[i + 1], nums[high] = nums[high], nums[i + 1]
     return i + 1
+
+def selection_sort(nums):
+    for i in range(len(nums)):
+        smallest_idx = i
+        for j in range(i+1,len(nums)):
+            if nums[j] < nums[smallest_idx]:
+                smallest_idx = j
+        nums[i], nums[smallest_idx] = nums[smallest_idx], nums[i]
+    return nums
+
+def fib(n):
+    if n <= 1:
+        return n
+    grandparent = 0
+    parent = 1
+    current = 0
+    for i in range(n-1):
+        current = parent + grandparent
+        grandparent = parent
+        parent = current
+    return current
+
+
+def letter_combinations(digits):
+    if digits is None:
+        return []
+    result = ['']
+    for d in digits:
+        if d not in digit_to_letters:
+            raise ValueError(f"invalid digit: {digits}")
+        new_result = []
+        letters = digit_to_letters[d]
+        for combo in result:
+            for letter in letters:
+                new_result.append(combo + letter)
+        result = new_result
+    if result == ['']:
+        return []
+    return result
+        
+
+
+# Don't touch below this line
+
+digit_to_letters = {
+    "2": "abc",
+    "3": "def",
+    "4": "ghi",
+    "5": "jkl",
+    "6": "mno",
+    "7": "pqrs",
+    "8": "tuv",
+    "9": "wxyz",
+}
+
+
+
