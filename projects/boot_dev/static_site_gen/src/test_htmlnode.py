@@ -4,26 +4,52 @@ from htmlnode import HTMLNode
 
 
 class TestHTMLNode(unittest.TestCase):
-    def __init__(self, methodName: str = "runTest") -> None:
-        super().__init__(methodName)
-        self.header3_node = HTMLNode(
-            tag="h3", value="This is header 3", children=None, props=None
-        )
-        self.link_node = HTMLNode(
-            tag="a",
-            value=None,
-            children=[self.header3_node],
-            props={"href": "www.link_node.com", "rel": "stylesheet"},
-        )
+    def test_init(self):
+        node = HTMLNode(tag="p", value="Hello", children=None, props={"class": "text"})
+        self.assertEqual(node.tag, "p")
+        self.assertEqual(node.value, "Hello")
+        self.assertIsNone(node.children)
+        self.assertEqual(node.props, {"class": "text"})
 
-    def test_props_to_html(self):
-        print(self.link_node.props_to_html())
+    def test_props_to_html_with_props(self):
+        node = HTMLNode(props={"class": "btn", "id": "main"})
+        result = node.props_to_html()
+        self.assertIn(' class="btn"', result)
+        self.assertIn(' id="main"', result)
 
-    def test_print_htmlnode(self):
-        print(self.link_node)
+    def test_props_to_html_no_props(self):
+        node = HTMLNode()
+        result = node.props_to_html()
+        self.assertEqual(result, "")
 
-    def test_eq(self):
-        self.assertEqual(self.header3_node.children, None)
+    def test_to_dict_without_children(self):
+        node = HTMLNode(tag="span", value="Hi", props={"style": "color:red"})
+        expected = {"tag": "span", "value": "Hi", "props": {"style": "color:red"}}
+        self.assertEqual(node.to_dict(), expected)
+
+    def test_to_dict_with_children(self):
+        child1 = HTMLNode(tag="b", value="Bold")
+        child2 = HTMLNode(tag="i", value="Italic")
+        parent = HTMLNode(tag="p", value=None, children=[child1, child2], props=None)
+
+        result = parent.to_dict()
+
+        self.assertEqual(result["tag"], "p")
+        self.assertEqual(len(result["children"]), 2)
+        self.assertEqual(result["children"][0]["tag"], "b")
+        self.assertEqual(result["children"][1]["tag"], "i")
+
+    def test_repr_returns_json_string(self):
+        node = HTMLNode(tag="div", value="Content")
+        result = repr(node)
+
+        # Should be valid JSON
+        import json
+
+        parsed = json.loads(result)
+
+        self.assertEqual(parsed["tag"], "div")
+        self.assertEqual(parsed["value"], "Content")
 
 
 if __name__ == "__main__":

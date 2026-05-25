@@ -1,3 +1,4 @@
+import json
 from htmlnode import HTMLNode
 
 
@@ -11,3 +12,9 @@ class LeafNode(HTMLNode):
         if self.tag is None:
             return self.value
         return f"<{self.tag}{self.props_to_html()}>{self.value}</{self.tag}>"
+
+    def to_dict(self):
+        return {"tag": self.tag, "value":self.value, "props":self.props}
+
+    def __repr__(self) -> str:
+        return json.dumps(self.to_dict(),indent=2)
