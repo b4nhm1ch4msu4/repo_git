@@ -1,7 +1,6 @@
 import unittest
-from textnode import TextNode, TextType  # adjust module name if needed
+from textnode import TextNode, TextType, text_node_to_html_node
 from leafnode import LeafNode
-from main import text_node_to_html_node  # adjust import
 
 
 class TestTextType(unittest.TestCase):
