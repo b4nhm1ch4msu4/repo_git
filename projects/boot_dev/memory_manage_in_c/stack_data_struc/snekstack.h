@@ -8,4 +8,5 @@ typedef struct Stack {
 
 snekstack_t *stack_new(size_t capacity);
 void stack_push(snekstack_t *stack, void *obj);
-
+void *stack_pop(snekstack_t *stack);
+void stack_free(snekstack_t *stack);
