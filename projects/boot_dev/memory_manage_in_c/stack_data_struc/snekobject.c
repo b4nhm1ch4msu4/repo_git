@@ -38,3 +38,31 @@ snek_object_t *new_snek_string(char *value) {
   new_obj->data.v_string = new_data;
   return new_obj;
 }
+
+snek_object_t *new_snek_vector3(snek_object_t *x, snek_object_t *y,
+                                snek_object_t *z) {
+  if (x == NULL || y == NULL || z == NULL) {
+    return NULL;
+  }
+  snek_object_t *new_obj = malloc(sizeof(snek_object_t));
+  if (new_obj == NULL) {
+    return NULL;
+  }
+  new_obj->kind = VECTOR3;
+  snek_vector_t v = {x, y, z};
+  new_obj->data.v_vector3 = v;
+  return new_obj;
+}
+
+snek_object_t *new_snek_array(size_t size) {
+  snek_object_t *new_obj = malloc(sizeof(snek_object_t));
+  if (new_obj == NULL) {
+    return NULL;
+  }
+  snek_object_t **arr = malloc(sizeof(snek_object_t*));
+  if (new_obj == NULL) {
+      free(new_obj);
+    return NULL;
+  }
+
+}
