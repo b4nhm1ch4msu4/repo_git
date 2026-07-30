@@ -24,7 +24,7 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_to_dict_without_children(self):
         node = HTMLNode(tag="span", value="Hi", props={"style": "color:red"})
-        expected = {"tag": "span", "value": "Hi", "props": {"style": "color:red"}}
+        expected = {"tag": "span", "value": "Hi","children": None, "props": {"style": "color:red"}}
         self.assertEqual(node.to_dict(), expected)
 
     def test_to_dict_with_children(self):

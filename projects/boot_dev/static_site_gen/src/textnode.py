@@ -31,7 +31,7 @@ class TextNode:
         return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
 
 
-def text_node_to_html_node(text_node: TextNode):
+def text_node_to_html_node(text_node: TextNode) -> LeafNode:
     try:
         TextType(text_node.text_type)
     except ValueError:
@@ -53,3 +53,4 @@ def text_node_to_html_node(text_node: TextNode):
             return LeafNode(
                 tag="img", value="", props={"src": text_node.url, "alt": text_node.text}
             )
+

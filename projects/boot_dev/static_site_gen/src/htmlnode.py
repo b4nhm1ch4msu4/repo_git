@@ -18,19 +18,19 @@ class HTMLNode:
         return output
 
     def to_dict(self):
+        obj_dict = {}
+        obj_dict["tag"] = self.tag if self.tag else None
+        obj_dict["value"] = self.value if self.value else None
         if self.children:
-            return {"tag": self.tag, "value":self.value, "children": [x.to_dict() for x in self.children], "props":self.props}
-        return {"tag": self.tag, "value":self.value, "props":self.props}
+            obj_children = []
+            for child in self.children:
+                obj_children.append(child.to_dict())
+            obj_dict["children"] = obj_children
+        else:
+            obj_dict["children"] = None
+        obj_dict["props"] = self.props if self.props else None
+        return obj_dict
+
 
     def __repr__(self) -> str:
-        output = "HTMLnode ("
-        if  self.tag:
-            output += f" Tag: {self.tag},"
-        if self.value:
-            output += f" Value: {self.value},"
-        if self.children:
-            output += f" Children: {self.children},"
-        if self.props:
-            output += f" Props: {{ {self.props_to_html()} }}"
-        output += " )"
-        return output
+        return json.dumps(self.to_dict(),indent=4)

@@ -1,6 +1,13 @@
 from textnode import TextNode, TextType
-from extract_markdown import extract_markdown_images, extract_markdown_links
 import re
+
+
+def extract_markdown_images(text):
+    return re.findall(r"!\[([^)]+)\]\(([^)]+)\)", text)
+
+
+def extract_markdown_links(text):
+    return re.findall(r"(?<!!)\[([^)]+)\]\(([^)]+)\)", text)
 
 
 def split_nodes_delimiter(
@@ -27,27 +34,45 @@ def split_nodes_delimiter(
 
 
 def split_nodes_image(old_nodes: list[TextNode]) -> list[TextNode]:
-    img_pattern = r"!\[[^\]]+\]\([^)]+\)"
+    # img_pattern = r"!\[[^\]]+\]\([^)]+\)"
+    # new_nodes = []
+    # for node in old_nodes:
+    #     if node.text_type != TextType.TEXT:
+    #         new_nodes.append(node)
+    #         continue
+    #     parts = re.split(f"({img_pattern})", node.text)
+    #     for part in parts:
+    #         if not part:
+    #             continue
+    #         match = re.match(r"!\[([^\]]+)\]\(([^)]+)\)", part)
+    #         if match:
+    #             new_nodes.append(
+    #                 TextNode(
+    #                     text=match.group(1),
+    #                     text_type=TextType.IMAGE,
+    #                     url=match.group(2),
+    #                 )
+    #             )
+    #         else:
+    #             new_nodes.append(TextNode(text=part, text_type=TextType.TEXT))
+    # return new_nodes
     new_nodes = []
     for node in old_nodes:
         if node.text_type != TextType.TEXT:
             new_nodes.append(node)
             continue
-        parts = re.split(f"({img_pattern})", node.text)
-        for part in parts:
-            if not part:
-                continue
-            match = re.match(r"!\[([^\]]+)\]\(([^)]+)\)", part)
-            if match:
-                new_nodes.append(
-                    TextNode(
-                        text=match.group(1),
-                        text_type=TextType.IMAGE,
-                        url=match.group(2),
-                    )
-                )
-            else:
-                new_nodes.append(TextNode(text=part, text_type=TextType.TEXT))
+        remain_text = node.text
+        imgs = extract_markdown_images(remain_text)
+        for img in imgs:
+            img_section = f"![{img[0]}]({img[1]})"
+            if remain_text == "":
+                break
+            sections = remain_text.split(img_section, maxsplit=1)
+            if sections[0] != "":
+                new_nodes.append(TextNode(sections[0], text_type=TextType.TEXT))
+                new_nodes.append(TextNode(img[0],TextType.IMAGE,img[1]))
+            remain_text = sections[1]
+
     return new_nodes
 
 
@@ -75,7 +100,7 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
 
 
 def text_to_textnodes(text):
-    text_node = TextNode(text,TextType.TEXT)
+    text_node = TextNode(text, TextType.TEXT)
     code_split = split_nodes_delimiter(
         old_nodes=[text_node], delimiter="`", text_type=TextType.CODE
     )
