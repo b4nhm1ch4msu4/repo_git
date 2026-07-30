@@ -23,4 +23,14 @@ class HTMLNode:
         return {"tag": self.tag, "value":self.value, "props":self.props}
 
     def __repr__(self) -> str:
-        return json.dumps(self.to_dict(),indent=2)
+        output = "HTMLnode ("
+        if  self.tag:
+            output += f" Tag: {self.tag},"
+        if self.value:
+            output += f" Value: {self.value},"
+        if self.children:
+            output += f" Children: {self.children},"
+        if self.props:
+            output += f" Props: {{ {self.props_to_html()} }}"
+        output += " )"
+        return output
