@@ -1,5 +1,11 @@
 from enum import Enum
+from typing import List
+from parentnode import ParentNode
 import re
+from textnode import text_node_to_html_node
+from htmlnode import HTMLNode
+from leafnode import LeafNode
+from split_text_node import text_to_textnodes
 
 
 class BlockType(Enum):
@@ -35,12 +41,50 @@ def block_to_block_type(block: str) -> BlockType:
     else:
         return BlockType.PARAGRAPH
 
+
 def markdown_to_blocks(markdown: str):
     blocks = markdown.split("\n\n")
-    for b in blocks:
-        if not b:
-            blocks.remove(b)
+    leng = len(blocks)
+    for i in range(leng):
+        if not blocks[i]:
+            blocks.remove(blocks[i])
+        else:
+            blocks[i] = blocks[i].strip()
     return blocks
 
+
 def markdown_to_html_node(markdown: str):
-    pass
+    childrent_nodes = list()
+    blocks = markdown_to_blocks(markdown)
+    for b in blocks:
+        b_node = HTMLNode()
+        b_type = block_to_block_type(b)
+        match b_type:
+            case BlockType.PARAGRAPH:
+                text_nodes = text_to_textnodes(b)
+                html_nodes = []
+                for t_node in text_nodes:
+                    h_node = text_node_to_html_node(t_node)
+                    html_nodes.append(h_node)
+
+                b_node = ParentNode(tag="p", children=html_nodes)
+            case BlockType.HEADING:
+                h_level = b.count('#')
+                b_node = LeafNode(tag=f"h{h_level}",value=b.strip('#'))
+            case BlockType.CODE:
+                code_node = LeafNode(tag="pre",value=b.strip("```"))
+                b_node = ParentNode(tag="code",children=code_node)
+            case BlockType.QUOTE:
+                text = b.replace(">","").replace("\n"," ")
+                b_node = LeafNode(tag="blockquote",value=text)
+            case BlockType.UNORDERED_LIST:
+                pass
+            case BlockType.ORDERED_LIST:
+                pass
+            case _:
+                b_node = None
+        if b_node is not None:
+            childrent_nodes.append(b_node)
+    root_node = ParentNode(tag="div",children=childrent_nodes)
+    print(root_node)
+
