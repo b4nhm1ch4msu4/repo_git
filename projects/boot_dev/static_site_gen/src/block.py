@@ -78,7 +78,7 @@ def markdown_to_html_node(markdown: str):
                 code_node = LeafNode(tag="code",value=b)
                 b_node = ParentNode(tag="pre",children=[code_node])
             case BlockType.QUOTE:
-                text = b.replace(">","").replace("\n"," ")
+                text = b.replace(">","")
                 b_node = LeafNode(tag="blockquote",value=text)
             case BlockType.UNORDERED_LIST:
                 lines = b.split("\n")
