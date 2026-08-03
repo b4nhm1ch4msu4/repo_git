@@ -70,21 +70,35 @@ def markdown_to_html_node(markdown: str):
                 b_node = ParentNode(tag="p", children=html_nodes)
             case BlockType.HEADING:
                 h_level = b.count('#')
-                b_node = LeafNode(tag=f"h{h_level}",value=b.strip('#'))
+                b = re.sub(r"#+\s","",b)
+                b_node = LeafNode(tag=f"h{h_level}",value=b)
             case BlockType.CODE:
-                code_node = LeafNode(tag="pre",value=b.strip("```"))
-                b_node = ParentNode(tag="code",children=code_node)
+                b = re.sub("```\n","",b)
+                b = b.strip("```")
+                code_node = LeafNode(tag="code",value=b)
+                b_node = ParentNode(tag="pre",children=[code_node])
             case BlockType.QUOTE:
                 text = b.replace(">","").replace("\n"," ")
                 b_node = LeafNode(tag="blockquote",value=text)
             case BlockType.UNORDERED_LIST:
-                pass
+                lines = b.split("\n")
+                li_nodes = []
+                for l in lines:
+                    l = l.lstrip("- ")
+                    i_node = LeafNode(tag="li",value=l)
+                    li_nodes.append(i_node)
+                b_node = ParentNode(tag="ul",children=li_nodes)
             case BlockType.ORDERED_LIST:
-                pass
+                lines = b.split("\n")
+                li_nodes = []
+                for l in lines:
+                    l = re.sub(r"^\d+\.\s","",l)
+                    i_node = LeafNode(tag="li",value=l)
+                    li_nodes.append(i_node)
+                b_node = ParentNode(tag="ol",children=li_nodes)
             case _:
                 b_node = None
         if b_node is not None:
             childrent_nodes.append(b_node)
     root_node = ParentNode(tag="div",children=childrent_nodes)
-    print(root_node)
-
+    return root_node

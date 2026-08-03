@@ -28,7 +28,7 @@ def split_nodes_delimiter(
         new_node = []
         for i in range(len(spliter_list)):
             if (i % 2) == 0:
-                new_node.append(TextNode(text=spliter_list[i], text_type=TextType.TEXT))
+                new_node.append(TextNode(text=spliter_list[i].replace("\n"," "), text_type=TextType.TEXT))
             else:
                 new_node.append(TextNode(text=spliter_list[i], text_type=text_type))
         new_nodes.extend(new_node)
@@ -78,9 +78,9 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
 
 
 def text_to_textnodes(text):
-    text_node = TextNode(text, TextType.TEXT)
+    text_node = [TextNode(text, TextType.TEXT)]
     new_textnodes = split_nodes_delimiter(
-        old_nodes=[text_node], delimiter="`", text_type=TextType.CODE
+        old_nodes=text_node, delimiter="`", text_type=TextType.CODE
     )
     new_textnodes = split_nodes_delimiter(
         old_nodes=new_textnodes, delimiter="**", text_type=TextType.BOLD
