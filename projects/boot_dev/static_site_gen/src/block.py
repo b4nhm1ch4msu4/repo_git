@@ -85,7 +85,11 @@ def markdown_to_html_node(markdown: str):
                 li_nodes = []
                 for l in lines:
                     l = l.lstrip("- ")
-                    i_node = LeafNode(tag="li",value=l)
+                    nodes = text_to_textnodes(l)
+                    childrent = []
+                    for n in nodes:
+                        childrent.append(text_node_to_html_node(n))
+                    i_node = ParentNode(tag="li",children=childrent)
                     li_nodes.append(i_node)
                 b_node = ParentNode(tag="ul",children=li_nodes)
             case BlockType.ORDERED_LIST:
@@ -93,7 +97,11 @@ def markdown_to_html_node(markdown: str):
                 li_nodes = []
                 for l in lines:
                     l = re.sub(r"^\d+\.\s","",l)
-                    i_node = LeafNode(tag="li",value=l)
+                    nodes = text_to_textnodes(l)
+                    childrent = []
+                    for n in nodes:
+                        childrent.append(text_node_to_html_node(n))
+                    i_node = ParentNode(tag="li",children=childrent)
                     li_nodes.append(i_node)
                 b_node = ParentNode(tag="ol",children=li_nodes)
             case _:
