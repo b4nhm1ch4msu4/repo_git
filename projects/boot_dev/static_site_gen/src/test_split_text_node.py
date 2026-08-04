@@ -1,6 +1,11 @@
 import unittest
 from textnode import TextNode, TextType
-from split_text_node import split_nodes_delimiter, split_nodes_image, split_nodes_link, text_to_textnodes
+from split_text_node import (
+    split_nodes_delimiter,
+    split_nodes_image,
+    split_nodes_link,
+    text_to_textnodes,
+)
 
 
 class TestSplitNodesDelimiter(unittest.TestCase):
@@ -264,9 +269,7 @@ class TestSplitNodesDelimiter(unittest.TestCase):
         text = "Just plain text"
         result = text_to_textnodes(text)
 
-        expected = [
-            TextNode("Just plain text", TextType.TEXT)
-        ]
+        expected = [TextNode("Just plain text", TextType.TEXT)]
 
         self.assertEqual(result, expected)
 
@@ -386,6 +389,7 @@ class TestSplitNodesDelimiter(unittest.TestCase):
         ]
 
         self.assertEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

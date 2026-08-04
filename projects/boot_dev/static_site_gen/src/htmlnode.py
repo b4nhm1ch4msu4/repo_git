@@ -1,5 +1,6 @@
 import json
 
+
 class HTMLNode:
     def __init__(self, tag=None, value=None, children=None, props=None) -> None:
         self.tag = tag
@@ -31,6 +32,5 @@ class HTMLNode:
         obj_dict["props"] = self.props if self.props else None
         return obj_dict
 
-
     def __repr__(self) -> str:
-        return json.dumps(self.to_dict(),indent=4)
+        return json.dumps(self.to_dict(), indent=4)

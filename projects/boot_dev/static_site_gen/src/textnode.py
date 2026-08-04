@@ -53,4 +53,3 @@ def text_node_to_html_node(text_node: TextNode) -> LeafNode:
             return LeafNode(
                 tag="img", value="", props={"src": text_node.url, "alt": text_node.text}
             )
-

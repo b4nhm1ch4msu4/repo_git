@@ -28,7 +28,11 @@ def split_nodes_delimiter(
         new_node = []
         for i in range(len(spliter_list)):
             if (i % 2) == 0:
-                new_node.append(TextNode(text=spliter_list[i].replace("\n"," "), text_type=TextType.TEXT))
+                new_node.append(
+                    TextNode(
+                        text=spliter_list[i].replace("\n", " "), text_type=TextType.TEXT
+                    )
+                )
             else:
                 new_node.append(TextNode(text=spliter_list[i], text_type=text_type))
         new_nodes.extend(new_node)

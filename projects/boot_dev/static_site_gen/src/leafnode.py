@@ -21,4 +21,4 @@ class LeafNode(HTMLNode):
         return obj_dict
 
     def __repr__(self) -> str:
-        return json.dumps(self.to_dict(),indent=4)
+        return json.dumps(self.to_dict(), indent=4)

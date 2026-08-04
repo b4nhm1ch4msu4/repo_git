@@ -25,25 +25,7 @@ def main():
     print(f"Create new folder: {dest_dir}")
 
     recursive_copy(source_dir, dest_dir)
-    # TODO: create generate_recursive function
-
     generate_page_recursive(f"{cwd}/content", f"{cwd}/template.html", f"{cwd}/public")
-
-    # generate_page(
-    #     f"{cwd}/content/index.md", f"{cwd}/template.html", f"{cwd}/public/index.html"
-    # )
-    # generate_page(
-    #     f"{cwd}/content/blog/glorfindel/index.md", f"{cwd}/template.html", f"{cwd}/public/blog/glorfindel/index.html"
-    # )
-    # generate_page(
-    #     f"{cwd}/content/blog/tom/index.md", f"{cwd}/template.html", f"{cwd}/public/blog/tom/index.html"
-    # )
-    # generate_page(
-    #     f"{cwd}/content/blog/majesty/index.md", f"{cwd}/template.html", f"{cwd}/public/blog/majesty/index.html"
-    # )
-    # generate_page(
-    #     f"{cwd}/content/contact/index.md", f"{cwd}/template.html", f"{cwd}/public/contact/index.html"
-    # )
 
 
 def recursive_copy(source, dest):
@@ -105,22 +87,20 @@ def generate_page(from_path, template_path, dest_path):
 
 
 def generate_page_recursive(from_dir, template_path, dest_dir):
+    print(f"Call gen_recur({from_dir},{dest_dir})")
     entries_name = os.listdir(from_dir)
     for name in entries_name:
-        path = os.path.join(from_dir, name)
-        print(f"path: {path}")
-        if os.path.isfile(path):
-            if path.endswith(".md"):
-                dest_path = os.path.join(dest_dir, path.replace(".md", ".html"))
+        source_path = os.path.join(from_dir, name)
+        print(f"source path: {source_path}")
+        if os.path.isfile(source_path):
+            if name.endswith(".md"):
+                dest_path = os.path.join(dest_dir, name.replace(".md", ".html"))
                 print(f"dest path: {dest_path}")
-                generate_page(path, template_path, dest_path)
+                generate_page(source_path, template_path, dest_path)
         else:
-            dest_dir = os.path.join(dest_dir, name)
-            generate_page_recursive(path, template_path, dest_dir)
-    #BUG: copy from content folder to public folder include content
-# Generating page from /home/tienp/Documents/repo_git/projects/boot_dev/static_site_gen/content/index.md to /home/tienp/Documents/r
-# epo_git/projects/boot_dev/static_site_gen/content/index.html using /home/tienp/Documents/repo_git/projects/boot_dev/static_site_g
-# en/template.html
+            new_dest_dir = os.path.join(dest_dir, name)
+            generate_page_recursive(source_path, template_path, new_dest_dir)
+
 
 if __name__ == "__main__":
     main()

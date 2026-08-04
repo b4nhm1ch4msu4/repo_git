@@ -22,5 +22,6 @@ This is the same paragraph on a new line
         ],
     )
 
+
 if __name__ == "__main__":
     unittest.main()

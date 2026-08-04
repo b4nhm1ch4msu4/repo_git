@@ -40,7 +40,9 @@ class TestBlockToBlockType(unittest.TestCase):
     # ---------- ORDERED LIST ----------
     def test_ordered_list_valid(self):
         self.assertEqual(block_to_block_type("1. item"), BlockType.ORDERED_LIST)
-        self.assertEqual(block_to_block_type("1. item\n2. next\n3. previous"), BlockType.ORDERED_LIST)
+        self.assertEqual(
+            block_to_block_type("1. item\n2. next\n3. previous"), BlockType.ORDERED_LIST
+        )
 
     def test_ordered_list_invalid(self):
         self.assertEqual(block_to_block_type("1.item"), BlockType.PARAGRAPH)
