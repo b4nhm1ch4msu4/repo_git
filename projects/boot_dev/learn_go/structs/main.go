@@ -51,18 +51,82 @@
 // 	return fmt.Sprintf("Authorization: Basic %s:%s", i.username, i.password)
 // }
 
+// package main
+//
+// type contact struct {
+// 	sendingLimit int32
+// 	age          int32
+// 	userID       string
+// }
+//
+// type perms struct {
+// 	permissionLevel int
+// 	canSend         bool
+// 	canReceive      bool
+// 	canManage       bool
+// }
+
+// package main
+//
+// type User struct {
+// 	Name string
+// 	Membership
+// }
+//
+// type Membership struct {
+// 	Type             string
+// 	MessageCharLimit int
+// }
+//
+// func newUser(name string, membershipType string) User {
+// 	// ?
+// 	if membershipType == "premium" {
+// 		return User{Name: name,
+// 			Membership: Membership{
+// 				Type:             membershipType,
+// 				MessageCharLimit: 1000,
+// 			},
+// 		}
+// 	} else {
+// 		return User{Name: name,
+// 			Membership: Membership{
+// 				Type:             membershipType,
+// 				MessageCharLimit: 100,
+// 			},
+// 		}
+// 	}
+// }
 
 package main
 
-type contact struct {
-	sendingLimit int32
-	age          int32
-	userID       string
+// ?
+func (u User) SendMessage(message string, messageLength int) (string, bool) {
+	if messageLength <= u.MessageCharLimit {
+		return message, true
+	} else {
+		return "", false
+	}
 }
 
-type perms struct {
-	permissionLevel int
-	canSend         bool
-	canReceive      bool
-	canManage       bool
+// don't touch below this line
+
+type User struct {
+	Name string
+	Membership
+}
+
+type Membership struct {
+	Type             string
+	MessageCharLimit int
+}
+
+func newUser(name string, membershipType string) User {
+	membership := Membership{Type: membershipType}
+	if membershipType == "premium" {
+		membership.MessageCharLimit = 1000
+	} else {
+		membership.Type = "standard"
+		membership.MessageCharLimit = 100
+	}
+	return User{Name: name, Membership: membership}
 }
