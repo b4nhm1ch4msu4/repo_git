@@ -152,30 +152,312 @@
 //
 
 
+// package main
+//
+// import (
+// 	"fmt"
+// 	"testing"
+// )
+//
+// func Test(t *testing.T) {
+// 	type testCase struct {
+// 		body           string
+// 		isSubscribed   bool
+// 		expectedCost   int
+// 		expectedFormat string
+// 	}
+//
+// 	runCases := []testCase{
+// 		{"hello there", true, 22, "'hello there' | Subscribed"},
+// 		{"general kenobi", false, 70, "'general kenobi' | Not Subscribed"},
+// 	}
+//
+// 	submitCases := append(runCases, []testCase{
+// 		{"i hate sand", true, 22, "'i hate sand' | Subscribed"},
+// 		{"it's coarse and rough and irritating", false, 180, "'it's coarse and rough and irritating' | Not Subscribed"},
+// 		{"and it gets everywhere", true, 44, "'and it gets everywhere' | Subscribed"},
+// 	}...)
+//
+// 	testCases := runCases
+// 	if withSubmit {
+// 		testCases = submitCases
+// 	}
+//
+// 	skipped := len(submitCases) - len(testCases)
+//
+// 	passCount := 0
+// 	failCount := 0
+//
+// 	for _, test := range testCases {
+// 		e := email{
+// 			body:         test.body,
+// 			isSubscribed: test.isSubscribed,
+// 		}
+// 		cost := e.cost()
+// 		format := e.format()
+// 		if format != test.expectedFormat || cost != test.expectedCost {
+// 			failCount++
+// 			t.Errorf(`---------------------------------
+// Inputs:     (%v, %v)
+// Expecting:  (%v, %v)
+// Actual:     (%v, %v)
+// Fail
+// `, test.body, test.isSubscribed, test.expectedCost, test.expectedFormat, cost, format)
+// 		} else {
+// 			passCount++
+// 			fmt.Printf(`---------------------------------
+// Inputs:     (%v, %v)
+// Expecting:  (%v, %v)
+// Actual:     (%v, %v)
+// Pass
+// `, test.body, test.isSubscribed, test.expectedCost, test.expectedFormat, cost, format)
+// 		}
+// 	}
+//
+// 	fmt.Println("---------------------------------")
+// 	if skipped > 0 {
+// 		fmt.Printf("%d passed, %d failed, %d skipped\n", passCount, failCount, skipped)
+// 	} else {
+// 		fmt.Printf("%d passed, %d failed\n", passCount, failCount)
+// 	}
+// }
+//
+// // withSubmit is set at compile time depending
+// // on which button is used to run the tests
+// var withSubmit = true
+//
+
+
+// package main
+//
+// import (
+// 	"fmt"
+// 	"testing"
+// )
+//
+// func Test(t *testing.T) {
+// 	type testCase struct {
+// 		expense      expense
+// 		expectedTo   string
+// 		expectedCost float64
+// 	}
+//
+// 	runCases := []testCase{
+// 		{
+// 			email{isSubscribed: true, body: "Whoa there!", toAddress: "soldier@monty.com"},
+// 			"soldier@monty.com",
+// 			0.11,
+// 		},
+// 		{
+// 			sms{isSubscribed: false, body: "Halt! Who goes there?", toPhoneNumber: "+155555509832"},
+// 			"+155555509832",
+// 			2.1,
+// 		},
+// 	}
+//
+// 	submitCases := append(runCases, []testCase{
+// 		{
+// 			email{
+// 				isSubscribed: false,
+// 				body:         "It is I, Arthur, son of Uther Pendragon, from the castle of Camelot. King of the Britons, defeator of the Saxons, sovereign of all England!",
+// 				toAddress:    "soldier@monty.com",
+// 			},
+// 			"soldier@monty.com",
+// 			6.95,
+// 		},
+// 		{
+// 			email{
+// 				isSubscribed: true,
+// 				body:         "Pull the other one!",
+// 				toAddress:    "arthur@monty.com",
+// 			},
+// 			"arthur@monty.com",
+// 			0.19,
+// 		},
+// 		{
+// 			sms{
+// 				isSubscribed:  true,
+// 				body:          "I am. And this my trusty servant Patsy.",
+// 				toPhoneNumber: "+155555509832",
+// 			},
+// 			"+155555509832",
+// 			1.17,
+// 		},
+// 		{
+// 			invalid{},
+// 			"",
+// 			0.0,
+// 		},
+// 	}...)
+//
+// 	testCases := runCases
+// 	if withSubmit {
+// 		testCases = submitCases
+// 	}
+//
+// 	passCount := 0
+// 	failCount := 0
+// 	skipped := len(submitCases) - len(testCases)
+//
+// 	for _, test := range testCases {
+// 		to, cost := getExpenseReport(test.expense)
+// 		if to != test.expectedTo || cost != test.expectedCost {
+// 			failCount++
+// 			t.Errorf(`---------------------------------
+// Inputs:     %+v
+// Expecting:  (%v, %v)
+// Actual:     (%v, %v)
+// Fail
+// `, test.expense, test.expectedTo, test.expectedCost, to, cost)
+// 		} else {
+// 			passCount++
+// 			fmt.Printf(`---------------------------------
+// Inputs:     %+v
+// Expecting:  (%v, %v)
+// Actual:     (%v, %v)
+// Pass
+// `, test.expense, test.expectedTo, test.expectedCost, to, cost)
+// 		}
+// 	}
+//
+// 	fmt.Println("---------------------------------")
+// 	if skipped > 0 {
+// 		fmt.Printf("%d passed, %d failed, %d skipped\n", passCount, failCount, skipped)
+// 	} else {
+// 		fmt.Printf("%d passed, %d failed\n", passCount, failCount)
+// 	}
+// }
+//
+// // withSubmit is set at compile time depending
+// // on which button is used to run the tests
+// var withSubmit = true
+//
+
+
+// package main
+//
+// import (
+// 	"fmt"
+// 	"strconv"
+// 	"testing"
+// )
+//
+// func TestSendMessage(t *testing.T) {
+// 	type testCase struct {
+// 		format   formatter
+// 		expected string
+// 	}
+//
+// 	runCases := []testCase{
+// 		{plainText{message: "Hello, World!"}, "Hello, World!"},
+// 		{bold{message: "Bold Message"}, "**Bold Message**"},
+// 		{code{message: "Code Message"}, "`Code Message`"},
+// 	}
+//
+// 	submitCases := append(runCases, []testCase{
+// 		{code{message: ""}, "``"},
+// 		{bold{message: ""}, "****"},
+// 		{plainText{message: ""}, ""},
+// 	}...)
+//
+// 	testCases := runCases
+// 	if withSubmit {
+// 		testCases = submitCases
+// 	}
+// 	skipped := len(submitCases) - len(testCases)
+//
+// 	passCount := 0
+// 	failCount := 0
+//
+// 	for i, test := range testCases {
+// 		testName := "Test Case " + strconv.Itoa(i+1)
+// 		t.Run(testName, func(t *testing.T) {
+// 			formattedMessage := sendMessage(test.format)
+// 			if formattedMessage != test.expected {
+// 				failCount++
+// 				t.Errorf(`---------------------------------
+// %s
+// Inputs:     (%v)
+// Expecting:  %v
+// Actual:     %v
+// Fail
+// `, testName, test.format, test.expected, formattedMessage)
+// 			} else {
+// 				passCount++
+// 				fmt.Printf(`---------------------------------
+// %s
+// Inputs:     (%v)
+// Expecting:  %v
+// Actual:     %v
+// Pass
+// `, testName, test.format, test.expected, formattedMessage)
+// 			}
+// 		})
+// 	}
+//
+// 	fmt.Println("---------------------------------")
+// 	if skipped > 0 {
+// 		fmt.Printf("%d passed, %d failed, %d skipped\n", passCount, failCount, skipped)
+// 	} else {
+// 		fmt.Printf("%d passed, %d failed\n", passCount, failCount)
+// 	}
+// }
+//
+// // withSubmit is set at compile time depending
+// // on which button is used to run the tests
+// var withSubmit = true
+//
+
+
 package main
 
 import (
 	"fmt"
+	"strconv"
 	"testing"
 )
 
 func Test(t *testing.T) {
 	type testCase struct {
-		body           string
-		isSubscribed   bool
-		expectedCost   int
-		expectedFormat string
+		notification       notification
+		expectedID         string
+		expectedImportance int
 	}
 
 	runCases := []testCase{
-		{"hello there", true, 22, "'hello there' | Subscribed"},
-		{"general kenobi", false, 70, "'general kenobi' | Not Subscribed"},
+		{
+			directMessage{senderUsername: "Kaladin", messageContent: "Life before death", priorityLevel: 10, isUrgent: true},
+			"Kaladin",
+			50,
+		},
+		{
+			groupMessage{groupName: "Bridge 4", messageContent: "Soups ready!", priorityLevel: 2},
+			"Bridge 4",
+			2,
+		},
+		{
+			systemAlert{alertCode: "ALERT001", messageContent: "THIS IS NOT A TEST HIGH STORM COMING SOON"},
+			"ALERT001",
+			100,
+		},
 	}
 
 	submitCases := append(runCases, []testCase{
-		{"i hate sand", true, 22, "'i hate sand' | Subscribed"},
-		{"it's coarse and rough and irritating", false, 180, "'it's coarse and rough and irritating' | Not Subscribed"},
-		{"and it gets everywhere", true, 44, "'and it gets everywhere' | Subscribed"},
+		{
+			directMessage{senderUsername: "Shallan", messageContent: "I am that I am.", priorityLevel: 5, isUrgent: false},
+			"Shallan",
+			5,
+		},
+		{
+			groupMessage{groupName: "Knights Radiant", messageContent: "For the greater good.", priorityLevel: 10},
+			"Knights Radiant",
+			10,
+		},
+		{
+			directMessage{senderUsername: "Adolin", messageContent: "Duels are my favorite.", priorityLevel: 3, isUrgent: true},
+			"Adolin",
+			50,
+		},
 	}...)
 
 	testCases := runCases
@@ -184,34 +466,32 @@ func Test(t *testing.T) {
 	}
 
 	skipped := len(submitCases) - len(testCases)
-
 	passCount := 0
 	failCount := 0
 
-	for _, test := range testCases {
-		e := email{
-			body:         test.body,
-			isSubscribed: test.isSubscribed,
-		}
-		cost := e.cost()
-		format := e.format()
-		if format != test.expectedFormat || cost != test.expectedCost {
-			failCount++
-			t.Errorf(`---------------------------------
-Inputs:     (%v, %v)
-Expecting:  (%v, %v)
-Actual:     (%v, %v)
+	for i, test := range testCases {
+		t.Run("TestProcessNotification_"+strconv.Itoa(i+1), func(t *testing.T) {
+			id, importance := processNotification(test.notification)
+			if id != test.expectedID || importance != test.expectedImportance {
+				failCount++
+				t.Errorf(`---------------------------------
+Test Failed: TestProcessNotification_%d
+Notification: %+v
+Expecting:    %v/%d
+Actual:       %v/%d
 Fail
-`, test.body, test.isSubscribed, test.expectedCost, test.expectedFormat, cost, format)
-		} else {
-			passCount++
-			fmt.Printf(`---------------------------------
-Inputs:     (%v, %v)
-Expecting:  (%v, %v)
-Actual:     (%v, %v)
+`, i+1, test.notification, test.expectedID, test.expectedImportance, id, importance)
+			} else {
+				passCount++
+				fmt.Printf(`---------------------------------
+Test Passed: TestProcessNotification_%d
+Notification: %+v
+Expecting:    %v/%d
+Actual:       %v/%d
 Pass
-`, test.body, test.isSubscribed, test.expectedCost, test.expectedFormat, cost, format)
-		}
+`, i+1, test.notification, test.expectedID, test.expectedImportance, id, importance)
+			}
+		})
 	}
 
 	fmt.Println("---------------------------------")
