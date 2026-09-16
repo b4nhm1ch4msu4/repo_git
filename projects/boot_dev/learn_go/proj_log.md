@@ -1,3 +1,4 @@
 ## Learn go
 
-TODO: Slices - L6: Variadic
+TODO:
+0916: CH10: Maps -> L5: Effective Go
