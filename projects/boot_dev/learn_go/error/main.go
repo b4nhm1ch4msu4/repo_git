@@ -76,22 +76,77 @@
 // 	return x / y, nil
 // }
 
+// package main
+//
+// import (
+// 	"errors"
+// )
+//
+// func validateStatus(status string) error {
+// 	// ?
+// 	stt_len := len(status)
+// 	if stt_len == 0 {
+// 		return errors.New("status cannot be empty")
+// 	}
+// 	if stt_len > 140 {
+// 		return errors.New("status exceeds 140 characters")
+// 	}
+// 	return nil
+// }
+
+// package main
+//
+// func sum(num ...int) int {
+// 	total := 0
+// 	for i:= 0; i < len(num); i++ {
+// 		total += num[i]
+// 	}
+// 	return total
+// }
+
+// package main
+//
+// type cost struct {
+// 	day   int
+// 	value float64
+// }
+//
+// func getDayCosts(cost []cost, day int) []float64 {
+// 	out := []float64{}
+// 	for i := 0; i < len(cost); i++ {
+// 		if cost[i].day == day {
+// 			out = append(out,cost[i].value)
+// 		}
+// 	}
+// 	return out
+// }
+
+// package main
+//
+// func indexOfFirstBadWord(msg []string, badWords []string) int {
+// 	// ?
+// 	for _,b := range badWords {
+// 		for i,w := range msg {
+// 			if w == b {
+// 				return i
+// 			}
+// 		}
+// 	}
+// 	return -1
+// }
 
 package main
 
-import (
-	"errors"
-)
-
-func validateStatus(status string) error {
+func createMatrix(rows, cols int) [][]int {
 	// ?
-	stt_len := len(status)
-	if stt_len == 0 {
-		return errors.New("status cannot be empty")
+	out := [][]int{}
+	for r:= 0 ; r < rows; r++ {
+		rs := []int{}
+		for c:= 0; c < cols; c++{
+			val := r * c
+			rs = append(rs,val)
+		}
+		out = append(out,rs)
 	}
-	if stt_len > 140 {
-		return errors.New("status exceeds 140 characters")
-	}
-	return nil
+	return out
 }
-
