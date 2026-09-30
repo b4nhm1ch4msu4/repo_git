@@ -258,43 +258,99 @@
 // 	return chSms, chEmails
 // }
 
+// package main
+//
+// import (
+// 	"time"
+// )
+//
+// func saveBackups(snapshotTicker, saveAfter <-chan time.Time, logChan chan string) {
+// 	// ?
+// 	for {
+// 		select {
+// 		case _, ok := <-snapshotTicker:
+// 			if ok {
+// 				takeSnapshot(logChan)
+// 			}
+// 		case _, ok := <-saveAfter:
+// 			if ok {
+// 				saveSnapshot(logChan)
+// 				return
+// 			}
+// 		default:
+// 			waitForData(logChan)
+// 			time.Sleep(500 * time.Millisecond)
+// 		}
+// 	}
+// }
+//
+// // don't touch below this line
+//
+// func takeSnapshot(logChan chan string) {
+// 	logChan <- "Taking a backup snapshot..."
+// }
+//
+// func saveSnapshot(logChan chan string) {
+// 	logChan <- "All backups saved!"
+// 	close(logChan)
+// }
+//
+// func waitForData(logChan chan string) {
+// 	logChan <- "Nothing to do, waiting..."
+// }
+
 package main
 
 import (
+	"fmt"
 	"time"
 )
 
-func saveBackups(snapshotTicker, saveAfter <-chan time.Time, logChan chan string) {
-	// ?
-	for {
-		select {
-		case _, ok := <-snapshotTicker:
-			if ok {
-				takeSnapshot(logChan)
-			}
-		case _, ok := <-saveAfter:
-			if ok {
-				saveSnapshot(logChan)
-				return
-			}
-		default:
-			waitForData(logChan)
-			time.Sleep(500 * time.Millisecond)
-		}
+func pingPong(numPings int) {
+	pings := make(chan struct{})
+	pongs := make(chan struct{})
+	go ponger(pings, pongs)
+	go pinger(pings, numPings)
+	i := 0
+	for range pongs {
+		fmt.Println("got pong", i)
+		i++
 	}
+	fmt.Println("pongs done")
 }
 
 // don't touch below this line
 
-func takeSnapshot(logChan chan string) {
-	logChan <- "Taking a backup snapshot..."
+func pinger(pings chan struct{}, numPings int) {
+	sleepTime := 50 * time.Millisecond
+	for i := 0; i < numPings; i++ {
+		fmt.Printf("sending ping %v\n", i)
+		pings <- struct{}{}
+		time.Sleep(sleepTime)
+		sleepTime *= 2
+	}
+	close(pings)
 }
 
-func saveSnapshot(logChan chan string) {
-	logChan <- "All backups saved!"
-	close(logChan)
+func ponger(pings, pongs chan struct{}) {
+	i := 0
+	for range pings {
+		fmt.Printf("got ping %v, sending pong %v\n", i, i)
+		pongs <- struct{}{}
+		i++
+	}
+	fmt.Println("pings done")
+	close(pongs)
 }
 
-func waitForData(logChan chan string) {
-	logChan <- "Nothing to do, waiting..."
+func test(numPings int) {
+	fmt.Println("Starting game...")
+	pingPong(numPings)
+	fmt.Println("===== Game over =====")
+}
+
+func main() {
+	test(4)
+	test(3)
+	test(2)
 }
