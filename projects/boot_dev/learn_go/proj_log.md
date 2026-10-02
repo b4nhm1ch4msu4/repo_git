@@ -1,4 +1,4 @@
 ## Learn go
 
 TODO:
-0916: CH13: Channels -> L6: Range
+1002: CH15: Generics -> L5: Parametric Constrain
