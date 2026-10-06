@@ -73,81 +73,151 @@
 // 	return float64(otup.numEmailsAllowed) * costPerEmail
 // }
 
+// package main
+//
+// import (
+// 	"fmt"
+// )
+//
+// type biller[C customer] interface {
+// 	//?
+// 	Charge(C) bill
+// 	Name() string
+// }
+//
+// // don't edit below this line
+//
+// type userBiller struct {
+// 	Plan string
+// }
+//
+// func (ub userBiller) Charge(u user) bill {
+// 	amount := 50.0
+// 	if ub.Plan == "pro" {
+// 		amount = 100.0
+// 	}
+// 	return bill{
+// 		Customer: u,
+// 		Amount:   amount,
+// 	}
+// }
+//
+// func (sb userBiller) Name() string {
+// 	return fmt.Sprintf("%s user biller", sb.Plan)
+// }
+//
+// type orgBiller struct {
+// 	Plan string
+// }
+//
+// func (ob orgBiller) Name() string {
+// 	return fmt.Sprintf("%s org biller", ob.Plan)
+// }
+//
+// func (ob orgBiller) Charge(o org) bill {
+// 	amount := 2000.0
+// 	if ob.Plan == "pro" {
+// 		amount = 3000.0
+// 	}
+// 	return bill{
+// 		Customer: o,
+// 		Amount:   amount,
+// 	}
+// }
+//
+// type customer interface {
+// 	GetBillingEmail() string
+// }
+//
+// type bill struct {
+// 	Customer customer
+// 	Amount   float64
+// }
+//
+// type user struct {
+// 	UserEmail string
+// }
+//
+// func (u user) GetBillingEmail() string {
+// 	return u.UserEmail
+// }
+//
+// type org struct {
+// 	Admin user
+// 	Name  string
+// }
+//
+// func (o org) GetBillingEmail() string {
+// 	return o.Admin.GetBillingEmail()
+// }
+//
+
+// package main
+//
+// type emailEnvelope struct {
+// 	recipient string
+// 	payload   string
+// }
+//
+// type paymentEnvelope struct {
+// 	recipient string
+// 	payload   int
+// }
+//
+// type envelope[T any] struct {
+// 	recipient string
+// 	payload   T
+// }
+//
+// func createEnvelopes[T any](recipients []string, payload T) []envelope[T] {
+// 	ens := []envelope[T]{}
+// 	for _, r := range recipients {
+// 		ens = append(ens, envelope[T]{recipient: r, payload: payload})
+// 	}
+// 	return ens
+// }
+
 package main
 
-import (
-	"fmt"
-)
-
-type biller[C customer] interface {
-	//?
-	Charge(C) bill
-	Name() string
+type email struct {
+	recipient string
+	subject   string
 }
 
-// don't edit below this line
-
-type userBiller struct {
-	Plan string
+type receipt struct {
+	amount int
 }
 
-func (ub userBiller) Charge(u user) bill {
-	amount := 50.0
-	if ub.Plan == "pro" {
-		amount = 100.0
+type inbox struct {
+	events []any
+}
+
+func (in inbox) Emails() []email {
+	result := []email{}
+	for _, event := range in.events {
+		if e, ok := event.(email); ok {
+			result = append(result, e)
+		}
 	}
-	return bill{
-		Customer: u,
-		Amount:   amount,
+	return result
+}
+
+func (in inbox) Receipts() []receipt {
+	result := []receipt{}
+	for _, event := range in.events {
+		if r, ok := event.(receipt); ok {
+			result = append(result, r)
+		}
 	}
+	return result
 }
 
-func (sb userBiller) Name() string {
-	return fmt.Sprintf("%s user biller", sb.Plan)
-}
-
-type orgBiller struct {
-	Plan string
-}
-
-func (ob orgBiller) Name() string {
-	return fmt.Sprintf("%s org biller", ob.Plan)
-}
-
-func (ob orgBiller) Charge(o org) bill {
-	amount := 2000.0
-	if ob.Plan == "pro" {
-		amount = 3000.0
+func (in inbox) Select[T any]() []T  {
+	result := []T{}
+	for _,envent := range in.events {
+		if r,ok := envent.(T); ok {
+			result = append(result, r)
+		}
 	}
-	return bill{
-		Customer: o,
-		Amount:   amount,
-	}
+	return result
 }
-
-type customer interface {
-	GetBillingEmail() string
-}
-
-type bill struct {
-	Customer customer
-	Amount   float64
-}
-
-type user struct {
-	UserEmail string
-}
-
-func (u user) GetBillingEmail() string {
-	return u.UserEmail
-}
-
-type org struct {
-	Admin user
-	Name  string
-}
-
-func (o org) GetBillingEmail() string {
-	return o.Admin.GetBillingEmail()
-}
-
